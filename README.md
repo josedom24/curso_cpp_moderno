@@ -5,7 +5,8 @@
     * ¿Qué es un lenguaje de programación?
     * Introducción a C++: historia y evolución
     * ¿Qué es C++ moderno? (C++11, C++14, C++17, C++20)
-    * Tu primer programa: Hello, world
+    * Instalación de C++
+    * [Estructura de un programa en C++](modulo01/estructura.md)
     * Cómo compilar y ejecutar programas (VS Code, terminal)
 
 2. Variables, tipos y entrada/salida
