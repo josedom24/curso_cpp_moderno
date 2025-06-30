@@ -14,8 +14,8 @@
     * [Tipos de datos fundamentales](modulo02/tipos.md)
     * [Tipos de datos carácter y booleano](modulo02/caracter_bool.md)
     * [Tipos de datos numéricos y operaciones aritméticas](modulo02/numeros.md)
-    * Variables. Declaración e inicaialización. modernas (auto, inicialización uniforme {})
-    * Constantes.
+    * Variables. Declaración e inicialización
+    * Constantes
     * Introducción a las cadenas de caracteres
     * Entrada/salida con std::cin y std::cout
 
