@@ -11,10 +11,13 @@
 
 2. Variables, tipos y entrada/salida
 
-    * Tipos de datos fundamentales (int, double, bool, char)
-    * Variables modernas (auto, inicialización uniforme {})
+    * [Tipos de datos fundamentales](modulo02/tipos.md)
+    * [Tipos de datos carácter y booleano](modulo02/caracter_bool.md)
+    * [Tipos de datos numéricos y operaciones aritméticas](modulo02/numeros.md)
+    * Variables. Declaración e inicaialización. modernas (auto, inicialización uniforme {})
+    * Constantes.
+    * Introducción a las cadenas de caracteres
     * Entrada/salida con std::cin y std::cout
-    * Comentarios y buenas prácticas
 
 3. Operadores y control de flujo
 
