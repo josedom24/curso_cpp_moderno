@@ -62,7 +62,6 @@ int main() {
 
 Ambos métodos `length()` y `size()` son equivalentes en `std::string`.
 
----
 
 ## Concatenación de cadenas
 
