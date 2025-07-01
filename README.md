@@ -29,7 +29,7 @@
     * [Estructuras alternativas: switch](contenido/modulo03/switch.md)
     * Ejercicios estructuras alternativas
     * [Estructuras repetitivas: while](contenido/modulo03/while.md)
-    * Estructuras repetitivas: do-while
+    * [Estructuras repetitivas: do-while](contenido/modulo03/dowhile.md)
     * Estructuras repetitivas: for ( Uso de range-based)
     * Uso específico de variables: contadores, acumuladores e indicadores
     * Ejercicios estructuras repetitivas
