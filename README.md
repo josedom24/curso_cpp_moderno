@@ -25,8 +25,8 @@
 3. Operadores y control de flujo
 
     * [Operadores relacionales y lógicos](contenido/modulo03/operadores.md)
-    * Estructuras alternativas: if
-    * Estructuras alternativas: switch
+    * [Estructuras alternativas: if](contenido/modulo03/if.md)
+    * [Estructuras alternativas: switch](contenido/modulo03/switch.md)
     * Ejercicios estructuras alternativas
     * Estructuras repetitivas: while
     * Estructuras repetitivas: do-while
@@ -72,18 +72,4 @@
     * Buenas prácticas: evitar new/delete, usar std::vector y std::unique_ptr
 
 9. C++ moderno en acción (proyecto final)
-
-Proyecto simple: calculadora, gestor de tareas o juego de consola
-Aplicación de todo lo aprendido: funciones, clases, vectores, errores
-Opcional: introducir pruebas con assert o incluso doctest
-
-
-🧠 Enfoque metodológico recomendado
-
-✅ Enfócate en ejemplos visuales y prácticos (sin teoría excesiva).
-✅ Usa std::vector, auto, y const desde el principio.
-✅ Evita using namespace std; globalmente.
-❌ No enseñes punteros crudos ( * y new/delete) hasta que entiendan RAII o unique_ptr.
-✅ Refuerza la comprensión con mini ejercicios en cada clase.
-
 
