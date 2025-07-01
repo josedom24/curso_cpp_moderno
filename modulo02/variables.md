@@ -27,8 +27,10 @@ En C++ moderno existen varias formas de inicializar variables. Inicializar una v
 * **Inicialización por asignación (forma clásica)**: Para inicializar una variable, asignarle un valor usamos el **operador de asignación** `=`. Por ejemplo:
 
    ```cpp
-   int y = 5;
+   int xs = 5;
    double pi = 3.14159;
+   char inicial = 'A';
+   bool esValido = true;
    ```
 
    No es aconsejable porque realiza conversiones implícitas, por ejemplo en esta asignación se pierde precisión:
@@ -42,6 +44,8 @@ En C++ moderno existen varias formas de inicializar variables. Inicializar una v
    ```cpp
    int x(5);
    double pi(3.14159);
+   char inicial('A');
+   bool esValido(true);
    ```
 
    Un problema que tiene es que podemos confundirla con la declaración de una función.
@@ -51,6 +55,8 @@ En C++ moderno existen varias formas de inicializar variables. Inicializar una v
    ```cpp
    int x{5};
    double pi{3.14159};
+   char inicial {'A'};
+   bool esValido {true};
    ```
 
    Previene la conversión implícita no deseada y es la forma recomendad de inicialización. Ejemplo:
