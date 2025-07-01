@@ -31,7 +31,7 @@
     * [Estructuras repetitivas: while](contenido/modulo03/while.md)
     * [Estructuras repetitivas: do-while](contenido/modulo03/dowhile.md)
     * [Estructuras repetitivas: for](contenido/modulo03/for.md)
-    * Uso específico de variables: contadores, acumuladores e indicadores
+    * [Uso específico de variables: contadores, acumuladores e indicadores](contenido/modulo03/variables.md)
     * Ejercicios estructuras repetitivas
 
 4. Funciones y modularidad
