@@ -87,6 +87,14 @@ int a{1}, b{2}, c{3};
 
 Sin embargo, es recomendable evitar esta práctica para mejorar la legibilidad.
 
+# Operadores de asignación
+
+Nos permiten guardar información en las variables. En una variable podemos guardar un literal, otra variable o el resultado de una expresión. Los operadores de asignación son los siguientes:
+
+   * `=`: Asignación simple, por ejemplo:` a=b+7`;
+   * Operadores de asignación compuesta: por ejemplo, `+=`, que nos permite sumar y posteriormente asignar. Por ejemplo: `a+=b` es igual que `a=a+b`. También podemos usar los operadores: `-=, *=, /=, %=`,...
+
+
 ## Ámbito y duración de almacenamiento de las variables en C++
 
 Además de declarar e inicializar variables, es importante entender **dónde y cuánto tiempo** existen esas variables en memoria durante la ejecución del programa. Esto depende de su **ámbito** y **duración de almacenamiento**.
@@ -107,15 +115,20 @@ Además de declarar e inicializar variables, es importante entender **dónde y c
 ```cpp
 #include <iostream>
 
+int contador{0};                    //Variable global
+
 int main() {
     int edad{30};                   // Inicialización uniforme
     auto salario{2500.75};          // Inferencia con auto (double)
     decltype(salario) PI{3.14159};  // Inferencia con decltype
-    
+    contador+=1;
+
+
     std::cout << "Edad: " << edad << "\n";
     std::cout << "Salario: " << salario << "\n";
     std::cout << "Pi: " << PI << "\n";
-
+    std::cout << "Contador: " << contador << "\n";
+    
     return 0;
 }
 ```
