@@ -20,6 +20,7 @@
     * [Introducción a las cadenas de caracteres](modulo02/cadenas.md)
     * [Conversión de cadenas de caracteres](modulo02/casting_cadenas.md)
     * [Entrada y salida estándar](modulo02/entrada_salida.md)
+    * [Ejercicios estructura secuencial](modulo02/secuencial.md)
 
 3. Operadores y control de flujo
 
