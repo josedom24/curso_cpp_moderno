@@ -16,8 +16,10 @@
     * [Tipos de datos numéricos y operaciones aritméticas](modulo02/numeros.md)
     * [Declaración e inicialización de variables](modulo02/variables.md)
     * [Declaración e inicialización de constantes](modulo02/constantes.md)
+    * [Conversión de tipos de datos](modulo02/casting.md)
     * [Introducción a las cadenas de caracteres](modulo02/cadenas.md)
-    * Entrada/salida con std::cin y std::cout
+    * [Conversión de cadenas de caracteres](modulo02/casting_cadenas.md)
+    * [Entrada y salida estándar](modulo02/entrada_salida.md)
 
 3. Operadores y control de flujo
 

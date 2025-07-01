@@ -81,4 +81,3 @@ int main() {
     std::cout << nombre_completo << std::endl;
 }
 ```
-
