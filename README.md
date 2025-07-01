@@ -30,7 +30,7 @@
     * Ejercicios estructuras alternativas
     * [Estructuras repetitivas: while](contenido/modulo03/while.md)
     * [Estructuras repetitivas: do-while](contenido/modulo03/dowhile.md)
-    * Estructuras repetitivas: for ( Uso de range-based)
+    * [Estructuras repetitivas: for](contenido/modulo03/for.md)
     * Uso específico de variables: contadores, acumuladores e indicadores
     * Ejercicios estructuras repetitivas
 
