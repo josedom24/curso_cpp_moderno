@@ -6,25 +6,25 @@
     * Introducción a C++: historia y evolución
     * ¿Qué es C++ moderno? (C++11, C++14, C++17, C++20)
     * Instalación de C++
-    * [Estructura de un programa en C++](modulo01/estructura.md)
+    * [Estructura de un programa en C++](contenido/modulo01/estructura.md)
     * Cómo compilar y ejecutar programas (VS Code, terminal)
 
 2. Variables, tipos y entrada/salida
 
-    * [Tipos de datos fundamentales](modulo02/tipos.md)
-    * [Tipos de datos carácter y booleano](modulo02/caracter_bool.md)
-    * [Tipos de datos numéricos y operaciones aritméticas](modulo02/numeros.md)
-    * [Declaración e inicialización de variables](modulo02/variables.md)
-    * [Declaración e inicialización de constantes](modulo02/constantes.md)
-    * [Conversión de tipos de datos](modulo02/casting.md)
-    * [Introducción a las cadenas de caracteres](modulo02/cadenas.md)
-    * [Conversión de cadenas de caracteres](modulo02/casting_cadenas.md)
-    * [Entrada y salida estándar](modulo02/entrada_salida.md)
-    * [Ejercicios estructura secuencial](modulo02/secuencial.md)
+    * [Tipos de datos fundamentales](contenido/modulo02/tipos.md)
+    * [Tipos de datos carácter y booleano](contenido/modulo02/caracter_bool.md)
+    * [Tipos de datos numéricos y operaciones aritméticas](contenido/modulo02/numeros.md)
+    * [Declaración e inicialización de variables](contenido/modulo02/variables.md)
+    * [Declaración e inicialización de constantes](contenido/modulo02/constantes.md)
+    * [Conversión de tipos de datos](contenido/modulo02/casting.md)
+    * [Introducción a las cadenas de caracteres](contenido/modulo02/cadenas.md)
+    * [Conversión de cadenas de caracteres](contenido/modulo02/casting_cadenas.md)
+    * [Entrada y salida estándar](contenido/modulo02/entrada_salida.md)
+    * [Ejercicios estructura secuencial](contenido/modulo02/secuencial.md)
 
 3. Operadores y control de flujo
 
-    * Operadores lógicos y de comparación
+    * [Operadores relacionales y lógicos](contenido/modulo03/operadores.md)
     * Estructuras alternativas: if
     * Estructuras alternativas: switch
     * Ejercicios estructuras alternativas
