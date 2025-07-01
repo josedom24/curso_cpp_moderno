@@ -24,11 +24,15 @@
 
 3. Operadores y control de flujo
 
-    * Operadores aritméticos, lógicos y de comparación
-    * if, else, else if
-    * switch, break, continue
-    * Bucles: for, while, do while
-    * Uso de range-based for (C++11)
+    * Operadores lógicos y de comparación
+    * Estructuras alternativas: if
+    * Estructuras alternativas: switch
+    * Ejercicios estructuras alternativas
+    * Estructuras repetitivas: while
+    * Estructuras repetitivas: do-while
+    * Estructuras repetitivas: for ( Uso de range-based)
+    * Uso específico de variables: contadores, acumuladores e indicadores
+    * Ejercicios estructuras repetitivas
 
 4. Funciones y modularidad
 
@@ -37,6 +41,7 @@
     * Valores de retorno (return, void)
     * default y constexpr (C++11)
     * Funciones inline y lambdas simples (C++11)
+
 5. Estructuras de datos básicas
 
     * Arreglos (std::array, std::vector)
