@@ -27,12 +27,12 @@
     * [Operadores relacionales y lógicos](contenido/modulo03/operadores.md)
     * [Estructuras alternativas: if](contenido/modulo03/if.md)
     * [Estructuras alternativas: switch](contenido/modulo03/switch.md)
-    * Ejercicios estructuras alternativas
+    * [Ejercicios estructuras alternativas](contenido/modulo03/alternativa.md)
     * [Estructuras repetitivas: while](contenido/modulo03/while.md)
     * [Estructuras repetitivas: do-while](contenido/modulo03/dowhile.md)
     * [Estructuras repetitivas: for](contenido/modulo03/for.md)
     * [Uso específico de variables: contadores, acumuladores e indicadores](contenido/modulo03/variables.md)
-    * Ejercicios estructuras repetitivas
+    * [Ejercicios estructuras repetitivas](contenido/modulo03/repetitiva.md)
 
 4. Gestión de recursos y punteros
 
