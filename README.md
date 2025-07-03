@@ -34,9 +34,10 @@
     * [Uso específico de variables: contadores, acumuladores e indicadores](contenido/modulo03/variables.md)
     * [Ejercicios estructuras repetitivas](contenido/modulo03/repetitiva.md)
 
-4. Gestión de recursos y punteros
+4. Gestión de recursos
 
-    * Introducción a la gestión de recursos
+    * [Introducción a la gestión de recursos](contenido/modulo04/introduccion.md)
+    * [Gestión manual de memoria](contenido/modulo04/memoria.md)
     * Punteros y referencias
     * Punteros inteligentes
     * RAII (Resource Acquisition Is Initialization)
