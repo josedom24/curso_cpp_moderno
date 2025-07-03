@@ -36,7 +36,7 @@ Las referencias son particularmente útiles en dos contextos:
 * **Modificación controlada de datos:** las referencias permiten modificar los valores originales dentro de funciones de forma clara y segura, sin la complejidad asociada al manejo de punteros.
 
 
-### Evitar copias innecesarias: Eficiencia en la gestión de recursos
+### ¿Qué significa evitar copias innecesarias?
 
 Uno de los aspectos fundamentales en la programación eficiente en C++ es **evitar las copias innecesarias** de datos, especialmente cuando se trabaja con estructuras complejas o de gran tamaño.
 
