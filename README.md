@@ -38,7 +38,8 @@
 
     * [Introducción a la gestión de recursos](contenido/modulo04/introduccion.md)
     * [Gestión manual de memoria](contenido/modulo04/memoria.md)
-    * Punteros y referencias
+    * [Gestión de memoria con punteros](contenido/modulo04/punteros.md)
+    * [Gestión de memoria con referencias](contenido/modulo04/referencias.md)
     * Punteros inteligentes
     * RAII (Resource Acquisition Is Initialization)
     * Propiedad de los recursos y gestión automática
