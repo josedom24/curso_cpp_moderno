@@ -40,10 +40,8 @@
     * [Gestión manual de memoria](contenido/modulo04/memoria.md)
     * [Gestión de memoria con punteros](contenido/modulo04/punteros.md)
     * [Gestión de memoria con referencias](contenido/modulo04/referencias.md)
-    * Punteros inteligentes
-    * RAII (Resource Acquisition Is Initialization)
-    * Propiedad de los recursos y gestión automática
-
+    * [Propiedad de recursos y patrón RAII](contenido/modulo04/raii.md)
+    * [Gestión de memoria con punteros inteligentes](contenido/modulo04/propiedad.md)
 
 5. Programación estructurada
 
