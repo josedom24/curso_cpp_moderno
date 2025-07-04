@@ -45,7 +45,7 @@
 
 5. Programación estructurada
 
-    * Definición y declaración de funciones
+    * [Introducción a la programación estructurada y uso de funciones](contenido/modulo05/funciones.md)
     * Paso de argumentos a funciones
     * Valores de retorno de una función
     * Parámetros con valores por defecto y constexpr
@@ -54,15 +54,14 @@
 
 6. Tipos de datos compuestos
 
+    * Tipos definidos por el usuario: `enum class`
+    * Tipos definidos por el usuario: `struct`
     * Cadenas de caracteres: `std::string`
     * Arreglos: `std::array`
     * Vectores: `std::vector`
     * Listas: `std::list`
-    * conjuntos: `std::set`y `std::unordered_set`
     * Mapas: `std::map` y `std::unordered_map`
-    * Enumeraciones `enum`
-    * Estructuras: `struct`
-
+    
 
 7. Programación orientada a objetos
 
