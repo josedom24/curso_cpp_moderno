@@ -54,7 +54,7 @@
 
 6. Tipos de datos compuestos
 
-    * Tipos definidos por el usuario: `enum class`
+    * [Tipos definidos por el usuario: `enum class`](contenido/modulo06/enum.md)
     * Tipos definidos por el usuario: `struct`
     * Cadenas de caracteres: `std::string`
     * Arreglos: `std::array`
