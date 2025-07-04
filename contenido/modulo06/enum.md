@@ -71,7 +71,7 @@ Aunque `enum class` no se convierte automáticamente a `int`, a veces es útil o
 enum class Estado { Inactivo = 1, Activo = 2, Suspendido = 3 };
 
 int main() {
-    Estado e = Estado::Activo;
+    Estado e {Estado::Activo};
 
     std::cout << "Valor numérico: " << static_cast<int>(e) << std::endl;
 
@@ -97,7 +97,7 @@ int main() {
     // Verificar si el valor ingresado es válido
     if (valor >= 1 && valor <= 3) {
         // Convertir el valor numérico al tipo enum class usando static_cast
-        Estado e = static_cast<Estado>(valor);
+        Estado e {static_cast<Estado>(valor)};
 
         // Imprimir el valor numérico del enum
         std::cout << "El valor numérico del estado es: " << static_cast<int>(e) << std::endl;
@@ -156,7 +156,7 @@ int main() {
         return 1;
     }
 
-    DiaSemana dia = static_cast<DiaSemana>(numero);
+    DiaSemana dia {static_cast<DiaSemana>(numero)};
 
     std::cout << "El día seleccionado es: " << diaAString(dia) << std::endl;
 
