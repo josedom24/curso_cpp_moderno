@@ -101,13 +101,14 @@ int main() {
 * Garantiza que el argumento no podrá modificarse dentro de la función.
 * Recomendado para objetos complejos como `std::string`, `std::vector`, estructuras de datos, etc.
 
-## 4. Paso por puntero (flexibilidad, cuidado con recursos)
+## Paso de argumento por puntero
 
-También se pueden pasar punteros, transmitiendo la **dirección de memoria** del argumento.
+También se pueden pasar punteros, transmitiendo la **dirección de memoria** del argumento y posibilitando también la modificación de los argumentos. 
 
 ```cpp
 void incrementar(int* x) {
     if (x) {
+        std::cout << x << '\n';
         *x = *x + 1;
     }
 }
@@ -115,51 +116,64 @@ void incrementar(int* x) {
 int main() {
     int a = 5;
     incrementar(&a);
+    std::cout << a;
 }
 ```
 
-**Ventajas:**
+* Esta manera de pasar los argumentos con punteros nos da más flexibilidad para trabajar con recursos dinámicos.
+* Sin embargo, requiere atención para evitar punteros nulos o no inicializados.
 
-✔️ Permite trabajar con recursos dinámicos o variables opcionales (puede ser `nullptr`).
-✔️ Flexibilidad en casos concretos.
+Por supuesto, aquí tienes un apartado didáctico completo y claro sobre **parámetros opcionales** para tu curso de introducción a C++ moderno:
 
-**Inconvenientes:**
+## Definición de parámetros opcionales
 
-⚠️ Requiere atención para evitar punteros nulos o no inicializados.
-⚠️ En C++ moderno se recomienda el uso de **punteros inteligentes** en lugar de punteros crudos, para gestionar recursos de forma más segura.
+En ocasiones, una función puede tener **valores predeterminados** para algunos de sus parámetros. Esto permite que el programador pueda **omitir esos argumentos** al llamar a la función, y en su lugar se utilizará un valor por defecto.
 
----
+Para declarar un parámetro opcional, se asigna un **valor por defecto** en la declaración de la función, veamos un ejemplo:
+
+```cpp
+#include <iostream>
+#include <string>
+
+void saludar(std::string nombre = "Usuario") {
+    std::cout << "Hola, " << nombre << std::endl;
+}
+
+int main() {
+    saludar("Carlos"); // Imprime: Hola, Carlos
+    saludar();         // Imprime: Hola, Usuario
+}
+```
+
+* Los **parámetros opcionales deben ir al final** de la lista de parámetros.
+* Los valores por defecto se especifican en la **declaración** o **definición** de la función, pero nunca en ambas.
+* Si se omite un argumento al llamar a la función, se utilizará el valor por defecto especificado.
+* Los parámetros opcionales pueden ser de **cualquier tipo**, incluyendo tipos primitivos, objetos de la STL, o incluso punteros.
+* os parámetros opcionales siguen las mismas reglas sobre **paso por valor**, **referencia**, o **referencia constante**, según sea necesario para evitar copias costosas y gestionar los recursos de forma eficiente.
+
+Ejemplo con varios parámetros opcionales:
+
+```cpp
+void imprimirLinea(std::string texto = "Línea vacía", char simbolo = '-', int repeticiones = 10) {
+    std::cout << texto << " ";
+    for (int i = 0; i < repeticiones; ++i) {
+        std::cout << simbolo;
+    }
+    std::cout << std::endl;
+}
+
+int main() {
+    imprimirLinea("Título", '*', 20); // Personalizado
+    imprimirLinea("Subtítulo");       // Usa los valores por defecto de 'simbolo' y 'repeticiones'
+    imprimirLinea();                  // Usa todos los valores por defecto
+}
+```
 
 ## Relación con la gestión de recursos y propiedad
 
 En C++, los objetos pueden ser propietarios de recursos como memoria dinámica, archivos, sockets, etc. Al pasar argumentos a funciones, es fundamental decidir si:
 
-✅ Se debe **copiar** el recurso (lo que implica un coste).
-✅ Se debe permitir que la función **modifique** el recurso original.
-✅ La función solo debe **acceder** al recurso sin modificarlo (idealmente mediante referencia constante).
-✅ Se desea **transferir la propiedad**, en cuyo caso se usan mecanismos como `std::move` o punteros inteligentes, que se tratarán más adelante.
+* Se debe **copiar** el recurso (lo que implica un coste).
+* Se debe permitir que la función **modifique** el recurso original.
+* La función solo debe **acceder** al recurso sin modificarlo (idealmente mediante referencia constante).
 
-**Resumen práctico:**
-
-| Situación                               | Cómo pasar el argumento                   |
-| --------------------------------------- | ----------------------------------------- |
-| Tipo simple, poco costoso de copiar     | Por valor                                 |
-| Objeto complejo, no se debe modificar   | Por referencia constante (`const &`)      |
-| Objeto complejo, se debe modificar      | Por referencia (`&`)                      |
-| Trabajo con memoria dinámica o opcional | Por puntero (preferentemente inteligente) |
-
----
-
-## Conclusión
-
-En C++ moderno, dominar las formas de pasar argumentos a funciones es esencial para escribir código:
-
-✅ Eficiente (evitando copias innecesarias).
-✅ Seguro (evitando errores de modificación no deseada).
-✅ Compatible con la gestión automática de recursos.
-
-En el siguiente apartado veremos en detalle el concepto de **referencias constantes** y ejemplos prácticos de cuándo y cómo usarlas correctamente.
-
----
-
-¿Quieres que prepare ya ese siguiente apartado con ejemplos de uso de referencias constantes?

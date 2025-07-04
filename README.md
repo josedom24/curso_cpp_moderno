@@ -46,7 +46,7 @@
 5. Programación estructurada
 
     * [Introducción a la programación estructurada y uso de funciones](contenido/modulo05/funciones.md)
-    * Paso de argumentos a funciones
+    * [Paso de argumentos a funciones](contenido/modulo05/argumentos.md)
     * Valores de retorno de una función
     * Parámetros con valores por defecto y constexpr
     * Funciones inline y expresiones lambda básicas 
