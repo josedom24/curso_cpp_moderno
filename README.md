@@ -47,10 +47,10 @@
 
     * [Introducción a la programación estructurada y uso de funciones](contenido/modulo05/funciones.md)
     * [Paso de argumentos a funciones](contenido/modulo05/argumentos.md)
-    * Valores de retorno de una función
-    * Parámetros con valores por defecto y constexpr
-    * Funciones inline y expresiones lambda básicas 
-    * Recursividad
+    * [Valores de retorno de una función](contenido/modulo05/retorno.md)
+    * [Ámbito y duración de las variables en funciones](contenido/modulo05/ambito.md)
+    * [Tipos de funciones: constexpr, inline, lambda y recursivas](contenido/modulo05/tipos.md)
+    * Ejercicios con funciones
 
 6. Tipos de datos compuestos
 
