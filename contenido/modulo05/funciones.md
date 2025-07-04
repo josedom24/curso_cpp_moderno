@@ -81,23 +81,7 @@ int main() {
 
 ## Prototipos de funciones
 
-Perfecto, aquí tienes una definición más formal y precisa de **prototipo de función**, sin utilizar la palabra "promesa":
-
----
-
-### ¿Qué es un prototipo de función?
-
 Un **prototipo de función** es una declaración previa que informa al compilador acerca del nombre, el tipo de retorno y la lista y tipo de los parámetros de una función. Permite al compilador verificar las llamadas a la función antes de que su definición completa aparezca en el código.
-
-Muy buena observación. Efectivamente, para un curso introductorio es fundamental explicar **dónde se declaran y definen las funciones**, y qué es exactamente un **prototipo de función**.
-
-Aquí tienes la ampliación del material didáctico para incluir este aspecto, ya integrado de forma coherente en el mismo apartado:
-
----
-
-## Definición, uso y clasificación de funciones en C++
-
-Las funciones son bloques de código reutilizables que permiten dividir un programa en partes más pequeñas, claras y fáciles de mantener. Son esenciales en la programación estructurada y constituyen una herramienta fundamental en C++.
 
 * Normalmente escribimos los prototipos **antes de `main()`**. Permite que `main()` o cualquier otra función puedan invocar a esa función, incluso si su definición completa viene después.
 * La definición de la función se puede escribir **antes o después de `main()`**, siempre que el prototipo esté presente si la definición está después.
