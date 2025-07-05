@@ -92,9 +92,9 @@ int main() {
 }
 ```
 
-## Introducción al bucle `for` range-based
+## Introducción al bucle range-based for loop (bucle basado en rangos)
 
-El **range-based for** simplifica el recorrido de los elementos de colecciones como cadenas (`std::string`), arrays o contenedores como `std::vector`. La sintaxis general:
+El **rrange-based for loop (bucle basado en rangos)** simplifica el recorrido de los elementos de colecciones como cadenas (`std::string`), arrays o contenedores como `std::vector`. La sintaxis general:
 
 ```cpp
 for (tipo elemento : colección) {
@@ -121,4 +121,4 @@ int main() {
 * El bucle `for` permite ejecutar un bloque un número determinado de veces.
 * Las tres partes del `for` son opcionales.
 * En C++ moderno, es habitual usar `{}` para inicializaciones generales, pero dentro del `for` se sigue usando `=` por legibilidad.
-* El **range-based for** facilita recorrer colecciones como cadenas o vectores.
+* El **range-based for loop (bucle basado en rangos)** facilita recorrer colecciones como cadenas o vectores.
