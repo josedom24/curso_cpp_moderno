@@ -194,15 +194,3 @@ int main() {
     }
 }
 ```
-
----
-
-## ✅ **5. Conclusión**
-
-Los algoritmos de la biblioteca estándar son esenciales para manipular datos de forma eficiente y segura en C++. Su diseño genérico permite aplicarlos a múltiples contenedores, mejorando la legibilidad y robustez del código.
-
-Un buen dominio de estos algoritmos es fundamental para desarrollar programas profesionales, eficientes y fáciles de mantener.
-
----
-
-¿Quieres que prepare ejercicios prácticos para que los estudiantes practiquen estos algoritmos con diferentes contenedores? 🎯

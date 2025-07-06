@@ -72,10 +72,6 @@ int main() {
 }
 ```
 
-Aquí tienes el texto que pediste, con los ejemplos completados para que sean ejecutables:
-
----
-
 ## Recorrido de un `std::string`
 
 Una operación habitual al trabajar con cadenas es recorrer sus caracteres, ya sea para mostrarlos, analizarlos o modificarlos. Existen varias formas de hacerlo, y es importante utilizar el tipo de dato correcto para los índices, especialmente en C++ moderno.

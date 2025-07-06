@@ -85,12 +85,6 @@ int main() {
 
 ## Relación con la Programación Orientada a Objetos (POO)
 
-Aquí tienes una **conclusión formal** sobre `struct`, adaptada al enfoque de tu curso, donde se deja claro que los aspectos avanzados se tratarán al introducir la Programación Orientada a Objetos y el concepto de `class`:
-
----
-
-## **Conclusión sobre `struct` en C++ moderno**
-
 Las estructuras (`struct`) en C++ son una herramienta fundamental para agrupar múltiples datos relacionados bajo un mismo nombre. Su uso permite organizar la información de forma clara y facilita el modelado de entidades sencillas dentro de un programa.
 
 Aunque en C++ moderno los `struct` pueden incorporar **constructores**, **métodos** y otras características avanzadas, en este apartado nos hemos centrado en su función básica: **agrupar datos de manera simple y directa**.

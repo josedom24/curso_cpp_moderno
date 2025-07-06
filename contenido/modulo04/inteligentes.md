@@ -76,8 +76,6 @@ int main() {
 ```
 El uso incorrecto de `shared_ptr` puede provocar **ciclos de referencias**, causando fugas de memoria. Para evitarlo, se utiliza `std::weak_ptr`.
 
----
-
 ## `std::weak_ptr` 
 
 `std::weak_ptr` es un puntero inteligente que observa un recurso gestionado por `shared_ptr`, pero **sin poseerlo**. Se le suele llamar **observador sin propiedad**. Su principal finalidad es romper ciclos de referencias y sus características son:
