@@ -58,7 +58,7 @@
     * [Tipos definidos por el usuario: `struct`](contenido/modulo06/struct.md)
     * [Cadenas de caracteres: `std::string`](contenido/modulo06/string.md)
     * [Arreglos: `std::array`](contenido/modulo06/array.md)
-    * Vectores: `std::vector`
+    * [Vectores: `std::vector`](contenido/modulo06/vector.md)
     * Listas: `std::list`
     * [Algoritmos de la Biblioteca Estándar de C++](contenido/modulo06/algoritmos.md)
     * Mapas: `std::map` y `std::unordered_map`
