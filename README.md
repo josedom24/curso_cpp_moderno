@@ -57,9 +57,10 @@
     * [Tipos definidos por el usuario: `enum class`](contenido/modulo06/enum.md)
     * [Tipos definidos por el usuario: `struct`](contenido/modulo06/struct.md)
     * [Cadenas de caracteres: `std::string`](contenido/modulo06/string.md)
-    * Arreglos: `std::array`
+    * [Arreglos: `std::array`](contenido/modulo06/array.md)
     * Vectores: `std::vector`
     * Listas: `std::list`
+    * [Algoritmos de la Biblioteca Estándar de C++](contenido/modulo06/algoritmos.md)
     * Mapas: `std::map` y `std::unordered_map`
     
 

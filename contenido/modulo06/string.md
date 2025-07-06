@@ -158,7 +158,7 @@ int main() {
 }
 ```
 
-### Uso de iteradores
+### Recorrido con iteradores
 
 Un **iterador** en C++ moderno es un objeto que permite recorrer los elementos de un contenedor (como un `std::vector`, `std::list`, `std::map`, etc.) de manera similar a un puntero. Los iteradores abstraen el acceso a los elementos del contenedor, proporcionando una interfaz común para iterar sobre diferentes tipos de contenedores, sin necesidad de conocer su implementación interna.
 
@@ -188,7 +188,7 @@ Ah, ya entiendo. Vamos a centrarnos en **cómo enviar un `std::string` a una fun
 
 ## `std::string` como parámetro en funciones
 
-### Paso de `std::string` por valor
+### Paso por valor
 
 Cuando pasamos un `std::string` por valor, se realiza una **copia completa** del objeto. Esto significa que la cadena original no se ve afectada por modificaciones dentro de la función, pero puede ser menos eficiente si la cadena es muy grande.
 
@@ -212,7 +212,7 @@ int main() {
     return 0;
 }
 ```
-### Paso de `std::string` por referencia
+### Paso por referencia
 
 Cuando pasamos un `std::string` por **referencia** (sin `const`), la función puede modificar directamente el objeto original. Esto es útil cuando se necesita cambiar el contenido de la cadena en la función y no se desea realizar una copia.
 
@@ -237,7 +237,7 @@ int main() {
 }
 ```
 
-### Paso de `std::string` por referencia constante
+### Paso por referencia constante
 
 Si no necesitas modificar la cadena dentro de la función, pero aún deseas evitar hacer una copia innecesaria, puedes pasar el `std::string` por **referencia constante**. Esto mejora la eficiencia, ya que no se realiza una copia, y también garantiza que la cadena no sea modificada dentro de la función.
 
@@ -258,7 +258,7 @@ int main() {
 }
 ```
 
-### Paso de `std::string` por puntero
+### Paso por puntero
 
 Aunque no es tan común en C++ moderno, también es posible pasar un `std::string` por **puntero**. Este enfoque se utiliza con menos frecuencia, ya que la referencia es más segura y conveniente. Sin embargo, es útil cuando se quiere pasar un puntero nulo (es decir, cuando se desea tener la posibilidad de que el argumento sea opcional).
 
