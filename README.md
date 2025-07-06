@@ -60,8 +60,9 @@
     * [Arreglos: `std::array`](contenido/modulo06/array.md)
     * [Vectores: `std::vector`](contenido/modulo06/vector.md)
     * [Listas: `std::list`](contenido/modulo06/list.md)
+    * [Mapas: `std::map` y `std::unordered_map`](contenido/modulo06/map.md)
     * [Algoritmos de la Biblioteca Estándar de C++](contenido/modulo06/algoritmos.md)
-    * Mapas: `std::map` y `std::unordered_map`
+    
     
 
 7. Programación orientada a objetos

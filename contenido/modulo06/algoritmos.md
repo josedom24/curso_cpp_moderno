@@ -194,3 +194,66 @@ int main() {
     }
 }
 ```
+
+## Algoritmos aplicables a mapas
+
+Los mapas (`std::map` y `std::unordered_map`) son contenedores que proporcionan **iteradores bidireccionales** (en el caso de `std::map`) o **iteradores al menos forward** (en el caso de `std::unordered_map`). Esto significa que se pueden usar algoritmos de la STL que:
+
+* No modifiquen la estructura interna del mapa (es decir, que no intenten ordenar, insertar o eliminar elementos, lo cual debe hacerse mediante los métodos específicos del mapa).
+* Trabajen sobre el rango proporcionado por los iteradores, generalmente operando sobre los **pares clave-valor**.
+
+Ejemplos de algoritmos que **sí** se pueden aplicar:
+
+* `std::for_each`: Recorrer y aplicar una función a cada elemento.
+* `std::find_if`: Buscar un elemento que cumpla una condición (aunque para buscar por clave es mejor usar `find()`).
+* `std::count_if`: Contar elementos que cumplan una condición.
+* `std::all_of`, `std::any_of`, `std::none_of`: Comprobar condiciones sobre los elementos.
+
+Algoritmos que no tienen sentido en mapas: `std::sort`, `std::reverse`, `std::shuffle` **no se deben aplicar**, ya que:
+
+* Los mapas ya tienen su propio criterio de orden (por clave en `std::map`).
+* Intentar alterar el orden viola las propiedades internas de la estructura.
+* Si necesitas orden personalizado, debes definir un comparador al construir el mapa, no con algoritmos externos.
+
+---
+
+Ejemplo con un `std::map`**
+
+```cpp
+#include <iostream>
+#include <map>
+#include <algorithm>
+#include <string>
+
+int main() {
+    std::map<std::string, int> edades {
+        {"Ana", 25},
+        {"Luis", 30},
+        {"Maria", 28}
+    };
+
+    // std::for_each para mostrar contenido
+    std::for_each(edades.begin(), edades.end(), [](const auto& par) {
+        std::cout << par.first << " tiene " << par.second << " años.\n";
+    });
+
+    // std::count_if para contar personas mayores de 27
+    int mayores = std::count_if(edades.begin(), edades.end(), [](const auto& par) {
+        return par.second > 27;
+    });
+    std::cout << "Hay " << mayores << " personas mayores de 27 años.\n";
+
+    // std::find_if para buscar a alguien con 30 años
+    auto it = std::find_if(edades.begin(), edades.end(), [](const auto& par) {
+        return par.second == 30;
+    });
+
+    if (it != edades.end()) {
+        std::cout << it->first << " tiene 30 años.\n";
+    } else {
+        std::cout << "Nadie tiene 30 años.\n";
+    }
+
+    return 0;
+}
+```
