@@ -97,3 +97,17 @@ Otros temas:
 
 3. C++ moderno en acción (proyecto final)
 
+
+Sugerencia para el contenido del módulo 8 combinado:
+
+Introducción a ficheros (ifstream, ofstream, fstream)
+
+Apertura, lectura y escritura de archivos
+
+Comprobación de errores en apertura y lectura
+
+Manejo básico de errores con condicionales y assert
+
+Introducción ligera a excepciones (try-catch) aplicadas a operaciones con archivos
+
+Ejercicios prácticos que incluyan lectura/escritura y control de errores
