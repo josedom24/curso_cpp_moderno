@@ -59,7 +59,7 @@
     * [Cadenas de caracteres: `std::string`](contenido/modulo06/string.md)
     * [Arreglos: `std::array`](contenido/modulo06/array.md)
     * [Vectores: `std::vector`](contenido/modulo06/vector.md)
-    * Listas: `std::list`
+    * [Listas: `std::list`](contenido/modulo06/list.md)
     * [Algoritmos de la Biblioteca Estándar de C++](contenido/modulo06/algoritmos.md)
     * Mapas: `std::map` y `std::unordered_map`
     
