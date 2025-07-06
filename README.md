@@ -62,7 +62,11 @@
     * [Listas: `std::list`](contenido/modulo06/list.md)
     * [Mapas: `std::map` y `std::unordered_map`](contenido/modulo06/map.md)
     * [Algoritmos de la Biblioteca Estándar de C++](contenido/modulo06/algoritmos.md)
-    
+    * [Ejercicios con `std::string`](contenido/modulo06/ejercicios_string.md)
+    * [Ejercicios con `std::array`](contenido/modulo06/ejercicios_array.md)
+    * [Ejercicios con `std::vector`](contenido/modulo06/ejercicios_vector.md)
+    * [Ejercicios con `std::list`](contenido/modulo06/ejercicios_list.md)
+    * [Ejercicios con `std::map` y `std::unordered_map`](contenido/modulo06/ejercicios_map.md)
     
 
 7. Programación orientada a objetos
