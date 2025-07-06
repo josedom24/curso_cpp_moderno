@@ -207,6 +207,38 @@ int main() {
 }
 ```
 
+## Trabajando con arrays multidimensionales
 
+Una **tabla o matriz** en un array bidimensional. La primera dimensión indica el número de filas y el segundo el número de columnas. Para acceder a cada uno de lo elemento tenemos que indicar la fila y la columna en la que se encuentra, siempre empezando por el 0. Veamos un ejemplo:
+
+```cpp
+#include <iostream>
+#include <array>
+
+int main() {
+    // Definir una tabla de 3 filas por 4 columnas con valores iniciales
+    std::array<std::array<int, 4>, 3> tabla {{
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    }};
+
+    // Recorrer la tabla fila por fila
+    for (const auto& fila : tabla) {
+        for (int valor : fila) {
+            std::cout << valor << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
+```
+
+* Se usa `std::array<std::array<int, 4>, 3>` para representar una matriz de 3 filas y 4 columnas.
+* Se inicializa con valores usando **inicialización uniforme**.
+* El recorrido se hace usando bucles range-based (`for (const auto& fila : tabla)`).
+* Cada `fila` es un `std::array<int, 4>`, y se puede recorrer también con un range-based loop.
+* Los arrays pueden tener las dimensiones que deseemos, por ejemplo podemos tener una array de tres dimensiones. En este caso necesitaríamos 3 bucles for para realizar el recorrido.
 
 
