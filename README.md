@@ -71,9 +71,10 @@
 
 7. Programación orientada a objetos
 
-    * Clases y objetos en C++
-    * Constructores y destructores
-    * Encapsulamiento (public, private, protected)
+    * Introducción a la Programación Orientada a Objetos
+    * Definición de clases y creación de objetos
+    * Constructores, destructores y métodos constantes
+    * Composición de Objetos
     * Métodos const, this, inicialización con member initializer list
     * std::unique_ptr y RAII
 
