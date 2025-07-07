@@ -99,6 +99,11 @@ public:
 ```
 
 Si no se define, el compilador genera uno por defecto. Sin embargo, es fundamental definirlo cuando se gestionan recursos manualmente.
+En ocasiones se recomienda definirlo expresamente. En este caso, le estamos diciendo al compiladore que genere automáticamente el destructor por defecto para una clase. La sintaxis para realizar esta declaración sería:
+
+```cpp
+~Clase() = default;
+```
 
 ## Métodos constantes (`const`) y objetos constantes
 

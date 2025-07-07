@@ -69,14 +69,14 @@
     * [Ejercicios con `std::map` y `std::unordered_map`](contenido/modulo06/ejercicios_map.md)
     
 
-7. Programación orientada a objetos
+7. Programación orientada a objeto/
 
-    * Introducción a la Programación Orientada a Objetos
-    * Definición de clases y creación de objetos
-    * Constructores, destructores y métodos constantes
-    * Composición de Objetos
-    * Métodos const, this, inicialización con member initializer list
-    * std::unique_ptr y RAII
+    * [Introducción a la Programación Orientada a Objetos](contenido/modulo07/introduccion.md)
+    * [Definición de clases y creación de objetos](contenido/modulo07/poo_c++.md)
+    * [Constructores, destructores y métodos constantes](contenido/modulo07/constructor.md)
+    * [Composición de Objetos](contenido/modulo07/composicion.md)
+    * [Herencia y polimorfismo](contenido/modulo07/herencia.md)
+    * Ejercicios de programación orieentada a objetos
 
 ---
 
