@@ -50,7 +50,7 @@
     * [Valores de retorno de una función](contenido/modulo05/retorno.md)
     * [Ámbito y duración de las variables en funciones](contenido/modulo05/ambito.md)
     * [Tipos de funciones: constexpr, inline, lambda y recursivas](contenido/modulo05/tipos.md)
-    * Ejercicios con funciones
+    * [Ejercicios con funciones](contenido/modulo05/ejercicios.md)
 
 6. Tipos de datos compuestos
 
