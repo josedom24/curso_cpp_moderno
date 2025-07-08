@@ -5,7 +5,7 @@
     * ¿Qué es un lenguaje de programación?
     * Introducción a C++: historia y evolución
     * ¿Qué es C++ moderno? (C++11, C++14, C++17, C++20)
-    * Instalación de C++
+    * Instalación de un entorno de desarrollo para C++
     * [Estructura de un programa en C++](contenido/modulo01/estructura.md)
     * Cómo compilar y ejecutar programas (VS Code, terminal)
 
