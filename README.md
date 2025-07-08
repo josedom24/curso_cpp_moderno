@@ -83,37 +83,3 @@
     * Introducción al trabajo con archivos
     * Apertura, lectura y escritura de archivos
     * Ejercicios con archivos
----
-
-Otros temas:
-
-1. Funciones avanzadas y plantillas
-
-    * Sobrecarga de funciones
-    * Plantillas (template<class T>)
-    * Introducción a std::function y lambdas más complejas
-    * constexpr y inline en funciones genéricas
-
-2. Manejo de errores y depuración
-
-    * Errores comunes de compilación y lógica
-    * Uso de assert y static_assert
-    * Excepciones (try, catch, throw)
-    * Buenas prácticas: evitar new/delete, usar std::vector y std::unique_ptr
-
-3. C++ moderno en acción (proyecto final)
-
-
-Sugerencia para el contenido del módulo 8 combinado:
-
-Introducción a ficheros (ifstream, ofstream, fstream)
-
-Apertura, lectura y escritura de archivos
-
-Comprobación de errores en apertura y lectura
-
-Manejo básico de errores con condicionales y assert
-
-Introducción ligera a excepciones (try-catch) aplicadas a operaciones con archivos
-
-Ejercicios prácticos que incluyan lectura/escritura y control de errores
