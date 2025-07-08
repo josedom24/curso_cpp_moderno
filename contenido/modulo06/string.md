@@ -165,7 +165,7 @@ Un **iterador** en C++ moderno es un objeto que permite recorrer los elementos d
 int main() {
     std::string texto {"Hola Mundo"};
 
-    for (std::string::iterator it = texto.begin(); it != texto.end(); it++) {
+    for (std::string::iterator it = texto.begin(); it != texto.end(); ++it) {
         std::cout << *it << ' ';
     }
     std::cout << std::endl;
@@ -178,7 +178,7 @@ En este ejemplo:
 
 * `texto.begin()` devuelve un **iterador** que apunta al primer carácter de la cadena.
 * `texto.end()` devuelve un **iterador** que apunta a la posición **después** del último elemento.
-* `it++` avanza el iterador al siguiente elemento, y `*it` accede al valor al que apunta.
+* `++it` avanza el iterador al siguiente elemento, y `*it` accede al valor al que apunta.
 
 Ah, ya entiendo. Vamos a centrarnos en **cómo enviar un `std::string` a una función como parámetro**. Este es un tema importante, ya que las cadenas son uno de los tipos de datos más utilizados en C++ y es esencial entender cómo pasarlas a funciones correctamente, tanto por valor como por referencia.
 

@@ -145,7 +145,7 @@ int main() {
 int main() {
     std::array<int, 5> numeros{1, 2, 3, 4, 5};
 
-    for (auto it = numeros.begin(); it != numeros.end(); it++) {
+    for (auto it = numeros.begin(); it != numeros.end(); ++it) {
         std::cout << *it << " ";
     }
 

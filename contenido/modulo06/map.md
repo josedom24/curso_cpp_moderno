@@ -136,7 +136,7 @@ int main() {
         {"Maria", 9101}
     };
 
-    for (auto it = telefonos.begin(); it != telefonos.end(); it++) {
+    for (auto it = telefonos.begin(); it != telefonos.end(); ++it) {
         std::cout << it->first << ": " << it->second << std::endl;
     }
 
