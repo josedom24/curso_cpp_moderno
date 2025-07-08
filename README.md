@@ -5,9 +5,9 @@
     * ¿Qué es un lenguaje de programación?
     * Introducción a C++: historia y evolución
     * ¿Qué es C++ moderno? (C++11, C++14, C++17, C++20)
-    * Instalación de un entorno de desarrollo para C++
+    * [Instalación de un entorno de desarrollo para C++](contenido/modulo01/instalacion.md)
     * [Estructura de un programa en C++](contenido/modulo01/estructura.md)
-    * Cómo compilar y ejecutar programas (VS Code, terminal)
+    * [Cómo compilar y ejecutar programas](contenido/modulo01/compilacion.md)
 
 2.  Tipos de datos básicos
 
