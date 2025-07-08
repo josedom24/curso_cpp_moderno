@@ -76,7 +76,7 @@
     * [Constructores, destructores y métodos constantes](contenido/modulo07/constructor.md)
     * [Composición de Objetos](contenido/modulo07/composicion.md)
     * [Herencia y polimorfismo](contenido/modulo07/herencia.md)
-    * Ejercicios de programación orieentada a objetos
+    * [Ejercicios de programación orientada a objetos](contenido/modulo07/ejercicios.md)
 
 ---
 

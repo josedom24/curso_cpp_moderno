@@ -154,3 +154,28 @@ int main() {
 
 * Es preferible usar la estructura `else if` en lugar de anidar múltiples `if` para evitar código difícil de leer.
 * Hay que tener en cuenta que la evaluación de las condiciones se realiza en orden, y se ejecuta solo el primer bloque cuyo `if` o `else if` sea verdadero.
+
+## Operador condicional ternario
+
+Es una forma compacta de escribir una estructura `if-else`. Su sintaxis es:
+
+```
+condición ? valor_si_verdadero : valor_si_falso;
+```
+
+Se evalúa la `condición`:
+* Si es **verdadera**, se devuelve `valor_si_verdadero`.
+* Si es **falsa**, se devuelve `valor_si_falso`.
+
+Ejemplo:
+
+```cpp
+#include <iostream>
+
+int main() {
+    int edad = 17;
+    std::string resultado{ (edad >= 18) ? "Mayor de edad" : "Menor de edad"};
+    std::cout << resultado << '\n';
+    return 0;
+}
+```
