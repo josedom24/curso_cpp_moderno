@@ -78,6 +78,12 @@
     * [Herencia y polimorfismo](contenido/modulo07/herencia.md)
     * [Ejercicios de programación orientada a objetos](contenido/modulo07/ejercicios.md)
 
+
+8. Excepciones y trabajo con archivos
+    * Introducción a las excepciones
+    * Introducción al trabajo con archivos
+    * Apertura, lectura y escritura de archivos
+    * Ejercicios con archivos
 ---
 
 Otros temas:
