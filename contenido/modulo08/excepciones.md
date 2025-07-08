@@ -60,7 +60,9 @@ int main() {
 }
 ```
 
-Aquí, usamos `vector::at`, que **lanza automáticamente** una excepción si se accede a una posición inválida. El código susceptible de fallar lo metemos en el bloque `try` y usamos `catch` para capturar la excepción y ejecutar las instrucciones que se deben de ejecutar cuando se produce. El programa **no se detiene**.
+* Aquí, usamos `vector::at`, que **lanza automáticamente** una excepción si se accede a una posición inválida. El código susceptible de fallar lo metemos en el bloque `try` y usamos `catch` para capturar la excepción y ejecutar las instrucciones que se deben de ejecutar cuando se produce. El programa **no se detiene**.
+* `e` es el objeto que representa la excepción que ha sido capturada en el bloque `catch`. Todas las excepciones estándar derivan de la clase base `std::exception`, que tiene un método llamado `what()`, que devuelve un mensaje descriptivo en formato de cadena de texto (`const char*`).
+* `std::cerr` es un flujo de salida estándar de errores (error output stream). Se usa para mostrar mensajes de error o advertencia, diferenciándolos de la salida normal que va a `std::cout`.
 
 ## Jerarquía de excepciones estándar
 
@@ -119,12 +121,11 @@ int main() {
 
 ```
 
+* Es necesario incluir el fichero de cabecea `stdexcept` donde están definidas varias clases de excepciones estándar.
 * Capturamos varias posibles excepciones.
 * Usamos `v.at(10)`, que intenta acceder al elemento en la posición 10 de un vector con solo 3 elementos. Como esa posición no existe, la función `at()` lanza automáticamente una excepción del tipo `std::out_of_range`.
 * Luego intenta convertir la cadena "abc" a un número entero con `std::stoi("abc")`. Esta función detecta que la cadena no representa un número válido y lanza una excepción `std::invalid_argument`.
-* Si se produce otra excepción se captura con la excepción `std::exception` que es la más general.
-* `e` es el objeto que representa la excepción que ha sido capturada en el bloque `catch`. Todas las excepciones estándar derivan de la clase base `std::exception`, que tiene un método llamado `what()`, que devuelve un mensaje descriptivo en formato de cadena de texto (`const char*`).
-* `std::cerr` es un flujo de salida estándar de errores (error output stream). Se usa para mostrar mensajes de error o advertencia, diferenciándolos de la salida normal que va a `std::cout`.
+* Si se produce otra excepción se captura con la excepción `std::exception` que es la más g
 
 
 ## Lanzar nuestras propias excepciones con `throw`
