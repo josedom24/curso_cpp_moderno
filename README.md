@@ -2,9 +2,8 @@
 
 1. Fundamentos de la programación
 
-    * ¿Qué es un lenguaje de programación?
-    * Introducción a C++: historia y evolución
-    * ¿Qué es C++ moderno? (C++11, C++14, C++17, C++20)
+    * [¿Qué es un lenguaje de programación?](contenido/modulo01/introduccion.md)
+    * [Introducción a C++ moderno](contenido/modulo01/cpp.md)
     * [Instalación de un entorno de desarrollo para C++](contenido/modulo01/instalacion.md)
     * [Estructura de un programa en C++](contenido/modulo01/estructura.md)
     * [Cómo compilar y ejecutar programas](contenido/modulo01/compilacion.md)
