@@ -14,7 +14,7 @@ En C++, como en cualquier lenguaje de programación, los errores pueden aparecer
 
     ```cpp
     int main() {
-        int x = "texto"; // ❌ Error de tipo: se esperaba un entero
+        int x = "texto"; // Error de tipo: se esperaba un entero
     }
     ```
 
@@ -33,7 +33,8 @@ En C++, como en cualquier lenguaje de programación, los errores pueden aparecer
 
     ```
 
-    El compilador no puede saber que `b` valdrá cero, así que no puede evitar el problema. Este tipo de errores pueden ser difíciles de encontrar y corregir, sobre todo si el programa es grande o complejo.
+    El compilador no puede saber que intentaremos acceder a una posición inválida, así que no puede evitar el problema. Recuerda que `at()` lanza excepción en caso de acceso fuera de rango, mientras que la indexación con el operador `[ ]` produce un comportamiento indefinido.
+    Este tipo de errores pueden ser difíciles de encontrar y corregir, sobre todo si el programa es grande o complejo.
 
 ## ¿Qué son las excepciones?
 
@@ -60,7 +61,7 @@ int main() {
 }
 ```
 
-* Aquí, usamos `vector::at`, que **lanza automáticamente** una excepción si se accede a una posición inválida. El código susceptible de fallar lo metemos en el bloque `try` y usamos `catch` para capturar la excepción y ejecutar las instrucciones que se deben de ejecutar cuando se produce. El programa **no se detiene**.
+* Aquí, usamos `vector::at`, que **lanza automáticamente** una excepción si se accede a una posición inválida. El código susceptible de fallar lo metemos en el bloque `try` y usamos `catch` para capturar la excepción y ejecutar las instrucciones que se deben de ejecutar cuando se produce. El programa **no se detiene**,  si la excepción se captura.
 * `e` es el objeto que representa la excepción que ha sido capturada en el bloque `catch`. Todas las excepciones estándar derivan de la clase base `std::exception`, que tiene un método llamado `what()`, que devuelve un mensaje descriptivo en formato de cadena de texto (`const char*`).
 * `std::cerr` es un flujo de salida estándar de errores (error output stream). Se usa para mostrar mensajes de error o advertencia, diferenciándolos de la salida normal que va a `std::cout`.
 
@@ -125,14 +126,14 @@ int main() {
 * Capturamos varias posibles excepciones.
 * Usamos `v.at(10)`, que intenta acceder al elemento en la posición 10 de un vector con solo 3 elementos. Como esa posición no existe, la función `at()` lanza automáticamente una excepción del tipo `std::out_of_range`.
 * Luego intenta convertir la cadena "abc" a un número entero con `std::stoi("abc")`. Esta función detecta que la cadena no representa un número válido y lanza una excepción `std::invalid_argument`.
-* Si se produce otra excepción se captura con la excepción `std::exception` que es la más g
+* Si se produce otra excepción se captura con la excepción `std::exception` que es la más genérica, y permite capturar cualquier excepción derivada de esta clase base.
 
 
 ## Lanzar nuestras propias excepciones con `throw`
 
 Una vez entendido cómo capturar excepciones, podemos pasar al siguiente nivel: **lanzar nuestras propias excepciones** cuando detectamos una situación anómala. La instrucción `throw` permite **lanzar** una excepción.
 
-Supongamos que escribimos una función para dividir dos enteros. Si el divisor es cero, no tiene sentido continuar, y es mejor **detener el flujo normal y avisar de forma estructurada**:
+Supongamos que escribimos una función para dividir dos enteros. Si el divisor es cero, no tiene sentido continuar, y es mejor **detener el flujo normal de ejecución y avisar de forma estructurada**:
 
 ```cpp
 #include <iostream>
@@ -152,8 +153,14 @@ int main() {
     } catch (const std::runtime_error& e) {
         std::cerr << "Error: " << e.what() << '\n';
     }
+    std::cout << "Programa terminado correctamente\n";
 }
 ```
 
- 
+ En C++ moderno, una función puede declararse con `noexcept` para indicar que no lanza excepciones. Esto puede ayudar al compilador a optimizar el código y a detectar errores si se lanza una excepción inesperadamente.
 
+```cpp
+void funcionSegura() noexcept {
+    // Esta función promete no lanzar excepciones
+}
+```
