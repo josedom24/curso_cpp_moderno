@@ -80,6 +80,6 @@
 
 8. Excepciones y trabajo con archivos
     * [Introducción a las excepciones](contenido/modulo08/excepciones.md)
-    * Introducción al trabajo con archivos
+    * [Introducción al trabajo con archivos](contenido/modulo8/archivos.md)
     * Apertura, lectura y escritura de archivos
     * Ejercicios con archivos
