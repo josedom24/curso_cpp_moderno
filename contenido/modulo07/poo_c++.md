@@ -152,20 +152,7 @@ Los getters y setters:
 * Mejoran la seguridad y robustez del código.
 * Mantienen el principio de encapsulamiento.
 
-## Ejemplo final
-
-Claro, aquí tienes un **ejemplo completo** que integra todos los conceptos presentados en este apartado, mostrando de forma práctica:
-
-✅ Definición de una clase
-✅ Atributos (variables miembro)
-✅ Métodos (funciones miembro)
-✅ Modificadores de acceso (`private`, `public`)
-✅ Encapsulamiento con getters y setters
-✅ Creación e inicialización de objetos
-
----
-
-## **Ejemplo completo: Clase `Coche`**
+## Ejemplo completo: Clase `Coche`
 
 ```cpp
 #include <iostream>
