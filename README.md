@@ -72,6 +72,7 @@
 
     * [Introducción a la Programación Orientada a Objetos](contenido/modulo07/introduccion.md)
     * [Definición de clases y creación de objetos](contenido/modulo07/poo_c++.md)
+    * [Atributos estáticos de clase](contenido/modulo07/estatico.md)
     * [Constructores, destructores y métodos constantes](contenido/modulo07/constructor.md)
     * [Composición de Objetos](contenido/modulo07/composicion.md)
     * [Herencia y polimorfismo](contenido/modulo07/herencia.md)
