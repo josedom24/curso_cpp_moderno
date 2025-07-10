@@ -65,6 +65,7 @@ Por convención y buenas prácticas, se recomienda:
 
 * Declarar los atributos como `private` para proteger el estado del objeto.
 * Proporcionar métodos públicos controlados (getters y setters) para acceder o modificar los atributos si es necesario.
+* Terminar el nombre de los atributos con guión bajo `_`. Esto permite diferenciar claramente atributos de variables locales o parámetros y evitar colisiones de nombres.
 
 ## Creación e inicialización de objetos
 
