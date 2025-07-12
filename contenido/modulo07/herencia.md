@@ -1,4 +1,4 @@
-# **Herencia y polimorfismo
+# Herencia y polimorfismo
 
 La **herencia** y el **polimorfismo** son conceptos fundamentales de la Programación Orientada a Objetos (POO) que permiten:
 
