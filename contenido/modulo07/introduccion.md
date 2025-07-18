@@ -4,17 +4,6 @@ La **Programación Orientada a Objetos (POO)** es un paradigma de programación 
 
 La POO busca modelar sistemas complejos de una forma más natural y modular, facilitando el desarrollo, mantenimiento y comprensión de los programas. A diferencia de la programación estructurada, que organiza el código en funciones y estructuras de control, la POO agrupa los datos y las operaciones que se pueden realizar sobre ellos dentro de objetos.
 
-**¿Por qué usar la POO?**
-
-Los sistemas de software modernos tienden a ser grandes, complejos y en constante evolución. La POO ofrece mecanismos para:
-
-* Representar de manera directa entidades del mundo real.
-* Modularizar el código, dividiéndolo en pequeñas piezas independientes.
-* Favorecer la reutilización de código y la extensión de funcionalidades.
-* Mejorar la mantenibilidad y escalabilidad de los programas.
-
-El lenguaje **C++** es un lenguaje multiparadigma, lo que significa que permite combinar programación estructurada, programación orientada a objetos y otros enfoques, adaptándose a las necesidades de cada proyecto. La POO en C++ es una parte fundamental de su potencia y versatilidad.
-
 ## Ventajas de la POO frente a la programación estructurada
 
 A continuación se presentan algunas de las ventajas más relevantes que ofrece la POO en comparación con la programación estructurada tradicional:
@@ -25,8 +14,6 @@ A continuación se presentan algunas de las ventajas más relevantes que ofrece 
 * **Reutilización de código**: Gracias a la herencia y la composición, es posible reutilizar código existente sin duplicación.
 * **Mantenimiento simplificado**: Al estar el código dividido en componentes bien definidos, resulta más sencillo localizar y corregir errores.
 * **Extensibilidad**: Los programas se pueden ampliar y modificar de forma controlada, gracias a mecanismos como la herencia y el polimorfismo.
-
-Cabe destacar que la POO no sustituye completamente a la programación estructurada; de hecho, se complementan. Es habitual emplear estructuras de control (condicionales, bucles) y funciones dentro de un diseño orientado a objetos.
 
 ## Conceptos básicos: objetos, clases, atributos y métodos
 
@@ -39,11 +26,7 @@ Para comprender la POO en C++, es necesario familiarizarse con sus conceptos fun
 * **Atributos**: Los **atributos** son las variables que describen el estado de un objeto. Cada objeto mantiene sus propios valores de estos atributos.
 * **Métodos**: Los **métodos** son funciones asociadas a la clase que definen el comportamiento de los objetos. Pueden consultar o modificar el estado del objeto, o realizar acciones.
 
-
-
-## Ejemplos sencillos para motivar el tema
-
-### Ejemplo 1: Clase `Persona`
+## Ejemplo 1: Clase `Persona`
 
 ```cpp
 #include <iostream>
@@ -75,14 +58,12 @@ int main() {
 }
 ```
 
-### Análisis
-
 * **`Persona`** es una clase que representa a una persona.
 * Tiene dos atributos: `nombre` y `edad`.
 * Tiene un método: `presentar`, que muestra información sobre la persona.
 * En la función `main`, se crean dos objetos de tipo `Persona` y se invoca el método `presentar` en cada uno.
 
-### Ejemplo 2: Motivación
+## Ejemplo 2: Agenda de contactos
 
 Supongamos que queremos crear un programa para gestionar una agenda de contactos. Si utilizamos programación estructurada, tendríamos que definir estructuras y funciones separadas, y ser muy cuidadosos con los datos.
 
@@ -109,14 +90,3 @@ public:
 
 Con este enfoque, gestionar múltiples contactos se vuelve sencillo, ordenado y escalable.
 
----
-
-## Conclusión
-
-La Programación Orientada a Objetos permite diseñar software de forma más estructurada, cercana al mundo real y con un alto grado de modularidad. En C++, la POO se integra de manera natural, ofreciendo herramientas poderosas para el desarrollo de programas robustos, mantenibles y escalables.
-
-En los próximos apartados profundizaremos en los mecanismos concretos que C++ ofrece para implementar estos conceptos, como encapsulamiento, constructores, destructores, herencia y polimorfismo.
-
----
-
-¿Quieres que prepare también ejercicios o preguntas de repaso para este apartado?
