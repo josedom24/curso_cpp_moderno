@@ -13,8 +13,7 @@ RAII es una técnica de diseño que vincula la **adquisición** y **liberación*
 
 Este principio se aplica no solo a memoria dinámica, sino también a recursos como archivos abiertos, sockets, mutexes, conexiones de red, entre otros.
 
--Como es necesario aprender programación orientada a objetos para aplicar estos conceptos vermos los ejemplos detenidamente en ese apartado del curso.-
-
+--Como es necesario aprender programación orientada a objetos para aplicar estos conceptos vermos los ejemplos detenidamente en ese apartado del curso.--
 
 ## Propiedad de los recursos
 
