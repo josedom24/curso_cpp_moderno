@@ -40,7 +40,7 @@
     * [Gestión de memoria con punteros](contenido/modulo04/punteros.md)
     * [Gestión de memoria con referencias](contenido/modulo04/referencias.md)
     * [Propiedad de recursos y patrón RAII](contenido/modulo04/raii.md)
-    * [Gestión de memoria con punteros inteligentes](contenido/modulo04/propiedad.md)
+    * [Gestión de memoria con punteros inteligentes](contenido/modulo04/inteligente.md)
 
 5. Programación estructurada
 
