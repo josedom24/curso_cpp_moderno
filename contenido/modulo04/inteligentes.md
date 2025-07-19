@@ -1,5 +1,5 @@
 # Gestión de memoria con punteros inteligentes
-
+**Falta por explicar las instrucciones make_. Que son los ciclos de recerencia.?**
 En C++, la gestión segura y eficiente de memoria dinámica es un aspecto crítico del desarrollo robusto. Tras comprender los conceptos de **RAII** y **propiedad**, resulta natural introducir los **punteros inteligentes**, que son herramientas diseñadas precisamente para aplicar estos principios en la gestión de memoria.
 
 ## ¿Qué son los punteros inteligentes?
