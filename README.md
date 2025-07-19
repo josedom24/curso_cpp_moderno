@@ -90,9 +90,9 @@
     * Ejercicios con plantillas de función
 
 9. Excepciones y trabajo con archivos
-    * [Introducción a las excepciones](contenido/modulo08/excepciones.md)
+    * [Introducción a las excepciones](contenido/modulo09/excepciones.md)
     * Uso de mensajes de depuración (std::cerr, assert)
     * Manejo de errores y uso de `try`, `catch`, `throw`
-    * [Introducción al trabajo con archivos](contenido/modulo08/archivos.md)
-    * [Apertura, lectura y escritura de archivos](contenido/modulo08/operaciones.md)
-    * [Ejercicios con archivos](contenido/modulo08/ejercicios.md)
+    * [Introducción al trabajo con archivos](contenido/modulo09/archivos.md)
+    * [Apertura, lectura y escritura de archivos](contenido/modulo09/operaciones.md)
+    * [Ejercicios con archivos](contenido/modulo09/ejercicios.md)
