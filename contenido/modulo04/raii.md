@@ -13,7 +13,7 @@ RAII es una técnica de diseño que vincula la **adquisición** y **liberación*
 
 Este principio se aplica no solo a memoria dinámica, sino también a recursos como archivos abiertos, sockets, mutexes, conexiones de red, entre otros.
 
-Como es necesario aprender programación orientada a objetos para aplicar estos conceptos vermos los ejemplos detenidamente en ese apartado del curso.
+-Como es necesario aprender programación orientada a objetos para aplicar estos conceptos vermos los ejemplos detenidamente en ese apartado del curso.-
 
 
 ## Propiedad de los recursos
@@ -24,9 +24,9 @@ Cuando un objeto adquiere un recurso siguiendo el patrón RAII, se convierte en 
 
 Existen diferentes modelos de propiedad:
 
-* **Propiedad exclusiva**: Un único objeto posee el recurso.                        |
-* **Propiedad compartida**: Varios objetos comparten la responsabilidad del recurso. |
-* **Observador**: Un objeto observa el recurso, pero no lo posee.          |
+* **Propiedad exclusiva**: Un único objeto posee el recurso.
+* **Propiedad compartida**: Varios objetos comparten la responsabilidad del recurso.
+* **Observador**: Un objeto observa el recurso, pero no lo posee.
 
 Definir claramente la propiedad es esencial para:
 
