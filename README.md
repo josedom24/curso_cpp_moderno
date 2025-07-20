@@ -36,18 +36,11 @@
     * [Uso específico de variables: contadores, acumuladores e indicadores](contenido/modulo03/variables.md)
     * [Ejercicios estructuras repetitivas](contenido/modulo03/repetitiva.md)
 
-4. Gestión de recursos
-
-    * [Introducción a la gestión de recursos](contenido/modulo04/introduccion.md)
-    * [Gestión manual de memoria](contenido/modulo04/memoria.md)
-    * [Gestión de memoria con punteros](contenido/modulo04/punteros.md)
-    * [Gestión de memoria con referencias](contenido/modulo04/referencias.md)
-    * [Propiedad de recursos y patrón RAII](contenido/modulo04/raii.md)
-    * [Gestión de memoria con punteros inteligentes](contenido/modulo04/inteligentes.md)
-
-5. Programación estructurada
+4. Programación estructurada
 
     * [Introducción a la programación estructurada y uso de funciones](contenido/modulo05/funciones.md)
+    * [Gestión de memoria con punteros](contenido/modulo05/punteros.md)
+    * [Gestión de memoria con referencias](contenido/modulo05/referencias.md)
     * [Paso de argumentos a funciones](contenido/modulo05/argumentos.md)
     * [Valores de retorno de una función](contenido/modulo05/retorno.md)
     * [Ámbito y duración de las variables en funciones](contenido/modulo05/ambito.md)
@@ -55,9 +48,9 @@
     * Organización del código en archivos (.h y .cpp)
     * [Ejercicios con funciones](contenido/modulo05/ejercicios.md)
 
-6. Estructuras dinámicas de la STL
+5. Estructuras dinámicas de la STL
 
-    * [Gestión de memoria y estructuras dinámicas](contenido/modulo06/introducción.md)
+    * [Gestión de memoria y estructuras dinámicas](contenido/modulo06/introduccion.md)
     * [Cadenas de caracteres: `std::string`](contenido/modulo06/string.md)
     * [Arreglos: `std::array`](contenido/modulo06/array.md)
     * [Vectores: `std::vector`](contenido/modulo06/vector.md)
@@ -70,7 +63,7 @@
     * [Ejercicios con `std::list`](contenido/modulo06/ejercicios_list.md)
     * [Ejercicios con `std::map` y `std::unordered_map`](contenido/modulo06/ejercicios_map.md)
     
-7. Funciones avanzadas y abstracción de comportamiento
+6. Funciones avanzadas y abstracción de comportamiento
 
     * Introducción al paso de funciones como parámetros
     * Uso de lambdas para comportamiento flexible
@@ -81,7 +74,7 @@
     * Comparación práctica: funciones normales vs. lambdas vs. `std::function`
     * Ejercicios sobre abstracción de comportamiento
 
-8. Introducción a las plantillas
+7. Introducción a las plantillas
 
     * ¿Qué es la programación genérica?
     * Plantillas de funciones: sintaxis y deducción de tipos
@@ -90,7 +83,7 @@
     * Ventajas y limitaciones básicas
     * Ejercicios con plantillas de función
 
-9. Excepciones y trabajo con archivos
+8. Excepciones y trabajo con archivos
     * [Introducción a las excepciones](contenido/modulo09/excepciones.md)
     * Uso de mensajes de depuración (std::cerr, assert)
     * Manejo de errores y uso de `try`, `catch`, `throw`
