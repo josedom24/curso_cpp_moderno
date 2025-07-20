@@ -1,6 +1,6 @@
 # Gestión de memoria con punteros
 
-En C++, los **punteros** y las **referencias** son dos herramientas esenciales que permiten acceder y manipular los datos de forma indirecta. Estos mecanismos proporcionan un mayor control sobre la memoria y los recursos, y constituyen la base para trabajar de forma eficiente con estructuras dinámicas, memoria dinámica y funciones que necesitan modificar datos externos.
+En C++, los **punteros** y las **referencias** son dos herramientas esenciales que permiten acceder y manipular los datos guardados en memoria de forma indirecta. Estos mecanismos proporcionan un mayor control sobre la memoria y los recursos, y constituyen la base para trabajar de forma eficiente con estructuras dinámicas, memoria dinámica y funciones que necesitan modificar datos externos.
 
 ## Dirección de memoria
 
