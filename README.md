@@ -8,7 +8,7 @@
     * [Estructura de un programa en C++](contenido/modulo01/estructura.md)
     * [Cómo compilar y ejecutar programas](contenido/modulo01/compilacion.md)
 
-2.  Tipos de datos básicos
+2.  Tipos de datos
 
     * [Tipos de datos fundamentales](contenido/modulo02/tipos.md)
     * [Tipos de datos carácter y booleano](contenido/modulo02/caracter_bool.md)
@@ -20,6 +20,9 @@
     * [Conversión de cadenas de caracteres](contenido/modulo02/casting_cadenas.md)
     * [Entrada y salida estándar](contenido/modulo02/entrada_salida.md)
     * [Ejercicios estructura secuencial](contenido/modulo02/secuencial.md)
+    * [Tipos definidos por el usuario: `enum class`](contenido/modulo02/enum.md)
+    * [Tipos definidos por el usuario: `struct`](contenido/modulo02/struct.md)
+    * Tipos definidos por el usuario: clases y objetos
 
 3. Control de flujo
 
@@ -52,11 +55,9 @@
     * Organización del código en archivos (.h y .cpp)
     * [Ejercicios con funciones](contenido/modulo05/ejercicios.md)
 
-6. Tipos de datos compuestos
+6. Estructuras dinámicas de la STL
 
-    * [Tipos definidos por el usuario: `enum class`](contenido/modulo06/enum.md)
-    * [Tipos definidos por el usuario: `struct`](contenido/modulo06/struct.md)
-    * Tipos definidos por el usuario: clases y objetos
+    * [Gestión de memoria y estructuras dinámicas](contenido/modulo06/introducción.md)
     * [Cadenas de caracteres: `std::string`](contenido/modulo06/string.md)
     * [Arreglos: `std::array`](contenido/modulo06/array.md)
     * [Vectores: `std::vector`](contenido/modulo06/vector.md)
