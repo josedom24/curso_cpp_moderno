@@ -62,17 +62,14 @@
     * [Ejercicios con `std::vector`](contenido/modulo06/ejercicios_vector.md)
     * [Ejercicios con `std::list`](contenido/modulo06/ejercicios_list.md)
     * [Ejercicios con `std::map` y `std::unordered_map`](contenido/modulo06/ejercicios_map.md)
-    
-6. Funciones avanzadas y abstracción de comportamiento
 
-    * Introducción al paso de funciones como parámetros
-    * Uso de lambdas para comportamiento flexible
-    * Captura de variables en lambdas (`[=]`,` [&]`, `[this]`)
-    * `std::function` para callbacks o comportamientos configurables
-    * Aplicaciones prácticas: filtros, predicados, transformaciones
-    * Introducción al concepto de estrategia: cambiar comportamiento sin cambiar estructura
-    * Comparación práctica: funciones normales vs. lambdas vs. `std::function`
-    * Ejercicios sobre abstracción de comportamiento
+6. Funciones como parámetros y expresiones lambda
+
+    * Funciones como argumentos: modularidad sin clases
+    * Expresiones lambda: funciones anónimas
+    * Captura de variables en lambdas (`[=]`, `[&]`)
+    * Aplicación práctica: funciones como comportamiento configurable
+    * Ejercicios guiados: filtros y transformaciones con lambdas
 
 7. Introducción a las plantillas
 
