@@ -65,8 +65,8 @@
 
 6. Funciones como parámetros y expresiones lambda
 
-    * Funciones como argumentos: modularidad sin clases
-    * Expresiones lambda: funciones anónimas
+    * [Funciones como argumentos](contenido/modulo06/funciones.md)
+    * [Expresiones lambda: funciones anónimas](contenido/modulo06/lambda.md)
     * Captura de variables en lambdas (`[=]`, `[&]`)
     * Aplicación práctica: funciones como comportamiento configurable
     * Ejercicios guiados: filtros y transformaciones con lambdas

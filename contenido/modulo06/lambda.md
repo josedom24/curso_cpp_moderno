@@ -89,3 +89,157 @@ int main() {
     * Permiten escribir código más expresivo y localizado.
     * Facilitan la programación funcional y el paso de comportamiento como argumento.
     * Pueden capturar el contexto (estado externo) cuando se necesita.
+
+
+
+Nueva versión
+
+
+Perfecto. A continuación te presento el material didáctico correspondiente al apartado:
+
+---
+
+# 📘 Expresiones lambda: funciones anónimas
+
+## 1. Introducción
+
+En C++ moderno, una **expresión lambda** permite definir una función **de manera anónima** (es decir, sin nombre) directamente en el lugar donde se necesita. Este recurso es especialmente útil cuando se desea expresar un comportamiento simple de forma **concisa**, **localizada** y **efímera**, sin necesidad de declarar una función externa.
+
+Las lambdas son ideales para ser utilizadas como **argumentos a otras funciones**, especialmente en combinación con algoritmos de la STL, donde se requiere especificar condiciones o acciones concretas de forma clara.
+
+---
+
+## 2. Sintaxis básica de lambdas
+
+La forma general de una lambda es:
+
+```cpp
+[captura](parámetros) -> tipo_retorno {
+    cuerpo;
+};
+```
+
+Para muchas situaciones, el compilador puede deducir el tipo de retorno, por lo que este se puede omitir.
+
+### Ejemplo básico:
+
+```cpp
+auto cuadrado = [](int x) {
+    return x * x;
+};
+
+std::cout << cuadrado(5);  // Imprime 25
+```
+
+### Expresión lambda sin almacenarla:
+
+También es posible definir y utilizar una lambda **sin asignarla a una variable**:
+
+```cpp
+std::cout << [](int x) { return x * 2; }(10);  // Imprime 20
+```
+
+Esto se conoce como **invocación inmediata**.
+
+---
+
+## 3. Uso en lugar de funciones normales
+
+Supongamos que queremos una función que reciba un número y verifique si es impar. Podemos hacerlo de forma tradicional:
+
+```cpp
+bool es_impar(int x) {
+    return x % 2 != 0;
+}
+```
+
+Pero si sólo necesitamos este comportamiento en un punto concreto, podemos usar una lambda en su lugar:
+
+```cpp
+auto es_impar = [](int x) {
+    return x % 2 != 0;
+};
+```
+
+Este enfoque evita la proliferación de funciones auxiliares triviales. Además, hace el código más **modular** y **localizado**, ya que el comportamiento queda expresado en el lugar donde se necesita.
+
+---
+
+## 4. Ventajas de la notación lambda
+
+Las expresiones lambda ofrecen múltiples beneficios prácticos:
+
+### 🟦 1. **Código más conciso**
+
+Eliminan la necesidad de escribir funciones auxiliares innecesarias. Esto reduce el tamaño y la complejidad del código.
+
+```cpp
+std::for_each(v.begin(), v.end(), [](int x) { std::cout << x << ' '; });
+```
+
+### 🟦 2. **Mayor legibilidad local**
+
+El comportamiento está **definido junto al uso**, lo cual facilita la comprensión sin necesidad de desplazarse a otra parte del código.
+
+### 🟦 3. **Captura de contexto**
+
+Permiten acceder a variables definidas fuera de la lambda, mediante mecanismos de captura. Esto aporta flexibilidad sin recurrir a clases o estructuras externas.
+
+Ejemplo con captura:
+
+```cpp
+int umbral = 5;
+
+std::for_each(v.begin(), v.end(), [umbral](int x) {
+    if (x > umbral)
+        std::cout << x << ' ';
+});
+```
+
+### 🟦 4. **Mayor modularidad sin clases**
+
+Permiten expresar **comportamientos parametrizables**, como condiciones, acciones o transformaciones, sin necesidad de diseñar una jerarquía de clases.
+
+---
+
+## 5. Ejemplo práctico: uso en algoritmos
+
+Veamos un ejemplo completo que muestra cómo las lambdas permiten aplicar filtros personalizados:
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    std::vector<int> datos = {1, 4, 6, 9, 12, 15};
+
+    std::cout << "Valores mayores que 10:\n";
+
+    std::for_each(datos.begin(), datos.end(), [](int x) {
+        if (x > 10)
+            std::cout << x << ' ';
+    });
+
+    std::cout << '\n';
+}
+```
+
+**Ventajas observadas**:
+
+* No fue necesario definir una función externa como `mayor_que_diez`.
+* El comportamiento está expresado directamente en el lugar donde se utiliza.
+* El código es compacto y claro.
+
+---
+
+## 6. Conclusión
+
+Las expresiones lambda son una herramienta poderosa para definir **funciones anónimas** y facilitar una **programación más modular y expresiva**.
+Permiten parametrizar comportamientos, capturar el contexto, y reducir la complejidad de programas estructurados, sin necesidad de recurrir a orientación a objetos.
+
+Su dominio es fundamental para aprovechar al máximo las capacidades de la STL y escribir código limpio, reutilizable y moderno.
+
+---
+
+¿Quieres que prepare ejercicios específicos para este apartado? También puedo escribir una clase dedicada exclusivamente a la **captura de variables en lambdas**.
