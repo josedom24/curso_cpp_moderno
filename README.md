@@ -72,13 +72,12 @@
     * [Ejercicios con `std::list`](contenido/modulo06/ejercicios_list.md)
     * [Ejercicios con `std::map` y `std::unordered_map`](contenido/modulo06/ejercicios_map.md)
 
-7. Introducción a las plantillas
+7. Introducción a programación genérica
 
-    * ¿Qué es la programación genérica?
-    * Plantillas de funciones: sintaxis y deducción de tipos
-    * Ejemplos típicos (`max`, `swap`, `print`)
+    * Introducción a la programación genérica
+    * Plantillas de funciones
+    * Ejemplos típicos de plantillas de funciones
     * Uso de funciones genéricas con contenedores STL
-    * Ventajas y limitaciones básicas
     * Ejercicios con plantillas de función
 
 8. Excepciones y trabajo con archivos
