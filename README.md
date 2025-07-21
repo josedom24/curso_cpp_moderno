@@ -54,7 +54,7 @@
     * [Definición de clases y creación de objetos](contenido/modulo05/poo_c++.md)
     * [Atributos estáticos de clase](contenido/modulo05/estatico.md)
     * [Constructores, destructores y métodos constantes](contenido/modulo05/constructor.md)
-    * [Composición de Objetos](contenido/modulo05/composicion.md)
+    * [Composición de objetos](contenido/modulo05/composicion.md)
     * [Herencia y polimorfismo](contenido/modulo05/herencia.md)
     * [Ejercicios de programación orientada a objetos](contenido/modulo05/ejercicios.md)
 

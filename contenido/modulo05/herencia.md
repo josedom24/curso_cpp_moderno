@@ -18,7 +18,9 @@ Esto representa una relación **"es un"** (**is-a**)*
 
 La herencia evita la duplicación de código y permite extender el comportamiento de las clases base.
 
-La forma más habitual y recomendada de herencia en C++ es la **herencia pública**, que significa que los miembros `public` y `protected` de la clase base se mantienen accesibles con las mismas restricciones en la clase derivada. La sintaxis básica es:
+La forma más habitual y recomendada de herencia en C++ es la **herencia pública**, que significa que los miembros `public` y `protected` de la clase base se mantienen accesibles con las mismas restricciones en la clase derivada. El control de acceso `protected` indica que un miembro no es accesible desde fuera de la clase, pero sí puede ser accedido por clases derivadas. Este modificador se utiliza comúnmente para permitir que las subclases interactúen directamente con ciertos atributos o métodos internos de la clase base, sin exponerlos completamente como parte de su interfaz pública.
+
+La sintaxis básica es:
 
 ```cpp
 class Animal {

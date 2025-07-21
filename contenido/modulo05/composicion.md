@@ -1,4 +1,4 @@
-# Composición de Objetos
+# Composición de objetos
 
 En la Programación Orientada a Objetos (POO), uno de los mecanismos fundamentales para modelar relaciones entre entidades del mundo real es la **composición**, también conocida como relación **"tiene un"** (**has-a**). Esta técnica permite construir clases complejas a partir de otras clases, fomentando el diseño modular y la reutilización de código.
 

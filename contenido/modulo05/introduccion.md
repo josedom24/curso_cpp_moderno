@@ -26,15 +26,13 @@ Para comprender la POO en C++, es necesario familiarizarse con sus conceptos fun
 * **Atributos**: Los **atributos** son las variables que describen el estado de un objeto. Cada objeto mantiene sus propios valores de estos atributos.
 * **Métodos**: Los **métodos** son funciones asociadas a la clase que definen el comportamiento de los objetos. Pueden consultar o modificar el estado del objeto, o realizar acciones.
 
-## Ejemplo conceptual: Cafetera como objeto
+## Ejemplo conceptual
 
-Imaginemos que queremos modelar una **cafetera** en un sistema.
+Imaginemos que queremos modelar una **bicicleta** en un sistema.
 
-* La **clase** sería el modelo general de una cafetera: describe qué características tiene y qué puede hacer.
-* Un **objeto** sería una cafetera concreta, por ejemplo, la que está en la cocina de tu casa.
-* Los **atributos** podrían ser: cantidad de agua, nivel de café, estado (encendida o apagada).
-* Los **métodos** podrían ser: encender, preparar café, apagar, rellenar depósito.
+* La **clase** sería el modelo general de una bicicleta: describe qué características tiene y qué puede hacer.
+* Un **objeto** sería una bicicleta concreta, por ejemplo, la que usas para ir al trabajo.
+* Los **atributos** podrían ser: marcha actual, presión de las ruedas, si está en movimiento o detenida.
+* Los **métodos** podrían ser: cambiar de marcha, inflar ruedas, empezar a pedalear, frenar.
 
-Cada vez que creamos una nueva cafetera en nuestro sistema, estaríamos creando un nuevo objeto a partir de la clase "Cafetera". Cada objeto tiene su propio estado: una cafetera puede estar encendida, otra apagada; una puede tener el depósito lleno, otra vacío.
-
-![cafetera](img/cafetera.png)
+Cada vez que creamos una nueva bicicleta en nuestro sistema, estaríamos creando un nuevo objeto a partir de la clase "Bicicleta". Cada objeto tiene su propio estado: una bicicleta puede estar detenida, otra en movimiento; una puede tener las ruedas bien infladas, otra desinfladas.
