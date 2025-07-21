@@ -1,4 +1,4 @@
-# Algoritmos de la Biblioteca Estándar de C++
+# Algoritmos de la STL
 
 La biblioteca estándar de C++ proporciona un conjunto de **algoritmos genéricos**, definidos en el encabezado `<algorithm>`. Estos algoritmos permiten realizar de forma segura y eficiente operaciones comunes sobre colecciones de datos, como:
 

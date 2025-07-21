@@ -47,9 +47,9 @@
     * [Organización del código en archivos (.h y .cpp)](contenido/modulo04/organizacion.md)
     * [Ejercicios con funciones](contenido/modulo05/ejercicios.md)
 
-5. Programación Orientada a Objetos
+5. Programación orientada a objetos
 
-    * [Introducción a la Programación Orientada a Objetos](contenido/modulo05/introduccion.md)
+    * [Introducción a la programación orientada a objetos](contenido/modulo05/introduccion.md)
     * [Definición de clases y creación de objetos](contenido/modulo05/poo_c++.md)
     * [Atributos estáticos de clase](contenido/modulo05/estatico.md)
     * [Constructores, destructores y métodos constantes](contenido/modulo05/constructor.md)
@@ -57,7 +57,7 @@
     * [Herencia y polimorfismo](contenido/modulo05/herencia.md)
     * [Ejercicios de programación orientada a objetos](contenido/modulo05/ejercicios.md)
 
-6. Estructuras dinámicas de la STL
+6. Estructuras dinámicas en la STL
 
     * [Gestión de memoria y estructuras dinámicas](contenido/modulo06/introduccion.md)
     * [Cadenas de caracteres: `std::string`](contenido/modulo06/string.md)
@@ -65,14 +65,14 @@
     * [Vectores: `std::vector`](contenido/modulo06/vector.md)
     * [Listas: `std::list`](contenido/modulo06/list.md)
     * [Mapas: `std::map` y `std::unordered_map`](contenido/modulo06/map.md)
-    * [Algoritmos de la Biblioteca Estándar de C++](contenido/modulo06/algoritmos.md)
+    * [Algoritmos de la STL](contenido/modulo06/algoritmos.md)
     * [Ejercicios con `std::string`](contenido/modulo06/ejercicios_string.md)
     * [Ejercicios con `std::array`](contenido/modulo06/ejercicios_array.md)
     * [Ejercicios con `std::vector`](contenido/modulo06/ejercicios_vector.md)
     * [Ejercicios con `std::list`](contenido/modulo06/ejercicios_list.md)
     * [Ejercicios con `std::map` y `std::unordered_map`](contenido/modulo06/ejercicios_map.md)
 
-7. Introducción a programación genérica
+7. Introducción a la programación genérica
 
     * [Introducción a la programación genérica](contenido/modulo07/generica.md)
     * [Plantillas de funciones](contenido/modulo07/plantillas.md)
