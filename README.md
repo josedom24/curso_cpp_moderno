@@ -22,7 +22,6 @@
     * [Ejercicios estructura secuencial](contenido/modulo02/secuencial.md)
     * [Tipos definidos por el usuario: `enum class`](contenido/modulo02/enum.md)
     * [Tipos definidos por el usuario: `struct`](contenido/modulo02/struct.md)
-    * Tipos definidos por el usuario: clases y objetos
 
 3. Control de flujo
 
