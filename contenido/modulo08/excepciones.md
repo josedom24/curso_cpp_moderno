@@ -1,42 +1,4 @@
-# Introducción a las excepciones
-
-
-En C++, como en cualquier lenguaje de programación, los errores pueden aparecer en dos momentos muy distintos: 
-
-* **Errores de compilación**: Son errores que el compilador detecta cuando intenta traducir nuestro código a lenguaje máquina. Aparecen por razones como:
-
-    * Errores de sintaxis.
-    * Tipos incompatibles.
-    * Variables no declaradas.
-    * Llamadas incorrectas a funciones.
-
-    Estos errores impiden que el programa se compile, y por tanto, nunca llega a ejecutarse:
-
-    ```cpp
-    int main() {
-        int x = "texto"; // Error de tipo: se esperaba un entero
-    }
-    ```
-
-    Este tipo de errores es directo y fácil de localizar: el compilador nos indica qué línea está mal y por qué.
-
-* **Errores en tiempo de ejecución**: Estos errores son más sutiles. El programa compila perfectamente, pero al ejecutarse ocurre algo inesperado: datos inválidos, recursos inaccesibles, operaciones imposibl,...
-
-    ```cpp
-    #include <iostream>
-    #include <vector>
-
-    int main() {
-        std::vector<int> v = {1, 2, 3};
-        int x = v.at(10); // Error en tiempo de ejecución
-    }
-
-    ```
-
-    El compilador no puede saber que intentaremos acceder a una posición inválida, así que no puede evitar el problema. Recuerda que `at()` lanza excepción en caso de acceso fuera de rango, mientras que la indexación con el operador `[ ]` produce un comportamiento indefinido.
-    Este tipo de errores pueden ser difíciles de encontrar y corregir, sobre todo si el programa es grande o complejo.
-
-## ¿Qué son las excepciones?
+# Manejo de excepciones con `try`, `catch` y `throw`
 
 Una **excepción** es una señal que indica que algo inesperado ha ocurrido mientras el programa se ejecutaba. En lugar de detener el programa bruscamente, C++ permite capturar esa señal y actuar en consecuencia. Esto se hace utilizando las palabras clave: `try` y `catch`.
 

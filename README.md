@@ -74,16 +74,15 @@
 
 7. Introducción a programación genérica
 
-    * Introducción a la programación genérica
-    * Plantillas de funciones
-    * Ejemplos típicos de plantillas de funciones
-    * Uso de funciones genéricas con contenedores STL
-    * Ejercicios con plantillas de función
+    * [Introducción a la programación genérica](contenido/modulo07/generica.md)
+    * [Plantillas de funciones](contenido/modulo07/plantillas.md)
+    * [Ejemplos típicos de plantillas de funciones](contenido/modulo07/ejemplos.md)
+    * [Uso de funciones genéricas con contenedores STL](contenido/modulo07/stl.md)
+    * [Ejercicios con plantillas de función](contenido/modulo07/ejercicios.md)
 
 8. Excepciones y trabajo con archivos
-    * [Introducción a las excepciones](contenido/modulo09/excepciones.md)
-    * Uso de mensajes de depuración (std::cerr, assert)
-    * Manejo de errores y uso de `try`, `catch`, `throw`
+    * [Gestión de errores en C++: conceptos fundamentales](contenido/modulo08/errores.md)
+    * [Manejo de excepciones con `try`, `catch` y `throw`](contenido/modulo08/excepciones.md)
     * [Introducción al trabajo con archivos](contenido/modulo09/archivos.md)
     * [Apertura, lectura y escritura de archivos](contenido/modulo09/operaciones.md)
     * [Ejercicios con archivos](contenido/modulo09/ejercicios.md)
