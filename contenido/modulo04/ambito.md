@@ -3,7 +3,7 @@
 
 El **ámbito** de una variable define la región del código donde dicha variable es accesible.
 
-## Variables locales:
+## Variables locales
 
 * Se declaran dentro de una función o bloque `{}`.
 * Solo son accesibles **dentro de la función o bloque** en el que se definen.
