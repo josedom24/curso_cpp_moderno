@@ -37,15 +37,15 @@
 
 4. Programación estructurada
 
-    * [Introducción a la programación estructurada y uso de funciones](contenido/modulo05/funciones.md)
-    * [Gestión de memoria con punteros](contenido/modulo05/punteros.md)
-    * [Gestión de memoria con referencias](contenido/modulo05/referencias.md)
-    * [Paso de argumentos a funciones](contenido/modulo05/argumentos.md)
-    * [Valores de retorno de una función](contenido/modulo05/retorno.md)
-    * [Ámbito y duración de las variables en funciones](contenido/modulo05/ambito.md)
-    * [Tipos de funciones: constexpr, inline, lambda y recursivas](contenido/modulo05/tipos.md)
+    * [Introducción a la programación estructurada y uso de funciones](contenido/modulo04/funciones.md)
+    * [Gestión de memoria con punteros](contenido/modulo04/punteros.md)
+    * [Gestión de memoria con referencias](contenido/modulo04/referencias.md)
+    * [Paso de argumentos a funciones](contenido/modulo04/argumentos.md)
+    * [Valores de retorno de una función](contenido/modulo04/retorno.md)
+    * [Ámbito y duración de las variables en funciones](contenido/modulo04/ambito.md)
+    * [Tipos de funciones: constexpr, inline, lambda y recursivas](contenido/modulo04/tipos.md)
     * [Organización del código en archivos (.h y .cpp)](contenido/modulo04/organizacion.md)
-    * [Ejercicios con funciones](contenido/modulo05/ejercicios.md)
+    * [Ejercicios con funciones](contenido/modulo04/ejercicios.md)
 
 5. Programación orientada a objetos
 

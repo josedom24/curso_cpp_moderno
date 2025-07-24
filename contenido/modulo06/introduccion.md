@@ -1,4 +1,4 @@
-## 📘 Gestión dinámica de memoria y estructuras dinámicas
+# Gestión dinámica de memoria y estructuras dinámicas
 
 En la programación moderna, es fundamental comprender **cómo se gestiona la memoria** y cómo se pueden construir y utilizar estructuras que se adaptan dinámicamente a las necesidades del programa.
 C++ es un lenguaje que permite tanto una gestión manual de la memoria (como en C), como una gestión segura y automática gracias a sus mecanismos modernos, en particular el **RAII** y las **estructuras dinámicas de la STL**.
