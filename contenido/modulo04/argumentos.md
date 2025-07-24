@@ -7,6 +7,13 @@ En C++, al definir y llamar funciones es fundamental entender cómo se transmite
 * El **control de la propiedad** de los recursos.
 * La **gestión correcta de los recursos**, evitando copias innecesarias.
 
+Al pasar argumentos a funciones, es fundamental decidir si:
+
+* Se debe **copiar** el recurso (lo que implica un coste).
+* Se debe permitir que la función **modifique** el recurso original.
+* La función solo debe **acceder** al recurso sin modificarlo (idealmente mediante referencia constante).
+
+
 ## Parámetros y argumentos: ¿cuál es la diferencia?
 
 * **Parámetro:** es la **variable** que se declara en la definición de la función, sirve como "nombre local" para los datos que se recibirán.
@@ -169,11 +176,39 @@ int main() {
 }
 ```
 
-## Relación con la gestión de recursos y propiedad
+## Envío de un `struct` a una función
 
-En C++, los objetos pueden ser propietarios de recursos como memoria dinámica, archivos, sockets, etc. Al pasar argumentos a funciones, es fundamental decidir si:
+Los `struct` pueden pasarse a funciones como cualquier otro tipo de dato. Dependiendo de si se pasa por **valor** o por **referencia**, se puede modificar su contenido o no. Ejemplo:
 
-* Se debe **copiar** el recurso (lo que implica un coste).
-* Se debe permitir que la función **modifique** el recurso original.
-* La función solo debe **acceder** al recurso sin modificarlo (idealmente mediante referencia constante).
+```cpp
+#include <iostream>
+
+struct Rectangulo {
+    double ancho;
+    double alto;
+};
+
+void mostrarRectangulo(const Rectangulo& r) {
+    std::cout << "Ancho: " << r.ancho << ", Alto: " << r.alto << std::endl;
+}
+
+void redimensionarRectangulo(Rectangulo& r, double nuevoAncho, double nuevoAlto) {
+    r.ancho = nuevoAncho;
+    r.alto = nuevoAlto;
+}
+
+int main() {
+    Rectangulo r{5.0, 3.0};
+    mostrarRectangulo(r);
+
+    redimensionarRectangulo(r, 8.0, 4.5);
+    std::cout << "Después de redimensionar:" << std::endl;
+    mostrarRectangulo(r);
+
+    return 0;
+}
+```
+* Para evitar copias innecesarias, se suele pasar el `struct` por **referencia**.
+* Si la función no debe modificar el `struct`, se declara como `const Rectangulo&`.
+* Si la función debe modificar el `struct`, se pasa como `Rectangulo&`.
 

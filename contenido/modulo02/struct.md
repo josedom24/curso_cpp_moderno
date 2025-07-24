@@ -46,41 +46,49 @@ Podemos usar los diferentes tipos de inicialización. En el ejemplo usamos **ini
 Punto p{3.5, 4.2};
 ```
 
-## Envío de un `struct` a una función
+## Ejemplo completo
 
-Los `struct` pueden pasarse a funciones como cualquier otro tipo de dato. Dependiendo de si se pasa por **valor** o por **referencia**, se puede modificar su contenido o no. Ejemplo:
+Veamos un ejemplo completo usando una estructura llamada `Libro`, que representa un libro con título, autor y número de páginas:
 
 ```cpp
 #include <iostream>
+#include <string>
 
-struct Rectangulo {
-    double ancho;
-    double alto;
+// Definición de un struct llamado Libro
+struct Libro {
+    std::string titulo;    // Título del libro
+    std::string autor;     // Autor del libro
+    int paginas;           // Número de páginas
 };
 
-void mostrarRectangulo(const Rectangulo& r) {
-    std::cout << "Ancho: " << r.ancho << ", Alto: " << r.alto << std::endl;
-}
-
-void redimensionarRectangulo(Rectangulo& r, double nuevoAncho, double nuevoAlto) {
-    r.ancho = nuevoAncho;
-    r.alto = nuevoAlto;
-}
-
 int main() {
-    Rectangulo r{5.0, 3.0};
-    mostrarRectangulo(r);
+    // Declaración de una variable de tipo Libro
+    Libro libro1;
 
-    redimensionarRectangulo(r, 8.0, 4.5);
-    std::cout << "Después de redimensionar:" << std::endl;
-    mostrarRectangulo(r);
+    // Asignación de valores a los miembros usando el operador punto (.)
+    libro1.titulo = "Cien años de soledad";
+    libro1.autor = "Gabriel García Márquez";
+    libro1.paginas = 417;
+
+    // Mostrar la información del libro en consola
+    std::cout << "Título: " << libro1.titulo << std::endl;
+    std::cout << "Autor: " << libro1.autor << std::endl;
+    std::cout << "Número de páginas: " << libro1.paginas << std::endl;
+
+    // Inicialización uniforme de un struct
+    Libro libro2{"Don Quijote de la Mancha", "Miguel de Cervantes", 863};
+
+    std::cout << "\nTítulo: " << libro2.titulo << std::endl;
+    std::cout << "Autor: " << libro2.autor << std::endl;
+    std::cout << "Número de páginas: " << libro2.paginas << std::endl;
 
     return 0;
 }
 ```
-* Para evitar copias innecesarias, se suele pasar el `struct` por **referencia**.
-* Si la función no debe modificar el `struct`, se declara como `const Rectangulo&`.
-* Si la función debe modificar el `struct`, se pasa como `Rectangulo&`.
+
+* `struct Libro` agrupa información relevante sobre un libro: título, autor y páginas.
+* Se puede asignar valores a cada miembro con el operador punto.
+* Se puede inicializar directamente al declarar la variable con la sintaxis uniforme `{...}`.
 
 
 ## Relación con la Programación Orientada a Objetos (POO)
