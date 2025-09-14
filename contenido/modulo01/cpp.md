@@ -26,7 +26,7 @@
 * **Multiplataforma**: se puede compilar y ejecutar en distintas plataformas.
 * **Moderno**: desde C++11, el lenguaje incluye muchas características para mejorar la legibilidad, seguridad y productividad.
 
-## Qué es C++ moderno?
+## ¿Qué es C++ moderno?
 
 * Se refiere a las **versiones más recientes** del lenguaje, a partir de **C++11**.
 * Introduce mejoras significativas en sintaxis, seguridad, rendimiento y estilo de programación.
