@@ -83,6 +83,6 @@
 8. Excepciones y trabajo con archivos
     * [Gestión de errores en C++: conceptos fundamentales](contenido/modulo08/errores.md)
     * [Manejo de excepciones con `try`, `catch` y `throw`](contenido/modulo08/excepciones.md)
-    * [Introducción al trabajo con archivos](contenido/modulo09/archivos.md)
-    * [Apertura, lectura y escritura de archivos](contenido/modulo09/operaciones.md)
-    * [Ejercicios con archivos](contenido/modulo09/ejercicios.md)
+    * Ejercicios con excepciones
+    * [Introducción al trabajo con archivos](contenido/modulo08/archivos.md)
+    * [Apertura, lectura y escritura de archivos](contenido/modulo08/operaciones.md)
