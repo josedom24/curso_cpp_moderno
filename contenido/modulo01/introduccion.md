@@ -79,6 +79,7 @@ Tipos de lenguajes de programación:
 
 * **Mixtos (compilación intermedia + máquina virtual)**:
 
+    * Se realiza una compilación inicial, generando un código intermedio que se interpreta con un interprete.
     * Ejemplo: Java (compila a bytecode que se ejecuta en la JVM).
     * Balance entre rendimiento y portabilidad.
 
