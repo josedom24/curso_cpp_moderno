@@ -86,3 +86,4 @@
     * Ejercicios con excepciones
     * [Introducción al trabajo con archivos](contenido/modulo08/archivos.md)
     * [Apertura, lectura y escritura de archivos](contenido/modulo08/operaciones.md)
+    * [Ejercicios con archivos](contenido/modulo08/ejercicios.md)
