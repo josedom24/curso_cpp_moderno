@@ -19,7 +19,7 @@
     * Usar representaciones como:
         * **Pseudocódigo**
         * **Diagramas de flujo**
-        * **Algoritmos paso a paso**
+        * **Algoritmos**
 * **Codificación**:
     * Traducir el diseño a un **lenguaje de programación** (C++, Python, Java…).
     * Se escribe el programa en un archivo de texto con una sintaxis concreta.
@@ -35,7 +35,7 @@
     * Preciso: cada paso debe ser claro y no ambiguo.
     * Efectivo: cada paso debe poder llevarse a cabo.
 
-## Lenguaje de programación?
+## Lenguajes de programación
 
 * Un lenguaje de programación es un lenguaje formal que permite **escribir instrucciones comprensibles para una computadora**.
 * Se utilizan para crear algoritmos ejecutables.
