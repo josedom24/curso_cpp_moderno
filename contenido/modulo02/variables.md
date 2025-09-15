@@ -39,7 +39,7 @@ En C++ moderno existen varias formas de inicializar variables. Inicializar una v
    int x = 3.14;  // Compila, pero trunca a 3.
    ```
 
-* **Inicialización con paréntesis (constructor):** Se llama directamente al constructor (método que nos permite crear un objeto en programación orientada a objetos). Bormalmente se usa ecuando trabajamos con tipos complejos. Ejemplos:
+* **Inicialización con paréntesis (constructor):** Se llama directamente al constructor (método que nos permite crear un objeto en programación orientada a objetos). Normalmente se usa cuando trabajamos con tipos complejos. Ejemplos:
 
    ```cpp
    int x(5);
@@ -93,7 +93,7 @@ int a{1}, b{2}, c{3};
 
 Sin embargo, es recomendable evitar esta práctica para mejorar la legibilidad.
 
-# Operadores de asignación
+## Operadores de asignación
 
 Nos permiten guardar información en las variables. En una variable podemos guardar un literal, otra variable o el resultado de una expresión. Los operadores de asignación son los siguientes:
 
