@@ -3,8 +3,8 @@
 Un programa en C++ se compone de los siguientes elementos:
 
 * **Instrucciones de Preprocesador**: Son directivas que se procesan antes de la compilación. La más común es la inclusión de archivos de cabeceras, que nos permiten usar funcionalidades extras en nuestros programas, mediante la directiva `#include`.
-* **Función main()**: Las instrucciones de un programa de agrupan en funciones. Todo programa en C++ debe contener una función llamada `main`, que representa el punto de entrada del programa,es decir, al ejecutar el programa son las instrucciones de esta función las que se empiezan a ejecutar de manera **secuencial**.  
-* **Instrucciones**: Son las líneas del programa que están agrupadas dentro de una función e indican que es la operación que hay que realizar. Existen distintos tipos: declaración de variables, instrucciones de asignación, instrucciones alternativas, instrucciones repetitivas,....
+* **Función main()**: Las instrucciones de un programa de agrupan en funciones. Todo programa en C++ debe contener una función llamada `main`, que representa el punto de entrada del programa, es decir, al ejecutar el programa son las instrucciones de esta función las que se empiezan a ejecutar de manera **secuencial**.  
+* **Instrucciones**: Son las líneas del programa que están agrupadas dentro de una función e indican la operación que hay que realizar. Existen distintos tipos: declaración de variables, instrucciones de asignación, instrucciones alternativas, instrucciones repetitivas,....
 * **Comentarios**: Los comentarios son anotaciones que el compilador ignora y que sirven para documentar el código:
     * **Comentarios de una línea:** Se inician con `//`.
     * **Comentarios de múltiples líneas:** Se delimitan con `/*` y `*/`.
@@ -20,7 +20,7 @@ La sintaxis de C++ define la forma en que se deben escribir las instrucciones. A
 * Si se viola la sintaxis, el compilador genera un error de sintaxis y detiene la compilación.
 * Se debe incluir solo las funcionalidades extras necesarias mediante la inclusión de archivos de cabeceras adecuadas.
 
-## Ejemplo: Programa "Hello World"
+## Ejemplo: Programa "Hola Mundo"
 
 A continuación, se presenta un programa completo en C++ moderno, seguido de la explicación detallada de cada línea.
 
@@ -47,10 +47,10 @@ int main() {  // Función principal: punto de inicio del programa
     ```
     int main(int argc, char *argv[])
     ```
-* `cout << "Hola, Mundo" << endl;`: Instrucción que envía el texto `"Hola, Mundo"` al flujo de salida estándar, generalmente la pantalla. `
+* `cout << "Hola, Mundo" << endl;`: Instrucción que envía el texto `"Hola, Mundo!!!"` al flujo de salida estándar, generalmente la pantalla. `
     * `cout` es el objeto de salida estándar de la biblioteca `std`.
     * El operador `<<` dirige la información al flujo de salida.
-    * `"Hola, Mundo"` es una cadena de texto literal.
+    * `"Hola, Mundo!!!"` es una cadena de texto literal.
     * `endl` inserta un salto de línea y fuerza el vaciado del búfer de salida.
 * En la última línea se finaliza la ejecución de la función `main()` con la instrucción `return`, además se devuelve el el valor `0`, lo cual indica que el programa concluyó correctamente.
 * Por último indicar que el programa tiene comentarios de una línea y de múltiples líneas.
