@@ -9,7 +9,7 @@ En un programa, a veces es necesario convertir el valor de una variable de un **
 C++ permite realizar estas conversiones de forma automática o manual, pero es muy importante entender cómo y cuándo ocurren, para evitar errores o resultados inesperados.
 
 
-## Conversión Implícita (automática)
+## Conversión implícita (automática)
 
 Ocurre cuando el compilador convierte un tipo a otro **de forma automática**, sin que el programador lo indique de forma explícita. Generalmente sucede cuando:
 
@@ -31,9 +31,9 @@ int main() {
 }
 ```
 
-El compilador convierte `entero` a `double` automáticamente, para que la suma sea precisa.
+El compilador convierte la variable `entero` al tipo `double` automáticamente, para que la suma sea precisa.
 
-## Conversión Explícita (casting)
+## Conversión explícita (casting)
 
 El programador indica de forma clara que quiere convertir un valor de un tipo a otro. Esto se hace cuando:
 

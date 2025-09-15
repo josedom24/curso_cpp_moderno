@@ -2,9 +2,15 @@
 
 En C++ moderno existen dos formas principales de trabajar con cadenas de caracteres:
 
-1. **La forma tradicional heredada de C:** Una cadena de caracteres es simplemente un **array de caracteres** terminado en un carácter especial `'\0'` (llamado **carácter nulo**).
-   Esta forma sigue existiendo, pero es más propensa a errores y requiere mayor cuidado por parte del programador.
-2. **La forma moderna con la clase `std::string`:**    C++ proporciona la clase `std::string` en la biblioteca estándar, que permite trabajar con cadenas de forma más segura, sencilla y flexible.
+1. **La forma tradicional heredada de C:** Una cadena de caracteres es simplemente un **array de caracteres** terminado en un carácter especial `'\0'` (llamado **carácter nulo**). Esta forma sigue existiendo, pero es más propensa a errores y requiere mayor cuidado por parte del programador.
+2. **La forma moderna usando la clase `std::string`:** C++ proporciona la clase `std::string` en la biblioteca estándar, que permite trabajar con cadenas de forma más segura, sencilla y flexible.
+
+## Clases y objetos
+
+* Una **clase** en C++ es como un **tipo de dato personalizado**. Así como `int` es un tipo que permite crear variables que guardan números enteros, una clase define un nuevo tipo que permite crear **objetos** con sus propios datos y comportamientos.
+* **Objeto:** es una **variable de ese tipo de clase**. Cada objeto guarda su propia información.
+* **Atributos (o miembros de datos):** son las **variables dentro de la clase**, que guardan la información del objeto.
+* **Métodos (o funciones miembro):** son las **acciones que puede hacer el objeto**, es decir, funciones asociadas a la clase.
 
 ## Uso de la clase `std::string`
 
@@ -22,7 +28,7 @@ int main() {
 }
 ```
 
-Es necesario incluir el archivo de cabeceras `string` para trabajar con la calse `std::string`.
+Es necesario incluir el archivo de cabeceras `string` para trabajar con la clase `std::string`.
 
 ## Indexación de caracteres
 
