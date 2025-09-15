@@ -11,7 +11,7 @@ En este curso vamos a utilizar com IDE **Visual Studio Code**: [https://code.vis
 
 La opción recomendada es instalar el compilador MinGW (GCC para Windows)
 
-* Ve a: [https://www.mingw-w64.org/](https://www.mingw-w64.org/)
+* Enlace de descarga: [https://www.mingw-w64.org/](https://www.mingw-w64.org/)
 * Recomendación: usa el instalador de la comunidad:
   [https://winlibs.com](https://winlibs.com) (elige la versión *"MinGW-w64 GCC"* de 64 bits).
 * Descarga y descomprime el archivo ZIP.
@@ -23,7 +23,7 @@ Configurar variables de entorno:
 * Abre el Panel de control → Sistema → Configuración avanzada → Variables de entorno.
 * En la variable `Path`, haz clic en *Editar* y añade la ruta del compilador (`C:\mingw-w64\bin`).
 
-Para verfificar la instalación:
+Para verificar la instalación:
 
 * Abre la terminal (CMD o PowerShell) y escribe:
 
