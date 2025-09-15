@@ -1,6 +1,6 @@
 # Cómo compilar y ejecutar programas 
 
-Suponemos que nuestro programa que hemos estudiado en el apartado anterior lo tenemos guardado en un fichero fuente llamado `porgrama.cpp`.
+Suponemos que nuestro programa que hemos estudiado en el apartado anterior lo tenemos guardado en un fichero fuente llamado `programa.cpp`.
 
 Si queremos compilar el programa desde el terminal:
 

@@ -1,10 +1,14 @@
 # Tipos de datos fundamentales
 
-En programación, un **dato** representa una pieza de información que puede ser manipulada por un programa. Los datos pueden adoptar distintas formas, como números, caracteres o valores booleanos, A etas formas se le llama **Tipo de datos** y permiten al compilador saber:
+## Datos y tipos de datos
+
+En programación, un **dato** representa una pieza de información que puede ser manipulada por un programa. Los datos pueden adoptar distintas formas, como números, caracteres o valores booleanos, A estas formas se le llama **tipo de datos** y permiten al compilador saber:
 
 * Qué clase de información se está almacenando.
 * Qué operaciones son válidas para dichos datos.
 * Cuánta memoria debe reservarse para almacenar los datos.
+
+## Clasificación de los tipos de datos
 
 Podemos clasificar los tipos de datos de la siguiente manera:
 
@@ -21,6 +25,8 @@ Podemos clasificar los tipos de datos de la siguiente manera:
     * Estructuras de datos y enumeraciones.
     * Clases
 * Hay otros tipos de datos más avanzados como los derivados: punteros, referencias, 
+
+## Representación de los datos
 
 Los datos se pueden representar de de distintas maneras:
 
