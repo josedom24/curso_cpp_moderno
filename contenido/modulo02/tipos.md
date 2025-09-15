@@ -18,13 +18,11 @@ Podemos clasificar los tipos de datos de la siguiente manera:
     * Valores lógicos (`bool`)
     * Caracteres (`char`)
     * `void`: Representa ausencia de tipo o ausencia de valor. Por ejemplo se usa cunado una función no devuelve nada.
-    * `nullptr_r`: Representa el tipo del literal `nullptr`, que se usa para indicar que un puntero no apunta a ningún objeto o dirección válida.
-
 * Tipos de datos compuestos:
     * Estructuras de datos de la librería estándar: arrays, vectores, cadenas de caracteres,...
-    * Estructuras de datos y enumeraciones.
-    * Clases
-* Hay otros tipos de datos más avanzados como los derivados: punteros, referencias, 
+    * Estructuras de datos (`struct`) y enumeraciones (`enum class`).
+    * Clases: en la Programación Orientada a Objetos usaremos clases para definir nuevos tipos de datos.
+* Hay otros tipos de datos más avanzados como los derivados: punteros, referencias,...
 
 ## Representación de los datos
 
