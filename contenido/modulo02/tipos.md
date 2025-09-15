@@ -17,7 +17,7 @@ Podemos clasificar los tipos de datos de la siguiente manera:
     * Números reales (`float` o `double`)
     * Valores lógicos (`bool`)
     * Caracteres (`char`)
-    * `void`: Representa ausencia de tipo o ausencia de valor. Por ejemplo se usa cunado una función no devuelve nada.
+    * `void`: Representa ausencia de tipo o ausencia de valor. Por ejemplo se usa cuando una función no devuelve nada.
 * Tipos de datos compuestos:
     * Estructuras de datos de la librería estándar: arrays, vectores, cadenas de caracteres,...
     * Estructuras de datos (`struct`) y enumeraciones (`enum class`).
