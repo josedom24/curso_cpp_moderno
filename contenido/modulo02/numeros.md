@@ -62,17 +62,66 @@ Podemos usar sufijos para indicar literales numéricos largos (con el sufijo `L`
 * `%`: Módulo o resto de la división
 * `+`, `-`: Operadores unarios positivo y negativo
 * `++`: Operador de incremento. Suma uno a la variable, `i++` es lo mismo que `i=i+1`. Dos tipos:
-    * `++i`. Pre-incremento:**Primero incrementa**, luego devuelve el valor incrementado.
-    * `i++`.Post-incremento:**Primero devuelve el valor actual**, luego incrementa.
+    * `++i`: Pre-incremento:**Primero incrementa**, luego devuelve el valor incrementado.
+    * `i++`: Post-incremento:**Primero devuelve el valor actual**, luego incrementa.
 * `--`: Operador de decremento. Resta uno a la variable. También existe el pre-decremento y el post-incremento.
 
 La precedencia de operadores es la siguiente:
 
 * Los paréntesis rompen la precedencia.
-* Operadores unarios (soĺo tienen un operador, por ejemplo el -9)
+* Operadores unarios (sólo tienen un operador, por ejemplo el -9)
 * Multiplicar, dividir y módulo
 * Suma y resta
 * Operadores de incremento y decremento
+
+Veamos un ejemplo:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Declaración de variables numéricas
+    int a = 10;                 // Entero con signo
+    unsigned int b = 20U;       // Entero sin signo (sufijo U)
+    long c = 1000000L;          // Entero largo (sufijo L)
+    float d = 3.14f;            // Número real de precisión simple (sufijo f)
+    double e = 2.71828;         // Número real de doble precisión
+
+    // Operaciones aritméticas básicas
+    int suma = a + b;           // Suma de int y unsigned int
+    int resta = b - a;          // Resta
+    int producto = a * 2;       // Multiplicación
+    int divisionEntera = b / a; // División entera: 20 / 10 = 2
+    double divisionReal = b / d; // División real: convierte a double
+
+    // Uso del operador módulo (solo válido con enteros)
+    int resto = b % a;          // 20 % 10 = 0
+
+    // Incremento y decremento
+    int x = 5;
+    int y = ++x;                // Pre-incremento: x=6, y=6
+    int z = x++;                // Post-incremento: z=6, luego x=7
+
+    // Ejemplo de precedencia
+    int resultado1 = a + b * 2;     // Multiplicación antes que la suma: 10 + (20*2) = 50
+    int resultado2 = (a + b) * 2;  // Paréntesis cambian la precedencia: (10+20)*2 = 60
+
+    // Mostramos resultados
+    cout << "Suma: " << suma << endl;
+    cout << "Resta: " << resta << endl;
+    cout << "Producto: " << producto << endl;
+    cout << "Division entera: " << divisionEntera << endl;
+    cout << "Division real: " << divisionReal << endl;
+    cout << "Resto (modulo): " << resto << endl;
+    cout << "Pre-incremento (++x): y = " << y << ", x = " << x << endl;
+    cout << "Post-incremento (x++): z = " << z << ", x = " << x << endl;
+    cout << "Resultado sin parentesis: " << resultado1 << endl;
+    cout << "Resultado con parentesis: " << resultado2 << endl;
+
+    return 0;
+}
+```
 
 ## Funciones matemáticas
 
@@ -84,15 +133,16 @@ En la librería `cmath` tenemos distintas funciones matemática. Las más útile
 
 Veamos un ejemplo:
 
-    #include <iostream>
-    #include <cmath>
-    using namespace std;
-
-    int main(int argc, char *argv[]) {
-    	int num1=4, num2=2;
-    	cout << "Potencia:" << pow(num1,num2) << endl; //Potencia
-    	cout << "Raíz Cuadrada:" << sqrt(num1) << endl; //Raíz cuadrada
-    	num1=-4;
-    	cout << "Valor absoluto:" << abs(num1) << endl; //Valor absoluto
-    	return 0;
-    }
+```cpp
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(int argc, char *argv[]) {
+	int num1=4, num2=2;
+	cout << "Potencia:" << pow(num1,num2) << endl; //Potencia
+	cout << "Raíz Cuadrada:" << sqrt(num1) << endl; //Raíz cuadrada
+	num1=-4;
+	cout << "Valor absoluto:" << abs(num1) << endl; //Valor absoluto
+	return 0;
+}
+```
