@@ -41,7 +41,7 @@ sudo apt update
 sudo apt install g++
 ```
 
-Verificamos la instalación
+Verificamos la instalación:
 
 ```bash
 g++ --version
@@ -49,7 +49,7 @@ g++ --version
 
 ## macOS
 
-Podemos usar el compilador `clang` incluido en Xcode Command Line Tools. Abrie el terminal y escribir:
+Podemos usar el compilador `clang` incluido en Xcode Command Line Tools. Abre el terminal y escribir:
 
 ```bash
 xcode-select --install
@@ -64,7 +64,7 @@ clang++ --version
 
 ## Instalar extensiones en VS Code
 
-Abre VS Code y haz lo siguiente:
+En **Visual Studio Code**:
 
 * Abre el panel de extensiones. Haz clic en el icono de cuadrados (barra lateral izquierda) o pulsa `Ctrl+Shift+X`.
 * Instala la extensión **C/C++**.
