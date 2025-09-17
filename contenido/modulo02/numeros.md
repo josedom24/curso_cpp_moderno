@@ -61,10 +61,10 @@ Podemos usar sufijos para indicar literales numéricos largos (con el sufijo `L`
 * `/`: Divide dos números.
 * `%`: Módulo o resto de la división
 * `+`, `-`: Operadores unarios positivo y negativo
-* `++`: Operador de incremento. Suma uno a la variable, `i++` es lo mismo que `i=i+1`. Dos tipos:
-    * `++i`: Pre-incremento:**Primero incrementa**, luego devuelve el valor incrementado.
-    * `i++`: Post-incremento:**Primero devuelve el valor actual**, luego incrementa.
-* `--`: Operador de decremento. Resta uno a la variable. También existe el pre-decremento y el post-incremento.
+* `++`: Operador de incremento. 
+    * `++i`: Pre-incremento
+    * `i++`: Post-incremento
+* `--`: Operador de decremento.
 
 La precedencia de operadores es la siguiente:
 
