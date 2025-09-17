@@ -17,7 +17,7 @@ El tipo de un dato determina el tamaño de memoria que se va a utilizar para gua
 
 ## Modificadores de tipos
 
-Podemos modificar los tipos anteriores para dos cosas: para aumentar la memoria utilizada y, por lo tanto, aumentar el rango de valores representables, y para indicar si se usan número negativos o no.
+Podemos modificar los tipos anteriores para dos cosas: para aumentar la memoria utilizada y, por lo tanto, aumentar el rango de valores representables, y para indicar si se usan números negativos o no.
 
 Los modificadores son los siguientes: `signed`, `unsigned`, `long` y `short`.
 
