@@ -5,7 +5,7 @@ Para programar en C++ se requieren dos herramientas:
 1. **Compilador C++**: Convierte el código fuente en un programa ejecutable.
 2. **Editor de texto o entorno de desarrollo (IDE)**: Donde escribimos nuestro código.
 
-En este curso vamos a utilizar com IDE **Visual Studio Code**: [https://code.visualstudio.com](https://code.visualstudio.com)
+En este curso vamos a utilizar como IDE **Visual Studio Code**: [https://code.visualstudio.com](https://code.visualstudio.com)
 
 ## Windows
 
@@ -68,7 +68,7 @@ En **Visual Studio Code**:
 
 * Abre el panel de extensiones. Haz clic en el icono de cuadrados (barra lateral izquierda) o pulsa `Ctrl+Shift+X`.
 * Instala la extensión **C/C++**.
-* Instala **Code Runner**. esto es opcional, pero nos permite ejecutar tu programa con un solo clic o atajo.
+* Instala **Code Runner**. Esto es opcional, pero nos permite ejecutar tu programa con un solo clic o atajo.
 
 La extensión C/C++:
 

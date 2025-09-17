@@ -17,7 +17,7 @@ programa.exe    # Windows
 
 Esto se puede realizar desde el **Visual Studio Code** abriendo un terminal: CTRL + SHIFT + `.
 
-Si queremos ejecutar con **Code Runner** desde **Visual Studio Code**.
+Sí queremos ejecutar con **Code Runner** desde **Visual Studio Code**.
 
 1. Abre tu archivo `.cpp` y pulsa `Ctrl+Alt+N`.
 2. El programa se compila y se ejecuta automáticamente.

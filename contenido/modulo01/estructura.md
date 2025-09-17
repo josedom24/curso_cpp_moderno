@@ -3,8 +3,8 @@
 Un programa en C++ se compone de los siguientes elementos:
 
 * **Instrucciones de Preprocesador**: Son directivas que se procesan antes de la compilación. La más común es la inclusión de archivos de cabeceras, que nos permiten usar funcionalidades extras en nuestros programas, mediante la directiva `#include`.
-* **Función main()**: Las instrucciones de un programa de agrupan en funciones. Todo programa en C++ debe contener una función llamada `main`, que representa el punto de entrada del programa, es decir, al ejecutar el programa son las instrucciones de esta función las que se empiezan a ejecutar de manera **secuencial**.  
-* **Instrucciones**: Son las líneas del programa que están agrupadas dentro de una función e indican la operación que hay que realizar. Existen distintos tipos: declaración de variables, instrucciones de asignación, instrucciones alternativas, instrucciones repetitivas,....
+* **Función main()**: Las instrucciones de un programa se agrupan en funciones. Todo programa en C++ debe contener una función llamada `main`, que representa el punto de entrada del programa, es decir, al ejecutar el programa son las instrucciones de esta función las que se empiezan a ejecutar de manera **secuencial**.  
+* **Instrucciones**: Son las líneas del programa que están agrupadas dentro de una función e indican la operación que hay que realizar. Existen distintos tipos: declaración de variables, instrucciones de asignación, instrucciones alternativas, instrucciones repetitivas,...
 * **Comentarios**: Los comentarios son anotaciones que el compilador ignora y que sirven para documentar el código:
     * **Comentarios de una línea:** Se inician con `//`.
     * **Comentarios de múltiples líneas:** Se delimitan con `/*` y `*/`.
@@ -39,11 +39,11 @@ int main() {  // Función principal: punto de inicio del programa
 ```
 
 * La primera línea es una directiva de preprocesador que indica al compilador que incluya el archivo de  cabecera `iostream`, la cual proporciona funcionalidades para realizar operaciones de entrada y salida estándar, como imprimir en pantalla o leer del teclado.
-* La segunda línea, es otra directiva del preprocesador, que nos permite usar el espacio de nombres estándar (`std`). Como podemos tener diferentes elementos en el lenguaje que se llamen igual se utiliza espacios de nombres para agruparlas. El espacio de nombres de las funciones de entrada / salida como `cout` o `cin` están definidos en el el espacio de nombres `std`, por lo tanto, si indicamos que vamos a usarlos no será necesario nombrarlo cuando escribamos las instrucciones. Si no indicamos que vamos a usar el espacio de nombres `std` la instrucción que escribe en pantalla quedaría de la siguiente forma:
+* La segunda línea, es otra directiva del preprocesador, que nos permite usar el espacio de nombres estándar (`std`). Como podemos tener diferentes elementos en el lenguaje que se llamen igual se utiliza espacios de nombres para agruparlas. El espacio de nombres de las funciones de entrada / salida como `cout` o `cin` están definidos en el espacio de nombres `std`, por lo tanto, si indicamos que vamos a usarlos no será necesario nombrarlo cuando escribamos las instrucciones. Si no indicamos que vamos a usar el espacio de nombres `std` la instrucción que escribe en pantalla quedaría de la siguiente forma:
     ```
     std::cout << "Hola Mundo!!!" << std::endl; 
     ```
-* `int main()`: Es la función principal del programa. Al iniciar el programa, se ejecutan de forma secuencial las instrucciones que tiene definida entre llaves `{}`. La función principal devuelve un valor entero (`int`) al sistema operativo. Normalmente se devuelve el valor `0` si el programa termina con éxito. Si el programa va a tener parámetros en la línea de comandos, nos podemos encontrar esta función definida de esta manera:
+* `int main()`: Es la función principal del programa. Al iniciar el programa, se ejecutan de forma secuencial las instrucciones que tiene definida entre llaves `{}`. La función principal devuelve un valor entero (`int`) al sistema operativo. Normalmente, se devuelve el valor `0` si el programa termina con éxito. Si el programa va a tener parámetros en la línea de comandos, nos podemos encontrar esta función definida de esta manera:
     ```
     int main(int argc, char *argv[])
     ```
@@ -52,5 +52,5 @@ int main() {  // Función principal: punto de inicio del programa
     * El operador `<<` dirige la información al flujo de salida.
     * `"Hola, Mundo!!!"` es una cadena de texto literal.
     * `endl` inserta un salto de línea y fuerza el vaciado del búfer de salida.
-* En la última línea se finaliza la ejecución de la función `main()` con la instrucción `return`, además se devuelve el el valor `0`, lo cual indica que el programa concluyó correctamente.
+* En la última línea se finaliza la ejecución de la función `main()` con la instrucción `return`, además se devuelve el valor `0`, lo cual indica que el programa concluyó correctamente.
 * Por último indicar que el programa tiene comentarios de una línea y de múltiples líneas.
