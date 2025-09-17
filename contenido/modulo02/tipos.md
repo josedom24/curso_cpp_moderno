@@ -26,10 +26,10 @@ Podemos clasificar los tipos de datos de la siguiente manera:
 
 ## Representación de los datos
 
-Los datos se pueden representar de de distintas maneras:
+Los datos se pueden representar de distintas maneras:
 
 * **Literales**: Los literales nos permiten representar valores. Por ejemplo un literal entero podría ser el 5.
-* **Variables**: Una variables es un identificador que guarda un valor. Las variables se declaran de un determinado tipo de datos. Por ejemplo una variable entera puede guardar datos enteros.
+* **Variables**: Una variable es un identificador que guarda un valor. Las variables se declaran de un determinado tipo de datos. Por ejemplo una variable entera puede guardar datos enteros.
 * **Constantes**: Podemos declarar un valor de un determinado tipo por medio de un identificador. Mientras el valor de una variable puede cambiar a lo largo de la ejecución de un programa, las constantes no pueden cambiar.
 * **Expresiones**: Por último indicar que podemos hacer operaciones entre los distintos datos. El tipo de dato de una expresión dependerá del resultado de la operación.
 

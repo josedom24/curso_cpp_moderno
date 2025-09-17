@@ -6,18 +6,18 @@ Los principales tipos de datos numéricos son los siguientes:
 * `float`: Nos permiten guardar números reales de precisión simple (7 dígitos decimales aproximadamente).
 * `double`: Nos permite guardar números reales de doble precisión (16 dígitos decimales aproximadamente).
 
-El tipo de un dato determina el tamaño de memoria que se va a utilizar para guardarlo y por lo tanto determina los valores que podemos representar.
+El tipo de un dato determina el tamaño de memoria que se va a utilizar para guardarlo y, por lo tanto, determina los valores que podemos representar.
 
 | Tipo       | Memoria    | Rango de valores               |
 | ---------- |:----------:|-------------------------------:|
 | int        | 4 bytes    | -2147483648 a 2147483647       |
 | float      | 4 bytes    | -3.4E+38 a +3.4E+38            |
-| double     | 8 bytes    | -1.7E+308 to +1.7E+308         |
+| double     | 8 bytes    | -1.7E+308 a +1.7E+308         |
 
 
 ## Modificadores de tipos
 
-Podemos modificar los tipos anteriores para dos cosas: para aumentar la memoria utilizada y por lo tanto aumentar el rango de valores representables, y para indicar si se usan número negativos o no.
+Podemos modificar los tipos anteriores para dos cosas: para aumentar la memoria utilizada y, por lo tanto, aumentar el rango de valores representables, y para indicar si se usan número negativos o no.
 
 Los modificadores son los siguientes: `signed`, `unsigned`, `long` y `short`.
 
@@ -69,7 +69,7 @@ Podemos usar sufijos para indicar literales numéricos largos (con el sufijo `L`
 La precedencia de operadores es la siguiente:
 
 * Los paréntesis rompen la precedencia.
-* Operadores unarios (sólo tienen un operador, por ejemplo el -9)
+* Operadores unarios (solo tienen un operador, por ejemplo el -9)
 * Multiplicar, dividir y módulo
 * Suma y resta
 * Operadores de incremento y decremento
@@ -125,9 +125,9 @@ int main() {
 
 ## Funciones matemáticas
 
-En la librería `cmath` tenemos distintas funciones matemática. Las más útiles que podemos usar en nuestros programas son:
+En la librería `cmath` tenemos distintas funciones matemáticas. Las más útiles que podemos usar en nuestros programas son:
 
-* `double std::pow(double, double);`: Realiza la potencia, la base es el primer parámetro y el exponente el segundo. Recibe datos de tipo `double` y devuelve también una valor `double`.
+* `double std::pow(double, double);`: Realiza la potencia, la base es el primer parámetro y el exponente el segundo. Recibe datos de tipo `double` y devuelve también un valor `double`.
 * `double std::sqrt(double);`: Realiza la raíz cuadrada del parámetro `double` que recibe. Devuelve un valor `double.
 * `int std::abs(int);`: Devuelve el valor absoluto (valor entero) del número entero que recibe como parámetro.
 

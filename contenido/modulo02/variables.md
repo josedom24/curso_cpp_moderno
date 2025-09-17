@@ -39,7 +39,7 @@ En C++ moderno existen varias formas de inicializar variables. Inicializar una v
    int x = 3.14;  // Compila, pero trunca a 3.
    ```
 
-* **Inicialización con paréntesis (constructor):** Se llama directamente al constructor (método que nos permite crear un objeto en programación orientada a objetos). Normalmente se usa cuando trabajamos con tipos complejos. Ejemplos:
+* **Inicialización con paréntesis (constructor):** Se llama directamente al constructor (método que nos permite crear un objeto en programación orientada a objetos). Normalmente, se usa cuando trabajamos con tipos complejos. Ejemplos:
 
    ```cpp
    int x(5);

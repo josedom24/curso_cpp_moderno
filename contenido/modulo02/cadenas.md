@@ -32,7 +32,7 @@ Es necesario incluir el archivo de cabeceras `string` para trabajar con la clase
 
 ## Indexación de caracteres
 
-Los caracteres que componen una cadena se pueden acceder utilizando un **índice numérico**,teniendo en cuenta que el primer carácter está en la posición `0`. Por ejemplo:
+Los caracteres que componen una cadena se pueden acceder utilizando un **índice numérico**, teniendo en cuenta que el primer carácter está en la posición `0`. Por ejemplo:
 
 ```cpp
 #include <iostream>

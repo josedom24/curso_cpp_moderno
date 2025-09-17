@@ -55,7 +55,7 @@ int main() {
 ```
 * La enumeración `Direccion` se crea en un ámbito global.
 * Vemos como declaramos la variable `d` de tipo `Direccion` y como le asignamos el valor `Direccion::Norte`.
-* También comprobamos como podemos usar el operador de igualdad para compara la variable con un valor. Por defecto cada valor se convierte a un entero que es el que se compara.
+* También comprobamos como podemos usar el operador de igualdad para comparar la variable con un valor. Por defecto cada valor se convierte a un entero que es el que se compara.
 
 ## Conversión de tipo
 
@@ -122,7 +122,7 @@ Esto puede ser útil para ahorrar memoria o por requisitos específicos.
 
 ## Ejemplo final
 
-Define un `enum class` llamado `DiaSemana` con los valores `Lunes`, `Martes`, `Miercoles`, `Jueves`, `Viernes`, `Sabado`, `Domingo`. Escribe un programa que:
+Define un `enum class` llamado `DiaSemana` con los valores `Lunes`, `Martes`, `Miércoles`, `Jueves`, `Viernes`, `Sábado`, `Domingo`. Escribe un programa que:
 
 * Pida al usuario un número entre 1 y 7.
 * Muestre el día correspondiente usando `enum class`.

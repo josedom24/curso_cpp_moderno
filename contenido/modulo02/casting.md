@@ -40,7 +40,7 @@ El programador indica de forma clara que quiere convertir un valor de un tipo a 
 * Hay riesgo de perder información (por ejemplo, al convertir de decimal a entero).
 * Queremos asegurarnos de que la conversión ocurre exactamente cuando y como queremos.
 
-Se realiza conversión explicita cuando usamos:
+Se realiza conversión explícita cuando usamos:
 
 * Conversión con inicialización uniforme `{}`: Es la forma más segura. Si la conversión puede provocar pérdida de información, el compilador genera un error.
 * La función `static_cast`: Es la forma recomendada en C++ moderno para conversiones controladas. 
