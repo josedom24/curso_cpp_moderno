@@ -1,42 +1,85 @@
 
 # Ámbito y duración de las variables en funciones
 
-El **ámbito** de una variable define la región del código donde dicha variable es accesible.
+Recordemos dos conceptos importantes sobre las variables:
+
+* El **ámbito** de una variable define la región del código donde dicha variable es accesible.
+* La **duración de almacenamiento (lifetime)** es el tiempo durante el cual la variable existe en memoria.
+
+Recordemos los tipos de variables:
 
 ## Variables locales
 
 * Se declaran dentro de una función o bloque `{}`.
-* Solo son accesibles **dentro de la función o bloque** en el que se definen.
-* Se crean cuando el flujo de ejecución entra en el ámbito y se destruyen automáticamente al salir. Es decir, su **duración** es automática.
-* Los **parámetros de una función** en C++ **se comportan como variables locales**.
-    * Cuando se pasa un parámetro por valor, se crea **una copia local**, independiente de la variable original.
-    * Cuando se pasa por referencia o puntero, se accede directamente al valor original, pero el propio parámetro sigue siendo una variable local.
+* **Ámbito local**: solo son accesibles **dentro de la función o bloque** en el que se definen.
+* **Duración automática**: se crean cuando el flujo de ejecución entra en el ámbito y se destruyen automáticamente al salir.
+* Estudiaremos en el siguiente apartado que los **parámetros de una función** en C++ **se comportan como variables locales**.
+    
+Ejemplo:
+
+```cpp
+#include <iostream>
+
+// Función sin parámetros
+void mostrarContador() {
+    // Variable local: solo existe dentro de esta función
+    int contador = 0;  
+
+    // Cada vez que se llama a la función, se crea de nuevo
+    contador++;
+
+    std::cout << "Valor del contador local: " << contador << std::endl;
+}
+
+int main() {
+    // Llamamos varias veces a la misma función
+    mostrarContador(); // Imprime 1
+    mostrarContador(); // Imprime 1 otra vez (porque la variable se reinicia)
+    mostrarContador(); // Imprime 1 otra vez
+
+    return 0;
+}
+```
+
+## Variables estáticas
+
+* Se definen utilizando la palabra reservada `static`.
+* **Ámbito local**: solo son accesibles **dentro de la función o bloque** en el que se definen.
+* **Duración global**: existen durante **toda la ejecución del programa** (no se destruye al salir de la función).
+* Se inicializa **solo una vez**, la primera vez que se llama a la función y **conserva su valor** en siguientes llamadas.
 
 Ejemplo:
 
 ```cpp
 #include <iostream>
-#include <string>
 
-void saludar(const std::string& nombre) {  // 'nombre' es un parámetro, pero se comporta como variable local
-    int contador = 5;  // Variable local
+// Función sin parámetros
+void mostrarContador() {
+    // Variable estática local:
+    // - Solo accesible dentro de esta función
+    // - Persiste durante toda la ejecución del programa
+    static int contador = 0;  
 
-    for (int i = 0; i < contador; ++i) {
-        std::cout << "Hola, " << nombre << std::endl;
-    }
-    // Aquí se destruyen las variables locales: 'contador' e 'i'
-}  // También se destruye 'nombre', que es un parámetro pero actúa como variable local
+    contador++; // Incrementa su valor acumulado
+
+    std::cout << "Valor del contador estático: " << contador << std::endl;
+}
 
 int main() {
-    saludar("Carlos");  // Llamada a la función pasando "Carlos" como argumento
+    mostrarContador(); // Imprime 1
+    mostrarContador(); // Imprime 2
+    mostrarContador(); // Imprime 3
+
     return 0;
 }
 ```
+
 ## Variables globales
 
 * Se declaran **fuera de cualquier función o clase**, normalmente al inicio del archivo.
-* Son accesibles desde cualquier función del mismo archivo (o de otros si se usa `extern`).
-* Su duración es **todo el tiempo de ejecución del programa**.
+* **Ámbito global**: Son accesibles desde cualquier función del mismo archivo.
+* **Duración estática**: Su duración es **todo el tiempo de ejecución del programa**.
+* El uso inadecuado puede dificultar la gestión clara de los recursos.
 
 Ejemplo:
 
@@ -60,6 +103,4 @@ int main() {
 }
 ```
 
-* Si un recurso se asocia a una **variable local**, se libera automáticamente al salir del ámbito, siguiendo el principio **RAII**.
-* Si se devuelve una referencia o puntero a una variable local, se produce un **error grave**, ya que la variable deja de existir al salir de la función.
-* Las variables globales viven durante todo el programa, pero su uso inadecuado puede dificultar la gestión clara de los recursos.
+

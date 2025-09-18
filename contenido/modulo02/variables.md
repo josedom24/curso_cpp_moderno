@@ -113,10 +113,10 @@ Además de declarar e inicializar variables, es importante entender **dónde y c
    * **Automática (local)**: Variables locales normales tienen duración automática: existen mientras se ejecuta el bloque donde fueron declaradas y se destruyen al salir de ese bloque.
    * **Estática (global)**: Variables con duración estática existen durante toda la ejecución del programa. Se inicializan una sola vez y mantienen su valor entre llamadas.
       * Variables globales tienen duración estática.
-      * Variables locales declaradas con la palabra clave `static` también tienen duración estática.
+      * Variables locales declaradas con la palabra clave `static` también tienen duración estática. La estudiaremos en la sección de Programación Estructurada.
    * **Dinámica**: Variables creadas con operadores de asignación dinámica (`new`/`delete`) existen hasta que se libere la memoria explícitamente. No se tratan aquí en detalle, pues forman parte de gestión avanzada de memoria.
 
-## Ejemplo
+## Ejemplo 
 
 ```cpp
 #include <iostream>
