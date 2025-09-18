@@ -1,5 +1,7 @@
 # Declaración e inicialización de variables
 
+## Variables
+
 Las **variables** son identificadores que permiten almacenar datos en memoria durante la ejecución de un programa. Cada variable tiene un **tipo** que determina qué clase de datos puede contener, así como la cantidad de memoria que ocupará.
 
 El nombre de una variable puede estar formado por letras, dígitos y subrayados, pero no puede empezar por un dígito. Los nombres se suelen indicar en minúsculas.
@@ -79,7 +81,7 @@ La inferencia solo funciona si la variable se inicializa en la declaración. El 
 Otra forma de inferir el tipo es usando la función `decltype()`, que nos permite **obtener el tipo exacto de una expresión** sin evaluarla. Es muy útil cuando quieres declarar una variable con el mismo tipo que otra expresión o variable, sin escribir el tipo explícitamente. Devuelve exactamente el tipo que tiene la expresión, incluidas referencias, const, etc.
 
    ```cpp
-   int x {5};
+   int x{5};
    decltype(x) y{10};   // y es int, como x
    ```
 
@@ -100,5 +102,28 @@ Nos permiten guardar información en las variables. En una variable podemos guar
    * `=`: Asignación simple, por ejemplo:` a=b+7`;
    * Operadores de asignación compuesta: por ejemplo, `+=`, que nos permite sumar y posteriormente asignar. Por ejemplo: `a+=b` es igual que `a=a+b`. También podemos usar los operadores: `-=, *=, /=, %=`,...
 
+
+## Ejemplo 
+
+```cpp
+#include <iostream>
+
+int contador{0};                    //Variable global
+
+int main() {
+    int edad{30};                   // Inicialización uniforme
+    auto salario{2500.75};          // Inferencia con auto (double)
+    decltype(salario) PI{3.14159};  // Inferencia con decltype
+    contador+=1;
+
+
+    std::cout << "Edad: " << edad << "\n";
+    std::cout << "Salario: " << salario << "\n";
+    std::cout << "Pi: " << PI << "\n";
+    std::cout << "Contador: " << contador << "\n";
+    
+    return 0;
+}
+```
 
 

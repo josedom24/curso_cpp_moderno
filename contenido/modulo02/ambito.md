@@ -13,26 +13,32 @@ Además de declarar e inicializar variables, es importante entender **dónde y c
       * Variables locales declaradas con la palabra clave `static` también tienen duración estática. La estudiaremos en la sección de Programación Estructurada.
    * **Dinámica**: Variables creadas con operadores de asignación dinámica (`new`/`delete`) existen hasta que se libere la memoria explícitamente. No se tratan aquí en detalle, pues forman parte de gestión avanzada de memoria.
 
-## Ejemplo 
+## Ejemplo
 
 ```cpp
 #include <iostream>
 
-int contador{0};                    //Variable global
+// Variable global:
+// - Ámbito: accesible desde cualquier función del programa.
+// - Duración: existe durante toda la ejecución del programa.
+int contadorGlobal = 0;
 
 int main() {
-    int edad{30};                   // Inicialización uniforme
-    auto salario{2500.75};          // Inferencia con auto (double)
-    decltype(salario) PI{3.14159};  // Inferencia con decltype
-    contador+=1;
+    // Variable local:
+    // - Ámbito: solo es accesible dentro de la función main.
+    // - Duración: se crea al entrar en main y se destruye al salir de main.
+    int contadorLocal = 0;
 
+    std::cout << "Valor inicial de contadorGlobal: " << contadorGlobal << '\n';
+    std::cout << "Valor inicial de contadorLocal: " << contadorLocal << '\n';
 
-    std::cout << "Edad: " << edad << "\n";
-    std::cout << "Salario: " << salario << "\n";
-    std::cout << "Pi: " << PI << "\n";
-    std::cout << "Contador: " << contador << "\n";
-    
+    // Modificamos ambas variables
+    contadorGlobal += 5;
+    contadorLocal += 5;
+
+    std::cout << "Valor modificado de contadorGlobal: " << contadorGlobal << '\n';
+    std::cout << "Valor modificado de contadorLocal: " << contadorLocal << '\n';
+
     return 0;
 }
 ```
-
