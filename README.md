@@ -14,6 +14,7 @@
     * [Tipos de datos carácter y booleano](contenido/modulo02/caracter_bool.md)
     * [Tipos de datos numéricos y operaciones aritméticas](contenido/modulo02/numeros.md)
     * [Declaración e inicialización de variables](contenido/modulo02/variables.md)
+    * [Ámbito y duración de almacenamiento de variables](contenido/modulo02/ambito.md)
     * [Declaración e inicialización de constantes](contenido/modulo02/constantes.md)
     * [Conversión de tipos de datos](contenido/modulo02/casting.md)
     * [Introducción a las cadenas de caracteres](contenido/modulo02/cadenas.md)
