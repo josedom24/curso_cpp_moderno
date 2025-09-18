@@ -1,4 +1,4 @@
-# Ejemplos de paso de parámetros a funciones
+# Ejemplos de paso de argumentos a funciones
 
 ## Definición de parámetros opcionales
 

@@ -42,7 +42,7 @@
     * [Gestión de memoria con punteros](contenido/modulo04/punteros.md)
     * [Gestión de memoria con referencias](contenido/modulo04/referencias.md)
     * [Paso de argumentos a funciones](contenido/modulo04/argumentos.md)
-    * [Ejemplos de paso de parámetros a funciones](contenido/modulo04/argumentos2.md)
+    * [Ejemplos de paso de argumentos a funciones](contenido/modulo04/argumentos2.md)
     * [Valores de retorno de una función](contenido/modulo04/retorno.md)
     * [Tipos de funciones: constexpr, inline, lambda y recursivas](contenido/modulo04/tipos.md)
     * [Organización del código en archivos (.h y .cpp)](contenido/modulo04/organizacion.md)
