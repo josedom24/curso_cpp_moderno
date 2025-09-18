@@ -3,7 +3,7 @@
 Además de declarar e inicializar variables, es importante entender **dónde y cuánto tiempo** existen esas variables en memoria durante la ejecución del programa. Esto depende de su **ámbito** y **duración de almacenamiento**.
 
 * **Ámbito (scope)**: El ámbito de una variable es la región del programa donde la variable es accesible. Existen varios tipos:
-   * **Ámbito de bloque (local)**: Variables declaradas dentro de un bloque `{ ... }` solo son visibles dentro de ese bloque.
+   * **Ámbito local (o de bloque)**: Variables declaradas dentro de un bloque `{ ... }` solo son visibles dentro de ese bloque.
    * **Ámbito global**: Variables declaradas fuera de cualquier función o clase son accesibles desde cualquier parte del código posterior a su declaración.
    * **Ámbito de función (parámetros)**: Los parámetros de una función tienen ámbito local a esa función.
 * **Duración de almacenamiento (lifetime)**: La duración de almacenamiento es el tiempo durante el cual la variable existe en memoria. Tipos:
