@@ -35,12 +35,12 @@ Muy útil para mostrar resultados por pantalla o para generar mensajes.
 
 Cuando tenemos un valor en formato texto y queremos obtener su valor numérico, usamos funciones como:
 
-* `std::stoi` → Convierte string a `int`.
-* `std::stol` → Convierte string a `long`.
-* `std::stoll` → Convierte string a `long long`.
-* `std::stof` → Convierte string a `float`.
-* `std::stod` → Convierte string a `double`.
-* `std::stold` → Convierte string a `long double`.
+* `std::stoi`: Convierte string a `int`.
+* `std::stol`: Convierte string a `long`.
+* `std::stoll`: Convierte string a `long long`.
+* `std::stof`: Convierte string a `float`.
+* `std::stod`: Convierte string a `double`.
+* `std::stold`: Convierte string a `long double`.
 
 Estas funciones se encuentran en la biblioteca `<string>`. Ejemplo:
 

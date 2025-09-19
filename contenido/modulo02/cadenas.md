@@ -7,7 +7,7 @@ En C++ moderno existen dos formas principales de trabajar con cadenas de caracte
 
 ## Clases y objetos
 
-* Una **clase** en C++ es como un **tipo de dato personalizado**. Así como `int` es un tipo que permite crear variables que guardan números enteros, una clase define un nuevo tipo que permite crear **objetos** con sus propios datos y comportamientos.
+* **Clase**: **Tipo de dato personalizado**. 
 * **Objeto:** es una **variable de ese tipo de clase**. Cada objeto guarda su propia información.
 * **Atributos (o miembros de datos):** son las **variables dentro de la clase**, que guardan la información del objeto.
 * **Métodos (o funciones miembro):** son las **acciones que puede hacer el objeto**, es decir, funciones asociadas a la clase.
