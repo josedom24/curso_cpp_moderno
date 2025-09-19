@@ -67,6 +67,14 @@ En C++ moderno existen varias formas de inicializar variables. Inicializar una v
    int x{3.14};  // ERROR: pérdida de precisión.
    ```
 
+   Si no se indica el valor, la variable se inicializará a valores por defecto: los números a 0, las cadenas de caracteres a cadena vacía,...
+
+   ```cpp
+   int x{};  // x = 0
+   ```
+
+
+
 ## Inferencia de tipos
 
 Desde C++11, se puede usar la palabra clave `auto` para que el compilador deduzca automáticamente el tipo de la variable a partir del valor con que se inicializa:
