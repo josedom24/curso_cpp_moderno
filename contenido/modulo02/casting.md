@@ -3,10 +3,10 @@
 En un programa, a veces es necesario convertir el valor de una variable de un **tipo de dato** a otro. Esto se llama **conversión de tipos** o **casting**. Por ejemplo:
 
 * Convertir un número decimal (`double`) a un número entero (`int`).
-* Convertir un carácter (`char`) a su código numérico (entero).
-* Convertir un entero a decimal para que no se pierda información en una operación.
+* Convertir un carácter (`char`) a su código numérico entero (`int`).
+* Convertir un entero (`int`) a decimal (`double`) para que no se pierda información en una operación.
 
-C++ permite realizar estas conversiones de forma automática o manual, pero es muy importante entender cómo y cuándo ocurren, para evitar errores o resultados inesperados.
+C++ permite realizar estas conversiones de forma **automática o manual**, pero es muy importante entender cómo y cuándo ocurren, para evitar errores o resultados inesperados.
 
 
 ## Conversión implícita (automática)
@@ -40,12 +40,8 @@ El programador indica de forma clara que quiere convertir un valor de un tipo a 
 * Hay riesgo de perder información (por ejemplo, al convertir de decimal a entero).
 * Queremos asegurarnos de que la conversión ocurre exactamente cuando y como queremos.
 
-Se realiza conversión explícita cuando usamos:
+Para realizar la conversión explícita usamos la función `static_cast`. Veamos un ejemplo:
 
-* Conversión con inicialización uniforme `{}`: Es la forma más segura. Si la conversión puede provocar pérdida de información, el compilador genera un error.
-* La función `static_cast`: Es la forma recomendada en C++ moderno para conversiones controladas. 
-
-Veamos un ejemplo del uso de `static_cast`:
 
 ```cpp
 #include <iostream>
@@ -53,18 +49,19 @@ Veamos un ejemplo del uso de `static_cast`:
 int main() {
     double decimal {3.75};
 
-    int entero {static_cast<int>(decimal)};  // Conversión explícita
+    int entero {static_cast<int>(decimal)};  // Conversión explícita en inicialización uniforme
 
     std::cout << "Decimal: " << decimal << std::endl;
     std::cout << "Entero: " << entero << std::endl;
+
+    entero = entero + static_cast<int>(1.0);  // Conversión explícita en asignación
+    std::cout << "Entero modificado: " << entero << std::endl;
 }
 ```
 
-Se elimina la parte decimal, lo que puede ser útil o peligroso según el caso.
-
 ## Conversión entre caracteres y números
 
-Recuerda que los caracteres se almacenan como códigos numéricos en la memoria (por ejemplo, en la tabla ASCII). Ejemplo:
+Recuerda que los caracteres se almacenan como códigos numéricos en la memoria (tabla ASCII). Ejemplo:
 
 ```cpp
 #include <iostream>
