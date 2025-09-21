@@ -1,51 +1,42 @@
 #include <iostream>
-#include <vector>
+#include <string>
 
-// Función que devuelve el valor máximo en un vector
-int CalcularMax(const std::vector<int>& valores) {
-    if (valores.empty()) {
-        std::cerr << "Error: vector vacío.\n";
-        return 0; // O un valor por defecto adecuado
+// Función que devuelve la palabra lexicográficamente mayor
+std::string CalcularMax(const std::string& palabra_actual, const std::string& max_actual) {
+    if (max_actual.empty() || palabra_actual > max_actual) {
+        return palabra_actual;
     }
-    int max_val = valores[0];  // Inicializamos con el primer elemento
-    for (int v : valores) {
-        if (v > max_val) max_val = v;
-    }
-    return max_val;
+    return max_actual;
 }
 
-// Función que devuelve el valor mínimo en un vector
-int CalcularMin(const std::vector<int>& valores) {
-    if (valores.empty()) {
-        std::cerr << "Error: vector vacío.\n";
-        return 0; // O un valor por defecto adecuado
+// Función que devuelve la palabra lexicográficamente menor
+std::string CalcularMin(const std::string& palabra_actual, const std::string& min_actual) {
+    if (min_actual.empty() || palabra_actual < min_actual) {
+        return palabra_actual;
     }
-    int min_val = valores[0];  // Inicializamos con el primer elemento
-    for (int v : valores) {
-        if (v < min_val) min_val = v;
-    }
-    return min_val;
+    return min_actual;
 }
 
 int main() {
-    std::vector<int> numeros;
-    int valor;
+    std::string entrada;
+    std::string max_palabra;
+    std::string min_palabra;
 
-    std::cout << "Introduce números enteros (introduce -1 para terminar):\n";
+    std::cout << "Introduce palabras (escribe 'fin' para terminar):" << std::endl;
+
     while (true) {
-        std::cout << "Número: ";
-        std::cin >> valor;
-        if (valor == -1) break;
-        numeros.push_back(valor);
+        std::cin >> entrada;
+        if (entrada == "fin") break;
+
+        max_palabra = CalcularMax(entrada, max_palabra);
+        min_palabra = CalcularMin(entrada, min_palabra);
     }
 
-    if (numeros.empty()) {
-        std::cout << "No se introdujeron números.\n";
+    if (!max_palabra.empty()) {
+        std::cout << "Palabra máxima: " << max_palabra << std::endl;
+        std::cout << "Palabra mínima: " << min_palabra << std::endl;
     } else {
-        int maximo = CalcularMax(numeros);
-        int minimo = CalcularMin(numeros);
-        std::cout << "Valor máximo: " << maximo << "\n";
-        std::cout << "Valor mínimo: " << minimo << "\n";
+        std::cout << "No se introdujeron palabras." << std::endl;
     }
 
     return 0;

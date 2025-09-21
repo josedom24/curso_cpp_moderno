@@ -18,26 +18,41 @@ Crea una función `std::string ConvertirEspaciado(const std::string& texto)` que
 
 ## Ejercicio 5
 
+Escribe un programa que lea palabras desde teclado hasta que el usuario escriba `"fin"`. Durante la lectura, determina **la palabra lexicográficamente mayor y la menor** sin almacenar todas las palabras en memoria.
+
 Define dos funciones:
 
-1. `int CalcularMax(const std::vector<int>& valores)` que devuelva el valor máximo del vector.
-2. `int CalcularMin(const std::vector<int>& valores)` que devuelva el valor mínimo del vector.
+```cpp
+std::string CalcularMax(const std::string& palabra_actual, const std::string& max_actual);
+std::string CalcularMin(const std::string& palabra_actual, const std::string& min_actual);
+```
 
-En el programa principal, lee números enteros desde teclado y añádelos a un vector hasta que el usuario decida parar (por ejemplo, introduciendo un valor especial como `-1`).
+Al finalizar, muestra la palabra máxima y la mínima introducidas.
 
-Después, llama a las funciones para obtener y mostrar el valor máximo y mínimo de los números introducidos.
 
 ## Ejercicio 6
 
+Aquí tienes un enunciado adaptado **sin usar vectores ni arrays**, calculando el promedio en tiempo real:
+
+---
+
+## Ejercicio: Promedio de números reales
+
 Define una función:
 
-* `double CalcularPromedio(const std::vector<double>& valores)`
-  Recibe un vector de números reales y devuelve el promedio (media aritmética) de los valores.
+```cpp
+double CalcularPromedio(double suma, int cantidad);
+```
+
+* `suma` es la suma acumulada de los números introducidos.
+* `cantidad` es el número de valores válidos introducidos.
+* La función devuelve el promedio (media aritmética) de los valores.
 
 En el programa principal:
 
-* Pide al usuario que introduzca números reales hasta que introduzca un valor negativo (que no se incluirá en el cálculo).
-* Calcula y muestra el promedio usando la función.
+* Pide al usuario que introduzca números reales uno a uno hasta que introduzca un valor negativo (que no se incluirá en el cálculo).
+* Mantén la **suma acumulada** y el **contador** de números introducidos mientras se leen los valores.
+* Llama a la función `CalcularPromedio` para calcular y mostrar el promedio.
 
 
 ## Ejercicio 7
@@ -50,7 +65,16 @@ Define una función `constexpr int Potencia(int base, unsigned int exponente)` q
 
 ## Ejercicio 9
 
-Dado un vector `std::vector<int>` con edades, utiliza expresiones lambda para contar cuántos elementos representan personas menores de edad (<18), adultas (18-64) y mayores (>=65). Muestra el conteo de cada grupo.
+Lee edades enteras desde teclado una a una hasta que el usuario introduzca un número negativo (que no se incluirá en el conteo).
+
+Durante la lectura, utiliza **funciones lambda** para determinar y contar cuántas edades corresponden a cada grupo:
+
+* **Menores de edad:** < 18
+* **Adultos:** 18 - 64
+* **Mayores:** >= 65
+
+Al finalizar, muestra el conteo de cada grupo.
+
 
 ## Ejercicio 10
 

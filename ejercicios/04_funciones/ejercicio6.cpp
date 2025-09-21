@@ -1,34 +1,30 @@
 #include <iostream>
-#include <vector>
 
-// Función para calcular el promedio de un vector de números reales
-double CalcularPromedio(const std::vector<double>& valores) {
-    if (valores.empty()) return 0.0;
-
-    double suma = 0.0;
-    for (double v : valores) {
-        suma += v;
-    }
-    return suma / valores.size();
+// Función que calcula el promedio a partir de la suma y la cantidad de números
+double CalcularPromedio(double suma, int cantidad) {
+    if (cantidad == 0) return 0.0; // Evitar división por cero
+    return suma / cantidad;
 }
 
 int main() {
-    std::vector<double> numeros;
-    double entrada;
+    double numero;
+    double suma = 0.0;
+    int contador = 0;
 
-    std::cout << "Introduce números reales (negativo para terminar):\n";
+    std::cout << "Introduce números reales (negativo para terminar):" << std::endl;
+
     while (true) {
-        std::cout << "> ";
-        std::cin >> entrada;
-        if (entrada < 0) break;
-        numeros.push_back(entrada);
+        std::cin >> numero;
+        if (numero < 0) break; // Terminamos si el número es negativo
+        suma += numero;
+        ++contador;
     }
 
-    if (numeros.empty()) {
-        std::cout << "No se introdujeron números válidos.\n";
-    } else {
-        double promedio = CalcularPromedio(numeros);
+    if (contador > 0) {
+        double promedio = CalcularPromedio(suma, contador);
         std::cout << "El promedio es: " << promedio << std::endl;
+    } else {
+        std::cout << "No se introdujeron números válidos." << std::endl;
     }
 
     return 0;
