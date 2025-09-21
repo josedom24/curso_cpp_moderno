@@ -76,7 +76,7 @@ Es aconsejable utilizar `{}` para delimitar los bloques, incluso si solo hay una
 
 Cuando un programa debe tomar decisiones con **más de dos opciones**, utilizamos estructuras más complejas que el simple `if` o el `if-else`. Para estos casos, C++ permite anidar instrucciones `if` o usar la construcción `else if`.
 
-Los `ìf` anidados se refieren a colocar una instrucción `if` dentro del bloque de otro `if` o dentro de un `else`. Esto permite realizar comprobaciones secuenciales según diferentes condiciones. La sintaxis sería:
+Los `if` anidados se refieren a colocar una instrucción `if` dentro del bloque de otro `if` o dentro de un `else`. Esto permite realizar comprobaciones secuenciales según diferentes condiciones. La sintaxis sería:
 
 
 ```cpp
