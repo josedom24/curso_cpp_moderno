@@ -38,9 +38,7 @@ int main() {
 }
 ```
 
-## Inicialización de una `struct`
-
-Podemos usar los diferentes tipos de inicialización. En el ejemplo usamos **inicialización uniforme**:
+Podemos usar los diferentes tipos de inicialización. Por ejemplo, usando **inicialización uniforme**:
 
 ```cpp
 Punto p{3.5, 4.2};
