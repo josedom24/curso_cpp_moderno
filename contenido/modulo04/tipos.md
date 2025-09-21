@@ -49,34 +49,9 @@ int main() {
 }
 ```
 
-## Funciones Lambda
+## Funciones lambda
 
-Las **lambdas** son funciones anónimas que se definen directamente en el lugar donde se necesitan. Son útiles para operaciones rápidas y sencillas.
-
-Ejemplo:
-
-```cpp
-#include <iostream>
-
-int main() {
-    // Lambda que multiplica un número por 3
-    auto triplicar = [](int n) {
-        return n * 3;
-    };
-
-    int valor = 4;
-    std::cout << "El triple de " << valor << " es: " << triplicar(valor) << std::endl;
-
-    return 0;
-}
-```
-La función lambda es:
-
-```cpp
-[](int n) { return n * 3;}
-```
-
-En este caso hemos guardado la función lambda en una variable `triplicar` que hemos definido con el tipo automático (`auto`). También tenemos la opción de utilizar la función lambda sin guardarla en una variable:
+Las **lambdas** son funciones anónimas que se definen directamente en el lugar donde se necesitan. Son útiles para operaciones rápidas y sencillas. Ejemplo:
 
 ```cpp
 #include <iostream>
@@ -87,8 +62,9 @@ int main() {
     return 0;
 }
 ```
+La función lambda es: `[](int n) { return n * 3;}`.
 
-## Funciones Recursivas
+## Funciones recursivas
 
 Las funciones recursivas se llaman a sí mismas, dividiendo el problema en subproblemas más pequeños. Son comunes para cálculos como factoriales o sumas repetitivas.
 
