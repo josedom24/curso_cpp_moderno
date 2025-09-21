@@ -12,7 +12,7 @@ Recordemos los tipos de variables:
 
 * Se declaran dentro de una función o bloque `{}`.
 * **Ámbito local**: solo son accesibles **dentro de la función o bloque** en el que se definen.
-* **Duración automática**: se crean cuando el flujo de ejecución entra en el ámbito y se destruyen automáticamente al salir.
+* **Duración automática o local**: se crean cuando el flujo de ejecución entra en el ámbito y se destruyen automáticamente al salir.
 * Estudiaremos en el siguiente apartado que los **parámetros de una función** en C++ **se comportan como variables locales**.
     
 Ejemplo:
@@ -45,7 +45,7 @@ int main() {
 
 * Se definen utilizando la palabra reservada `static`.
 * **Ámbito local**: solo son accesibles **dentro de la función o bloque** en el que se definen.
-* **Duración global**: existen durante **toda la ejecución del programa** (no se destruye al salir de la función).
+* **Duración estática o global**: existen durante **toda la ejecución del programa** (no se destruye al salir de la función).
 * Se inicializa **solo una vez**, la primera vez que se llama a la función y **conserva su valor** en siguientes llamadas.
 
 Ejemplo:
@@ -78,7 +78,7 @@ int main() {
 
 * Se declaran **fuera de cualquier función o clase**, normalmente al inicio del archivo.
 * **Ámbito global**: Son accesibles desde cualquier función del mismo archivo.
-* **Duración estática**: Su duración es **todo el tiempo de ejecución del programa**.
+* **Duración estática o global**: Su duración es **todo el tiempo de ejecución del programa**.
 * El uso inadecuado puede dificultar la gestión clara de los recursos.
 
 Ejemplo:
