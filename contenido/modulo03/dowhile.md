@@ -15,7 +15,7 @@ do {
 * Este tipo de estructura es útil cuando necesitamos que el bloque de instrucciones se ejecute **al menos una vez**, independientemente de la condición inicial.
 * Para evitar ciclos infinitos, el bloque de instrucciones debe modificar alguna de las variables que intervienen en la condición, de modo que eventualmente la condición pueda ser falsa y se finalice el bucle.
 
-Veamos un ejemplo de un programa similar al del apartado anterior que que solicita al usuario una contraseña. 
+Veamos un ejemplo de un programa similar al del apartado anterior que solicita al usuario una contraseña. 
 
 ```cpp
 #include <iostream>

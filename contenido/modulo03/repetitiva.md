@@ -26,11 +26,11 @@ Crea un programa que pida dos números enteros y muestre todos los números pare
 
 ## Ejercicio 7
 
-Escribe un programa que pida el limite inferior y superior de un intervalo. Si el límite inferior es mayor que el superior lo tiene que volver a pedir. A continuación se van introduciendo números hasta que introduzcamos el 0. Cuando termine el programa dará las siguientes informaciones:
+Escribe un programa que pida el límite inferior y superior de un intervalo. Si el límite inferior es mayor que el superior lo tiene que volver a pedir. A continuación se van introduciendo números hasta que introduzcamos el 0. Cuando termine el programa dará las siguientes informaciones:
 
 * La suma de los números que están dentro del intervalo (intervalo abierto).
 * Cuantos números están fuera del intervalo.
-* He informa si hemos introducido algún número igual a los límites del intervalo.
+* E informa si hemos introducido algún número igual a los límites del intervalo.
 
 
 ## Ejercicio 8

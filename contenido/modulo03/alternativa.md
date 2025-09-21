@@ -34,7 +34,7 @@ Si el número introducido no está entre 1 y 6, debe mostrar el mensaje: `"ERROR
 
 Realiza un programa que calcule la potencia, para ello pide por teclado la base y el exponente. Pueden ocurrir tres cosas:
 
-    El exponente sea positivo, sólo tienes que imprimir la potencia.
+    El exponente sea positivo, solo tienes que imprimir la potencia.
     El exponente sea 0, el resultado es 1.
     El exponente sea negativo, el resultado es 1/potencia con el exponente positivo.
 
@@ -54,4 +54,4 @@ Escribe un programa que lea las longitudes de los tres lados de un triángulo y 
 
 ## Ejercicio 10
 
-Escribe un programa que pida una fecha (día, mes y año) y diga si es correcta. Tienes que tener en cueta los días que tiene cada mes y que un año es bisiesto si es divisible por 4, pero no por 100, excepto si también es divisible por 400.
+Escribe un programa que pida una fecha (día, mes y año) y diga si es correcta. Tienes que tener en cuenta los días que tiene cada mes y que un año es bisiesto si es divisible por 4, pero no por 100, excepto si también es divisible por 400.
