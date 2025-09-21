@@ -72,7 +72,7 @@ int main() {
 
 Es aconsejable utilizar `{}` para delimitar los bloques, incluso si solo hay una instrucción. Esto previene errores y mejora la claridad.
 
-## Estructura alternativa: `if` anidados
+## Alternativa múltiple
 
 Cuando un programa debe tomar decisiones con **más de dos opciones**, utilizamos estructuras más complejas que el simple `if` o el `if-else`. Para estos casos, C++ permite anidar instrucciones `if` o usar la construcción `else if`.
 
