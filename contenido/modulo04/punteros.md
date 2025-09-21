@@ -1,6 +1,6 @@
 # Gestión de memoria con punteros
 
-En C++, los **punteros** y las **referencias** son dos herramientas esenciales que permiten acceder y manipular los datos guardados en memoria de forma indirecta. Estos mecanismos proporcionan un mayor control sobre la memoria y los recursos, y constituyen la base para trabajar de forma eficiente con estructuras dinámicas, memoria dinámica y funciones que necesitan modificar datos externos.
+En C++, los **punteros** y las **referencias** son dos herramientas esenciales que permiten acceder y manipular los datos guardados en memoria de **forma indirecta**. Estos mecanismos proporcionan un mayor control sobre la memoria y los recursos, y constituyen la base para trabajar de forma eficiente con estructuras dinámicas, memoria dinámica y funciones que necesitan modificar datos externos.
 
 ## Dirección de memoria
 
@@ -18,39 +18,54 @@ En C++, existen dos operadores fundamentales para trabajar con direcciones de me
 Ejemplo práctico:
 
 ```cpp
-int edad = 10;
+#include <iostream>
 
-std::cout << &edad << std::endl;   // Muestra la dirección de memoria de 'edad'
-std::cout << *&edad << std::endl;  // Muestra el contenido de esa dirección (valor de 'edad')
-*&edad = 12;                       // Modifica el contenido de la variable usando su dirección
-std::cout << edad << std::endl;    // Comprueba que el valor de 'edad' ha cambiado
+int main() {
+    int edad = 10;
+
+    std::cout << &edad << std::endl;   // Muestra la dirección de memoria de 'edad'
+    std::cout << *&edad << std::endl;  // Muestra el contenido de esa dirección (valor de 'edad')
+    *&edad = 12;                       // Modifica el contenido de la variable usando su dirección
+    std::cout << edad << std::endl;    // Comprueba que el valor de 'edad' ha cambiado
+
+    return 0;
+}
 ```
 
 ## Punteros
 
 Un **puntero** es una variable especial que almacena la **dirección de memoria** de otra variable. Se dice que el puntero "apunta" a esa variable, y a través de él se puede acceder y modificar su contenido.
 
-Para declarar un puntero, se indica el tipo de dato al que va a apuntar, seguido del operador `*`:
+Para declarar un puntero, se indica el tipo de dato al que va a apuntar, seguido del operador `*`. Veamos un ejemplo:
 
 ```cpp
-int edad = 10;
-int* ptr;    // Definición de puntero a entero
-ptr = &edad; // El puntero almacena la dirección de 'edad'
+#include <iostream>
+
+int main() {
+    // Declaramos una variable entera
+    int edad = 10;
+
+    // Declaramos un puntero a entero
+    int* ptr;
+
+    // El puntero apunta a la dirección de 'edad'
+    ptr = &edad;
+
+    // Mostramos la dirección de memoria de 'edad' usando el puntero
+    std::cout << "Dirección de memoria almacenada en ptr: " << ptr << std::endl;
+
+    // Accedemos al contenido apuntado por ptr (valor de 'edad')
+    std::cout << "Valor de 'edad' a través del puntero: " << *ptr << std::endl;
+
+    // Modificamos el valor de 'edad' usando el puntero
+    *ptr = 12;
+
+    // Comprobamos que el valor de 'edad' ha cambiado
+    std::cout << "Nuevo valor de 'edad' después de modificarlo con ptr: " << edad << std::endl;
+
+    return 0;
+}
 ```
-
-A partir de ese momento, se puede:
-
-* Acceder al contenido apuntado:
-
-  ```cpp
-  std::cout << *ptr << std::endl;  // Muestra el valor de 'edad'
-  ```
-* Modificar el valor de la variable apuntada:
-
-  ```cpp
-  *ptr = 12;  
-  std::cout << edad << std::endl;  // Muestra el nuevo valor de 'edad' (12)
-  ```
 
 ## Punteros y gestión de memoria
 

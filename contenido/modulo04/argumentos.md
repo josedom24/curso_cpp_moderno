@@ -1,20 +1,8 @@
 # Paso de argumentos a funciones
 
-En C++, al definir y llamar funciones es fundamental entender cómo se transmiten los datos, ya que de ello dependen:
+## Parámetros y argumentos
 
-* La **eficiencia** del programa.
-* La **posibilidad de modificar** los datos originales.
-* El **control de la propiedad** de los recursos.
-* La **gestión correcta de los recursos**, evitando copias innecesarias.
-
-Al pasar argumentos a funciones, es fundamental decidir si:
-
-* Se debe **copiar** el recurso (lo que implica un coste).
-* Se debe permitir que la función **modifique** el recurso original.
-* La función solo debe **acceder** al recurso sin modificarlo (idealmente mediante referencia constante).
-
-
-## Parámetros y argumentos: ¿cuál es la diferencia?
+El paso de argumentos a funciones es el mecanismo mediante el cual se proporcionan valores o referencias a los parámetros de una función para que esta pueda utilizarlos durante su ejecución.
 
 * **Parámetro:** es la **variable** que se declara en la definición de la función, sirve como "nombre local" para los datos que se recibirán. Se comporta como una **variable local**, es decir, su **ámbito es local** y su **duración automática**.
 
@@ -39,7 +27,22 @@ El parámetro `nombre` actúa como una **variable local**, por lo tanto:
 * Solo es accesible en la función `saludar()`. Desde la función `main()` no podemos utilizarla.
 * Una vez finalizada la ejecución de la función `saludar()` la variable `nombre` se destruye.
 
-## Paso de argumentos por valor
+## Tipos de pasos de argumentos
+
+En C++, al definir y llamar funciones es fundamental entender cómo se transmiten los datos, ya que de ello dependen aspectos clave como:
+
+* La **eficiencia** del programa.
+* La **posibilidad de modificar** los datos originales.
+* Evitar **copias innecesarias**, especialmente cuando se trabaja con estructuras complejas, objetos grandes o contenedores de datos voluminosos. Las copias pueden **incrementar el consumo de memoria**, generar un **mayor tiempo de ejecución** e **introducir errores** si no se controlan adecuadamente las operaciones de copia.
+
+Teniendo en cuanta esto, tenemos varias formas de pasar argumentos a las funciones:
+
+1. **Por valor:** se realiza una copia del recurso. Es seguro, pero puede ser costoso en memoria y tiempo para objetos grandes.
+2. **Por referencia:** permite que la función **modifique directamente** el recurso original, evitando la copia.
+3. **Por referencia constante:** permite que la función **lea** los datos sin modificarlos y sin realizar copias innecesarias.
+4. **Por punteros:** cuando se requiere manipulación explícita de memoria o control fino de estructuras dinámicas, asegurando una gestión adecuada de los recursos.
+
+### Paso de argumentos por valor
 
 La función recibe una **copia** del argumento. Trabaja sobre esa copia, y el valor original no se puede modificar.
 
@@ -62,7 +65,7 @@ int main() {
 * El uso del paso de argumentos por valor es sencillo y seguro, y como hemos visto el argumento que se envía a la función no se modifica, podemos decir que es un **parámetro de solo lectura**.
 * Sin embargo, puede ser ineficiente si el argumento es un objeto complejo (por ejemplo, `std::vector`, `std::string`, estructuras grandes), ya que se pueden generar copias innecesarias, lo que impacta en el rendimiento y el consumo de recursos.
 
-## Paso de argumentos por referencia
+### Paso de argumentos por referencia
 
 Se utiliza el operador `&` para que la función reciba una **referencia** al argumento original. No se realiza copia, y cualquier modificación afecta directamente al argumento original.
 
@@ -87,7 +90,7 @@ int main() {
 * Recomendado cuando queremos modificar objetos complejos como `std::string`, `std::vector`, estructuras de datos, etc.
 
 
-## Paso de argumentos por referencia constante 
+### Paso de argumentos por referencia constante 
 
 Si no es necesario modificar el argumento original, pero tampoco queremos hacer una copia costosa, se usa una **referencia constante** (`const &`). Es muy habitual en C++ moderno.
 
@@ -113,7 +116,7 @@ int main() {
 * Garantiza que el argumento no podrá modificarse dentro de la función.
 * Recomendado para objetos complejos como `std::string`, `std::vector`, estructuras de datos, etc.
 
-## Paso de argumento por puntero
+### Paso de argumento por puntero
 
 También se pueden pasar punteros, transmitiendo la **dirección de memoria** del argumento y posibilitando también la modificación de los argumentos. 
 
