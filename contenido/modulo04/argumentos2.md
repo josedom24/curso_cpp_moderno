@@ -10,21 +10,27 @@ Para declarar un parámetro opcional, se asigna un **valor por defecto** en la d
 #include <iostream>
 #include <string>
 
-void saludar(std::string nombre = "Usuario") {
-    std::cout << "Hola, " << nombre << std::endl;
-}
+
+// Valor por defecto en la declaración
+void saludar(std::string nombre = "Usuario");  
 
 int main() {
     saludar("Carlos"); // Imprime: Hola, Carlos
     saludar();         // Imprime: Hola, Usuario
 }
+
+// Definición sin repetir el valor por defecto
+void saludar(std::string nombre) {
+    std::cout << "Hola, " << nombre << std::endl;
+}
+
 ```
 
 * Los **parámetros opcionales deben ir al final** de la lista de parámetros.
 * Los valores por defecto se especifican en la **declaración** o **definición** de la función, pero nunca en ambas.
 * Si se omite un argumento al llamar a la función, se utilizará el valor por defecto especificado.
 * Los parámetros opcionales pueden ser de **cualquier tipo**, incluyendo tipos primitivos, objetos de la STL, o incluso punteros.
-* los parámetros opcionales siguen las mismas reglas sobre **paso por valor**, **referencia**, o **referencia constante**, según sea necesario para evitar copias costosas y gestionar los recursos de forma eficiente.
+* Los parámetros opcionales siguen las mismas reglas sobre **paso por valor**, **referencia**, **referencia constante** o **punteros**, según sea necesario para evitar copias costosas y gestionar los recursos de forma eficiente.
 
 Ejemplo con varios parámetros opcionales:
 
@@ -46,7 +52,7 @@ int main() {
 
 ## Envío de un `struct` a una función
 
-Los `struct` pueden pasarse a funciones como cualquier otro tipo de dato. Dependiendo de si se pasa por **valor** o por **referencia**, se puede modificar su contenido o no. Ejemplo:
+Los `struct` pueden pasarse a funciones como cualquier otro tipo de dato. Se puede emplear cualquiera de los tipos de paso de argumentos que hemos estudiado. Ejemplo:
 
 ```cpp
 #include <iostream>
@@ -76,7 +82,7 @@ int main() {
     return 0;
 }
 ```
-* Para evitar copias innecesarias, se suele pasar el `struct` por **referencia**.
+
 * Si la función no debe modificar el `struct`, se declara como `const Rectangulo&`.
 * Si la función debe modificar el `struct`, se pasa como `Rectangulo&`.
 
