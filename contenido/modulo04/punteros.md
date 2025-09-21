@@ -6,7 +6,7 @@ En C++, los **punteros** y las **referencias** son dos herramientas esenciales q
 
 Para comprender los punteros, es necesario recordar que cada variable que declaramos en un programa C++ se almacena en una posición concreta de la memoria RAM del ordenador. Cada una de esas posiciones tiene asociada una **dirección de memoria**, que permite localizarla.
 
-Al declarar una variable, ademá de indicar el nombre de la variable y su tipo de datos (que determina el espacio de memoria ocupado) podemos acceder a la **dirección de memoria** donde se ubica y donde guardaremos su valor.
+Al declarar una variable, además de indicar el nombre de la variable y su tipo de datos (que determina el espacio de memoria ocupado) podemos acceder a la **dirección de memoria** donde se ubica y donde guardaremos su valor.
 
 ## Los Operadores `&` y `*`
 
