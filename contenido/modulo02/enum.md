@@ -2,64 +2,58 @@
 
 En programación, a menudo necesitamos representar un conjunto de valores posibles claramente definidos y finitos. Por ejemplo, los días de la semana, los colores de un semáforo, o el estado de una tarea.
 
-Los **tipos enumerados** (`enum`) nos permiten precisamente eso: definir un conjunto de valores simbólicos, legibles y con significado, que el compilador puede tratar como valores concretos.
+Para ello usamos los **tipos enumerados** (`enum`):
 
-Sin embargo, en C++ clásico, los `enum` tradicionales tienen limitaciones que pueden generar errores. Por eso, en **C++ moderno**, se prefiere el uso de **`enum class`**, que soluciona esos problemas.
-
-## Tipo `enum` tradicional
-
-En este ejemplo definimos una enumeración `Color` de tipo `enum` con tres posibles valores, posteriormente creamos una variable `miColor` del tipo `Color` y cuyo valor es `Rojo`.
-
-```cpp
-enum Color { Rojo, Verde, Azul };
-
-Color miColor = Rojo;
-```
-
-El uso de `enum` tradicionales tiene una serie de problemas:
-
-* Los nombres de los valores se introducen en el espacio de nombres global.
-* Los valores son convertibles a `int` de forma implícita, lo que puede dar lugar a errores.
+* En C++ clásico, se utiliza el tipo `enum`. El uso de este tipo enumerado tiene limitaciones que pueden generar errores. 
+* En **C++ moderno**, se prefiere el uso de **`enum class`**, que soluciona esos problemas.
 
 ## `enum class`: Enumeraciones fuertemente tipadas
 
-En C++ moderno se introduce el tipo `enum class`, que resuelve los problemas anteriores. La definición de la numeración es similar, pero vemos a que al declarar la variable `miColor` el valor se indica dentro de un espacio de nombres:
+`enum class` (enumeration class) es un tipo definido por el programador que representa un conjunto finito de valores simbólicos, llamados **enumeradores**. Estos valores se agrupan bajo un mismo nombre de tipo y están fuertemente tipados.
+
+Ejemplo:
 
 ```cpp
 enum class Color { Rojo, Verde, Azul };
-
 Color miColor = Color::Rojo;
 ```
 
-* Los valores están "encapsulados" dentro del nombre de la enumeración. Es decir, en un espacio de nombres independiente.
-* No se convierten implícitamente a `int`, con lo que conseguimos una mayor seguridad de tipos.
-* Mejor legibilidad y mantenimiento del código.
+Sus características principales son:
 
-Veamos un ejemplo:
+* **Es un tipo propio**: Un `enum class` define un tipo independiente, es decir, definido por el usuario.
+* **Nombres de los enumeradores cualificados**: Los valores del `enum class` se acceden a través del nombre del tipo, lo que evita ambigüedad. Ejemplo: `Color::Rojo`.
+* **Seguridad de tipo (type safety)**: Un valor de `enum class` no puede convertirse implícitamente a otro tipo como `int` o `float`. Esto evita errores al mezclar enumeraciones con otros tipos numéricos.
+* **Se puede especificar el tipo base**: Es posible indicar explícitamente el tipo subyacente (como `int`, `char`, `unsigned`, etc.), lo que permite controlar el tamaño en memoria.
+
+## Ejemplo
+
 ```cpp
 #include <iostream>
 
-enum class Direccion { Norte, Sur, Este, Oeste };
+enum class Color {
+    Rojo,
+    Verde,
+    Azul
+};
 
 int main() {
-    Direccion d {Direccion::Norte};
+    Color c {Color::Verde};
 
-    if (d == Direccion::Norte) {
-        std::cout << "Vamos hacia el Norte" << std::endl;
-    } else {
-        std::cout << "No vamos hacia el Norte" << std::endl;
+    if (c == Color::Verde) {
+        std::cout << "El color es verde\n";
     }
-
-    return 0;
 }
 ```
-* La enumeración `Direccion` se crea en un ámbito global.
-* Vemos como declaramos la variable `d` de tipo `Direccion` y como le asignamos el valor `Direccion::Norte`.
-* También comprobamos como podemos usar el operador de igualdad para comparar la variable con un valor. Por defecto cada valor se convierte a un entero que es el que se compara.
+
+En este ejemplo:
+
+* `Color` es un tipo definido por el usuario.
+* Sus posibles valores son `Color::Rojo`, `Color::Verde` y `Color::Azul`.
+* El uso de `Color::` es obligatorio para acceder a los enumeradores.
 
 ## Conversión de tipo
 
-Por defecto, cada valor que definimos en una `enum class``se relacionan con un entero, siendo el primer elemento el valor 0, el segundo el 1, y así sucesivamente.
+Por defecto, cada valor que definimos en un `enum class` se relaciona con un entero, siendo el primer elemento el valor 0, el segundo el 1, y así sucesivamente.
 
 En la declaración de la enumeración podemos establecer el valor entero de cada uno de los valores que definimos.
 
@@ -109,13 +103,18 @@ int main() {
 }
 ```
 
+Si ponemos sólo el valor inicial, el resto de los elementos irán cogiendo el valor consecutivo. Ejemplo:
+
+```cpp
+enum class Estado { Inactivo = 1, Activo, Suspendido };
+``` 
 
 ## Definir el tipo subyacente
 
 Por defecto, el tipo subyacente es `int`, pero se puede especificar otro tipo:
 
 ```cpp
-enum class CodigoError : unsigned char { Ok = 0, Advertencia = 1, Error = 2 };
+enum class Estado : unsigned char { Inactivo = 1, Activo = 2, Suspendido = 3 };
 ```
 
 Esto puede ser útil para ahorrar memoria o por requisitos específicos.
@@ -130,24 +129,18 @@ Define un `enum class` llamado `DiaSemana` con los valores `Lunes`, `Martes`, `M
 ```cpp
 #include <iostream>
 
-enum class DiaSemana { Lunes = 1, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo };
-
-std::string diaAString(DiaSemana dia) {
-    switch (dia) {
-        case DiaSemana::Lunes: return "Lunes";
-        case DiaSemana::Martes: return "Martes";
-        case DiaSemana::Miercoles: return "Miercoles";
-        case DiaSemana::Jueves: return "Jueves";
-        case DiaSemana::Viernes: return "Viernes";
-        case DiaSemana::Sabado: return "Sabado";
-        case DiaSemana::Domingo: return "Domingo";
-        default: return "Desconocido";
-    }
-}
-
 int main() {
-    int numero;
+    enum class DiaSemana { 
+        Lunes = 1, 
+        Martes, 
+        Miercoles, 
+        Jueves, 
+        Viernes, 
+        Sabado, 
+        Domingo 
+    };
 
+    int numero;
     std::cout << "Introduce un número del 1 al 7 para indicar el día de la semana: ";
     std::cin >> numero;
 
@@ -156,10 +149,21 @@ int main() {
         return 1;
     }
 
-    DiaSemana dia {static_cast<DiaSemana>(numero)};
+    DiaSemana dia { static_cast<DiaSemana>(numero) };
 
-    std::cout << "El día seleccionado es: " << diaAString(dia) << std::endl;
+    std::cout << "El día seleccionado es: ";
+    switch (dia) {
+        case DiaSemana::Lunes: std::cout << "Lunes"; break;
+        case DiaSemana::Martes: std::cout << "Martes"; break;
+        case DiaSemana::Miercoles: std::cout << "Miércoles"; break;
+        case DiaSemana::Jueves: std::cout << "Jueves"; break;
+        case DiaSemana::Viernes: std::cout << "Viernes"; break;
+        case DiaSemana::Sabado: std::cout << "Sábado"; break;
+        case DiaSemana::Domingo: std::cout << "Domingo"; break;
+    }
+    std::cout << std::endl;
 
     return 0;
 }
+
 ```
