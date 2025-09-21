@@ -24,7 +24,6 @@ switch (expresión) {
 * La instrucción `break` es importante para evitar que se ejecuten los `case` siguientes.
 * El bloque `default` es opcional y se ejecuta si ningún `case` coincide con el valor de la expresión.
 
-
 Cuando se evalúa la expresión del `switch`:
 
 * Se busca el primer `case` que coincida con el valor.
