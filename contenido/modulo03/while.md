@@ -82,9 +82,9 @@ int main() {
 }
 ```
 
-Hemos usado la función `std::toupper()` nos permite convertir un carácter a mayúsculas.
+Hemos usado la función `std::toupper()` que nos permite convertir un carácter a mayúsculas.
 
-## Instrucción `continue`
+### Instrucción `continue`
 
 Interrumpe la iteración actual del bucle y salta directamente a la siguiente evaluación de la condición, sin ejecutar las instrucciones restantes del cuerpo del bucle.
 
