@@ -16,8 +16,6 @@ Los pilares fundamentales de la programación estructurada son:
 * **Evitar el uso innecesario de saltos incondicionales (`goto`)**, que dificultan el seguimiento del flujo.
 * **Facilita la comprensión y el mantenimiento:** Al dividir el código en partes lógicas independientes.
 
-Además, como ya has aprendido, conceptos como la **gestión de recursos**, el uso de **punteros** y **referencias**, y la **propiedad de los datos**, se integran perfectamente en este modelo, contribuyendo a escribir código seguro y eficiente.
-
 ## Definición y uso de funciones
 
 Dentro de la programación estructurada, las **funciones** son la herramienta principal para dividir un programa en bloques reutilizables y comprensibles.
@@ -55,7 +53,7 @@ int main() {
 }
 ```
 
-Las funciones también pueden **no devolver ningún resultado, solo realizar una tarea. Veamos un  ejemplo:
+Las funciones también pueden **no devolver ningún resultado**, solo realizar una tarea. Veamos un  ejemplo:
 
 ```cpp
 #include <iostream>
@@ -77,9 +75,8 @@ int main() {
 * **Reutilización:** Una función puede invocarse múltiples veces, evitando duplicación de código.
 * **Claridad:** Los nombres de las funciones describen su propósito, lo que mejora la legibilidad.
 * **Facilita la depuración:** Los errores se localizan más fácilmente al estar el código segmentado.
-* **Integración con la gestión de recursos:** Las funciones permiten controlar el uso y la liberación de recursos dentro de bloques bien definidos, aplicando técnicas como RAII.
 
-## Prototipos de funciones
+### Prototipos de funciones
 
 Un **prototipo de función** es una declaración previa que informa al compilador acerca del nombre, el tipo de retorno y la lista y tipo de los parámetros de una función. Permite al compilador verificar las llamadas a la función antes de que su definición completa aparezca en el código.
 
