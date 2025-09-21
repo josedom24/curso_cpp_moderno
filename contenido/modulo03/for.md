@@ -1,6 +1,6 @@
 # Estructuras repetitivas: for
 
-El bucle `for` permite ejecutar de forma repetitiva un bloque de instrucciones, normalmente cuando se conoce cuántas veces debe realizarse esa repetición.
+El bucle `for` permite ejecutar de forma repetitiva un bloque de instrucciones, normalmente se usa cuando se conoce cuántas veces debe realizarse esa repetición.
 
 Su sintaxis consta de tres partes:
 
@@ -94,7 +94,7 @@ int main() {
 
 ## Introducción al bucle range-based for loop (bucle basado en rangos)
 
-El **rrange-based for loop (bucle basado en rangos)** simplifica el recorrido de los elementos de colecciones como cadenas (`std::string`), arrays o contenedores como `std::vector`. La sintaxis general:
+El **range-based for loop (bucle basado en rangos)** simplifica el recorrido de los elementos de colecciones como cadenas (`std::string`), arrays o contenedores como `std::vector`. La sintaxis general:
 
 ```cpp
 for (tipo elemento : colección) {
@@ -117,8 +117,3 @@ int main() {
     return 0;
 }
 ```
-
-* El bucle `for` permite ejecutar un bloque un número determinado de veces.
-* Las tres partes del `for` son opcionales.
-* En C++ moderno, es habitual usar `{}` para inicializaciones generales, pero dentro del `for` se sigue usando `=` por legibilidad.
-* El **range-based for loop (bucle basado en rangos)** facilita recorrer colecciones como cadenas o vectores.
