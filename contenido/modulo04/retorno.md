@@ -87,4 +87,4 @@ int main() {
 
 En este caso, debe garantizarse que el valor referenciado siga existiendo tras finalizar la función (en el ejemplo, se usa `static` para lograrlo).
 
-Aunque también es posible devolver punteros, lo que nos otorga una gran flexibilidad, no lo veremos en este capítulo ya que exige precaución, al ser el programador responsable de liberar la memoria si es necesario. Además, en C++ moderno se usan mecanismos para que la gestión de la memoria dinámica se haga de forma más efectiva.
+Aunque también es posible devolver punteros, lo que nos otorga una gran flexibilidad, no lo veremos en este capítulo, ya que exige precaución, al ser el programador responsable de liberar la memoria si es necesario. Además, en C++ moderno se usan mecanismos para que la gestión de la memoria dinámica se haga de forma más efectiva.

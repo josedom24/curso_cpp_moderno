@@ -64,7 +64,7 @@ Los **punteros** permiten trabajar directamente con direcciones de memoria, lo q
 Sin embargo, el uso de punteros exige una gestión rigurosa para evitar errores frecuentes:
 
 * **Punteros colgantes:** se produce cuando un puntero apunta a memoria que ya ha sido liberada.
-* **Fugas de memoria:** ocurren cuando se reserva memoria dinámicamente pero no se libera correctamente, lo que consume recursos de forma permanente.
+* **Fugas de memoria:** ocurren cuando se reserva memoria dinámicamente, pero no se libera correctamente, lo que consume recursos de forma permanente.
 * **Acceso indebido:** desreferenciar punteros no inicializados o nulos puede provocar fallos graves en la ejecución del programa.
 
 Dominar el uso responsable de punteros es un aspecto clave para escribir programas seguros y eficientes en C++.

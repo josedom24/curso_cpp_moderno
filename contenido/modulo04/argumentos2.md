@@ -24,7 +24,7 @@ int main() {
 * Los valores por defecto se especifican en la **declaración** o **definición** de la función, pero nunca en ambas.
 * Si se omite un argumento al llamar a la función, se utilizará el valor por defecto especificado.
 * Los parámetros opcionales pueden ser de **cualquier tipo**, incluyendo tipos primitivos, objetos de la STL, o incluso punteros.
-* os parámetros opcionales siguen las mismas reglas sobre **paso por valor**, **referencia**, o **referencia constante**, según sea necesario para evitar copias costosas y gestionar los recursos de forma eficiente.
+* los parámetros opcionales siguen las mismas reglas sobre **paso por valor**, **referencia**, o **referencia constante**, según sea necesario para evitar copias costosas y gestionar los recursos de forma eficiente.
 
 Ejemplo con varios parámetros opcionales:
 

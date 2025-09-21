@@ -55,7 +55,7 @@ int main() {
 }
 ```
 
-Las funciones también pueden **no devolver ningún resultado, sólo realizar una tarea. Veamos un  ejemplo:
+Las funciones también pueden **no devolver ningún resultado, solo realizar una tarea. Veamos un  ejemplo:
 
 ```cpp
 #include <iostream>
@@ -83,7 +83,7 @@ int main() {
 
 Un **prototipo de función** es una declaración previa que informa al compilador acerca del nombre, el tipo de retorno y la lista y tipo de los parámetros de una función. Permite al compilador verificar las llamadas a la función antes de que su definición completa aparezca en el código.
 
-* Normalmente escribimos los prototipos **antes de `main()`**. Permite que `main()` o cualquier otra función puedan invocar a esa función, incluso si su definición completa viene después.
+* Normalmente, escribimos los prototipos **antes de `main()`**. Permite que `main()` o cualquier otra función puedan invocar a esa función, incluso si su definición completa viene después.
 * La definición de la función se puede escribir **antes o después de `main()`**, siempre que el prototipo esté presente si la definición está después.
 
 Los ejemplos anteriores quedarían con prototipo:
