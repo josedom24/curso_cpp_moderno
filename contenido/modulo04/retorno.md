@@ -1,6 +1,6 @@
 # Valores de retorno de una función
 
-En C++, las funciones pueden devolver un valor tras su ejecución. Para ello utilizamos la instrucción `return` y veremos que existen varias formas de hacerlo:
+En C++, las funciones pueden devolver un valor tras su ejecución. Si no devuelven ningún valor se decalaran con el tipo de datos `vood`. Para devolver una valor, utilizamos la instrucción `return` y veremos que existen varias formas de hacerlo:
 
 
 ## Retorno por valor
@@ -33,7 +33,7 @@ Hay que tener en cuenta que si el valor devuelto es grande (por ejemplo, un `std
 
 ## Retorno por referencia
 
-La función devuelve **una referencia a un valor existente**, en lugar de una copia. Esta forma tiene sentido cuando el valor que se devuelve **existe fuera de la función**  y seguirá existiendo después de que la función termine y cuando se desea hacer modificaciones del valor original.
+La función devuelve **una referencia a un valor existente**, en lugar de una copia. Esta forma tiene sentido cuando el valor que se devuelve **existe fuera de la función** y seguirá existiendo después de que la función termine y cuando se desea hacer modificaciones del valor original.
 
 Veamos un ejemplo:
 
