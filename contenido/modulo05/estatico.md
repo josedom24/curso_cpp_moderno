@@ -36,8 +36,12 @@ public:
         std::cout << "Ticket creado: " << id << " - " << asunto << '\n';
     }
 
-    int getId() const { return id; }
-    const std::string& getAsunto() const { return asunto; }
+    int getId() { 
+        return id; 
+    }
+    const std::string& getAsunto() { 
+        return asunto; 
+    }
 
     // Método estático para acceder al contador
     static int totalTicketsCreados() { return contadorTickets; }
@@ -81,8 +85,12 @@ public:
         std::cout << "Ticket creado: " << id << " - " << asunto << '\n';
     }
 
-    int getId() const { return id; }
-    const std::string& getAsunto() const { return asunto; }
+    int getId() { 
+        return id; 
+    }
+    const std::string& getAsunto() { 
+        return asunto; 
+    }
 
     // Método estático para acceder al contador
     static int totalTicketsCreados() { return contadorTickets; }
