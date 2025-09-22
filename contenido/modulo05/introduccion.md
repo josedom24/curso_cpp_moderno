@@ -22,9 +22,7 @@ Para comprender la POO en C++, es necesario familiarizarse con sus conceptos fun
 * **Clases**: Una **clase** es un plano o plantilla que define las características y comportamientos de un conjunto de objetos. Especifica:
     * Los **atributos** o **miembros de datos**: las propiedades o características de los objetos.
     * Los **métodos** o **miembros función**: las operaciones o comportamientos que los objetos pueden realizar.
-* **Objetos**: Un **objeto** es una instancia concreta de una clase. Representa una entidad específica que posee un estado propio y puede ejecutar acciones definidas por la clase.
-* **Atributos**: Los **atributos** son las variables que describen el estado de un objeto. Cada objeto mantiene sus propios valores de estos atributos.
-* **Métodos**: Los **métodos** son funciones asociadas a la clase que definen el comportamiento de los objetos. Pueden consultar o modificar el estado del objeto, o realizar acciones.
+* **Objetos**: Un **objeto** es una instancia concreta de una clase. Representa una entidad específica que posee un estado propio (atributos) y puede ejecutar acciones definidas por la clase (métodos).
 
 ## Ejemplo conceptual
 
