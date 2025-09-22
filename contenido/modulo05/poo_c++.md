@@ -67,182 +67,63 @@ En este caso:
 * Se crea un objeto `r1` de tipo `Rectangulo`.
 * Como los atributos son públicos, se pueden inicializar. Para acceder a los atributos utilizamos el punto.
 
+## Introducción a los constructores
 
+Un **constructor** es una función especial cuyo nombre coincide con el de la clase y que **no tiene tipo de retorno**. Se ejecuta automáticamente al crear un objeto y se utiliza para inicializar sus atributos.
 
+Tipos de constructores:
 
----
+* **Constructor por defecto**: no recibe argumentos e inicializan los atributos a valores por defecto.
+* **Constructor parametrizado**: recibe argumentos para inicializar atributos.
 
-
-
-
-
-
-
-
-
-
-
-## Introducción de getters y setters
-
-El **encapsulamiento** es un principio fundamental de la POO que consiste en proteger los atributos internos de los objetos, permitiendo su acceso o modificación únicamente a través de métodos públicos controlados, conocidos como **getters** (métodos que permiten el valor de los atributos) y **setters** (métodos que permiten modificar los atributos).
-
-
-
-```cpp
-class Persona {
-private:
-    std::string nombre;
-    int edad;
-
-public:
-    // Setter para el nombre
-    void setNombre(const std::string& n) {
-        nombre = n;
-    }
-
-    // Getter para el nombre
-    std::string getNombre() const {
-        return nombre;
-    }
-
-    // Setter para la edad
-    void setEdad(int e) {
-        if (e >= 0) {
-            edad = e;
-        }
-    }
-
-    // Getter para la edad
-    int getEdad() const {
-        return edad;
-    }
-};
-
-int main() {
-    Persona p1;
-    p1.setNombre("Laura");
-    p1.setEdad(28);
-
-    std::cout << "Nombre: " << p1.getNombre() << ", Edad: " << p1.getEdad() << std::endl;
-
-    return 0;
-}
-```
-Los getters y setters:
-
-* Permiten controlar cómo se accede o modifica el estado del objeto.
-* Facilitan la validación de datos antes de modificar atributos (como en el caso de la edad).
-* Mejoran la seguridad y robustez del código.
-* Mantienen el principio de encapsulamiento.
-
-## Ejemplo completo: Clase `Coche`
+Veamos un ejemplo definiendo los constructores:
 
 ```cpp
 #include <iostream>
-#include <string>
 
-class Coche {
-private:
-    std::string marca;
-    std::string modelo;
-    int anio;
-
+class Rectangulo {
 public:
-    // Setter para la marca
-    void setMarca(const std::string& m) {
-        marca = m;
+    double base;
+    double altura;
+
+    // Constructor por defecto
+    Rectangulo() {
+        base = 0.0;
+        altura = 0.0;
     }
 
-    // Getter para la marca
-    std::string getMarca() const {
-        return marca;
+    // Constructor con parámetros
+    Rectangulo(double b, double h) {
+        base = b;
+        altura = h;
     }
 
-    // Setter para el modelo
-    void setModelo(const std::string& mod) {
-        modelo = mod;
+    // Método para calcular el área
+    double calcularArea() const {
+        return base * altura;
     }
 
-    // Getter para el modelo
-    std::string getModelo() const {
-        return modelo;
-    }
-
-    // Setter para el año (con validación)
-    void setAnio(int a) {
-        if (a > 1885) { // Primer automóvil se inventó alrededor de 1886
-            anio = a;
-        } else {
-            std::cout << "Año no válido. Debe ser mayor a 1885." << std::endl;
-        }
-    }
-
-    // Getter para el año
-    int getAnio() const {
-        return anio;
-    }
-
-    // Método para mostrar la información del coche
-    void mostrarInformacion() const {
-        std::cout << "Marca: " << marca 
-                  << ", Modelo: " << modelo 
-                  << ", Año: " << anio << std::endl;
+    // Método para establecer las dimensiones usando inicialización uniforme
+    void establecerDimensiones(double b, double h) {
+        base = b;
+        altura = h;
     }
 };
 
 int main() {
-    Coche coche1;
+    // Crear un objeto usando el constructor por defecto
+    Rectangulo r1();
+    std::cout << "Área del rectángulo r1 (por defecto): " << r1.calcularArea() << std::endl;
 
-    // Inicialización de los atributos usando setters
-    coche1.setMarca("Toyota");
-    coche1.setModelo("Corolla");
-    coche1.setAnio(2020);
+    // Crear un objeto usando el constructor con parámetros
+    Rectangulo r2(5.0, 3.0);
+    std::cout << "Área del rectángulo r2 (con parámetros): " << r2.calcularArea() << std::endl;
 
-    // Mostrar información usando un método
-    coche1.mostrarInformacion();
-
-    // Ejemplo de uso de getters
-    std::cout << "La marca del coche es: " << coche1.getMarca() << std::endl;
+    // Modificar las dimensiones de r1 usando el método establecerDimensiones
+    r1.establecerDimensiones(7.0, 4.0);
+    std::cout << "Área del rectángulo r1 después de actualizar dimensiones: " << r1.calcularArea() << std::endl;
 
     return 0;
 }
 ```
-
-* La clase `Coche` encapsula tres atributos privados: `marca`, `modelo` y `anio`.
-* Se proporcionan métodos públicos (`set` y `get`) para controlar el acceso y modificación de esos atributos.
-* El método `setAnio` incluye una validación para evitar valores inválidos.
-* El método `mostrarInformacion` imprime el estado del objeto de forma legible.
-* En la función `main`, se crea un objeto `coche1`, se inicializa mediante setters y se accede a su información.
-
-
-
-
-
-
-
-
-
-Los **modificadores de acceso** determinan la visibilidad de los atributos y métodos de la clase. Los más utilizados son:
-
-* `public`: Los miembros declarados como `public` son accesibles desde cualquier parte del programa.
-* `private`: Los miembros declarados como `private` solo son accesibles desde dentro de la propia clase. Se utilizan para proteger el estado interno del objeto.
-
-Ejemplo:
-
-```cpp
-class Ejemplo {
-private:
-    int datoPrivado; // Solo accesible dentro de la clase
-
-public:
-    void metodoPublico() {
-        // Puede acceder a datoPrivado
-    }
-};
-```
-
-Por convención y buenas prácticas, se recomienda:
-
-* Declarar los atributos como `private` para proteger el estado del objeto.
-* Proporcionar métodos públicos controlados (getters y setters) para acceder o modificar los atributos si es necesario.
-* Terminar el nombre de los atributos con guión bajo `_`. Esto permite diferenciar claramente atributos de variables locales o parámetros y evitar colisiones de nombres.
+* En este caso se crea el `Rectangulo r1` usando el constructor por defecto: `Rectangulo r1()` y se crea el `Rectangulo r2` usando el constructor con argumentos: `Rectangulo r2(5.0, 3.0);`.
