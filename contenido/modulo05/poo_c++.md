@@ -67,7 +67,7 @@ En este caso:
 * Se crea un objeto `r1` de tipo `Rectangulo`.
 * Como los atributos son públicos, se pueden inicializar. Para acceder a los atributos utilizamos el punto.
 
-## Introducción a los constructores
+## Introducción a los constructores y destructores
 
 Un **constructor** es un método especial cuyo nombre coincide con el de la clase y que **no tiene tipo de retorno**. Se ejecuta automáticamente al crear un objeto y se utiliza para inicializar sus atributos.
 
@@ -75,6 +75,8 @@ Tipos de constructores:
 
 * **Constructor por defecto**: no recibe argumentos e inicializan los atributos a valores por defecto.
 * **Constructor parametrizado**: recibe argumentos para inicializar atributos.
+
+Un **destructor** es un método especial que se ejecuta automáticamente cuando un objeto sale de su ámbito de vida (final de un bloque de código). No lo vamos a declarar y vamos a dejar que se ejecute el método destructor creado por defecto.
 
 Veamos un ejemplo definiendo los constructores:
 
