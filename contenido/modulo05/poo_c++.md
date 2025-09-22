@@ -1,104 +1,86 @@
 # Definición de clases y creación de objetos
 
-Una **clase** en C++ se define mediante la palabra clave `class`, seguida del nombre de la clase y un bloque de llaves `{}` que contiene la declaración de atributos (variables miembro) y métodos (funciones miembro).
+## Definición de clases
+
+Una **clase** es una plantilla o molde que define:
+
+* **Atributos** (también llamados **miembros de datos**): variables que representan el estado de los objetos.
+* **Métodos** (también llamados **funciones miembro**): funciones que representan el comportamiento de los objetos.
+
+La clase encapsula estos elementos y define cómo los objetos deben comportarse. Veamos un ejemplo:
 
 ```cpp
-class NombreDeLaClase {
-    // Sección de atributos y métodos
-};
-```
+#include <iostream>
 
-## Atributos (variables miembro) y métodos (funciones miembro)
-
-Dentro de una clase se definen:
-
-* **Atributos**: Variables que almacenan el estado o las propiedades de los objetos.
-* **Métodos**: Funciones que definen el comportamiento o las operaciones que los objetos pueden realizar.
-
-Veamos un ejemplo:
-
-```cpp
 class Rectangulo {
-private:
+public:
     double base;
     double altura;
 
-public:
-    // Método para inicializar los atributos
-    void establecerDimensiones(double b, double h) {
-        base = b;
-        altura = h;
-    }
 
     // Método para calcular el área
     double calcularArea() const {
         return base * altura;
     }
-};
-```
 
-En este ejemplo:
-
-* `base` y `altura` son **atributos privados**.
-* Los métodos `establecerDimensiones` y `calcularArea` son **públicos** y permiten manipular el estado del objeto y realizar cálculos.
-
-Los **modificadores de acceso** determinan la visibilidad de los atributos y métodos de la clase. Los más utilizados son:
-
-* `public`: Los miembros declarados como `public` son accesibles desde cualquier parte del programa.
-* `private`: Los miembros declarados como `private` solo son accesibles desde dentro de la propia clase. Se utilizan para proteger el estado interno del objeto.
-
-Ejemplo:
-
-```cpp
-class Ejemplo {
-private:
-    int datoPrivado; // Solo accesible dentro de la clase
-
-public:
-    void metodoPublico() {
-        // Puede acceder a datoPrivado
+    // Método para establecer las dimensiones (si se desea cambiar después de la creación)
+    void establecerDimensiones(double b, double h) {
+        base = b;
+        altura = h;
     }
 };
-```
 
-Por convención y buenas prácticas, se recomienda:
-
-* Declarar los atributos como `private` para proteger el estado del objeto.
-* Proporcionar métodos públicos controlados (getters y setters) para acceder o modificar los atributos si es necesario.
-* Terminar el nombre de los atributos con guión bajo `_`. Esto permite diferenciar claramente atributos de variables locales o parámetros y evitar colisiones de nombres.
-
-## Creación e inicialización de objetos
-
-Una vez definida la clase, se pueden crear **objetos** que son instancias concretas de esa clase. La sintaxis para crear objetos es:
-
-```cpp
-NombreDeLaClase nombreDelObjeto;
-```
-
-Los objetos se pueden inicializar mediante:
-
-* **Asignación directa a los atributos públicos** (poco recomendable por falta de encapsulamiento).
-* **Métodos específicos** diseñados para establecer el estado del objeto (preferible).
-* **Constructores**, que se verán en detalle en apartados posteriores.
-
-Ejemplo:
-
-```cpp
 int main() {
+    // Crear el objeto con el constructor y pasar las dimensiones directamente
     Rectangulo r1;
-    r1.establecerDimensiones(5.0, 3.0);
+    r1.base=3.0;
+    r1.altura=5.0;
 
     std::cout << "Área del rectángulo: " << r1.calcularArea() << std::endl;
+
+    // Si se desea cambiar las dimensiones después de la creación
+    r1.establecerDimensiones(7.0, 4.0);
+    std::cout << "Área del rectángulo actualizado: " << r1.calcularArea() << std::endl;
 
     return 0;
 }
 ```
 
+En este ejemplo:
+
+* `base` y `altura` son **atributos públicos**.
+* Los métodos `establecerDimensiones` y `calcularArea` son **públicos** y permiten manipular el estado del objeto y realizar cálculos.
+* Los métodos, al ser funciones miembro, pueden recibir argumentos y retornar valores como cualquier función en C++. Las distintas formas de paso de argumentos y retorno de valores es igual a las estudiadas con las funciones.
+
+## Creación e inicialización de objetos
+
+Un **objeto** es una **instancia concreta de una clase**. Cada objeto tiene su propio estado (valores de los atributos) y puede ejecutar los métodos definidos por la clase. En el ejemplo:
+
+```cpp
+    Rectangulo r1;
+    r1.base=3.0;
+    r1.altura=5.0;
+```
+
 En este caso:
 
 * Se crea un objeto `r1` de tipo `Rectangulo`.
-* Se llama al método `establecerDimensiones` para inicializar sus atributos.
-* Se utiliza el método `calcularArea` para obtener el resultado.
+* Como los atributos son públicos, se pueden inicializar. Para acceder a los atributos utilizamos el punto.
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
 
 ## Introducción de getters y setters
 
@@ -232,3 +214,35 @@ int main() {
 * El método `mostrarInformacion` imprime el estado del objeto de forma legible.
 * En la función `main`, se crea un objeto `coche1`, se inicializa mediante setters y se accede a su información.
 
+
+
+
+
+
+
+
+
+Los **modificadores de acceso** determinan la visibilidad de los atributos y métodos de la clase. Los más utilizados son:
+
+* `public`: Los miembros declarados como `public` son accesibles desde cualquier parte del programa.
+* `private`: Los miembros declarados como `private` solo son accesibles desde dentro de la propia clase. Se utilizan para proteger el estado interno del objeto.
+
+Ejemplo:
+
+```cpp
+class Ejemplo {
+private:
+    int datoPrivado; // Solo accesible dentro de la clase
+
+public:
+    void metodoPublico() {
+        // Puede acceder a datoPrivado
+    }
+};
+```
+
+Por convención y buenas prácticas, se recomienda:
+
+* Declarar los atributos como `private` para proteger el estado del objeto.
+* Proporcionar métodos públicos controlados (getters y setters) para acceder o modificar los atributos si es necesario.
+* Terminar el nombre de los atributos con guión bajo `_`. Esto permite diferenciar claramente atributos de variables locales o parámetros y evitar colisiones de nombres.
