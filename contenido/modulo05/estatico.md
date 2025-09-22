@@ -8,100 +8,96 @@ Un **atributo estático** es un miembro de una clase que **pertenece a la clase 
 
 * Existe una sola copia compartida por todas las instancias.
 * Puede accederse sin necesidad de crear un objeto (usando el nombre de la clase).
-
-La declaración de un atributo estático se realiza dentro de la clase. Su definición (y posible inicialización) debe hacerse fuera de la clase, en un archivo fuente `.cpp` o tras la clase si está en un solo archivo.
-
-```cpp
-class Contador {
-private:
-    static int totalObjetos;
-
-public:
-    Contador() {
-        ++totalObjetos;
-    }
-
-    static int obtenerTotal() {
-        return totalObjetos;
-    }
-};
-
-// Definición del atributo estático
-int Contador::totalObjetos = 0;
-```
-
-##  Acceso a miembros estáticos
-
-Los miembros estáticos pueden ser accedidos:
-
-* A través del nombre de la clase: `Contador::obtenerTotal()`
-* A través de una instancia (aunque no es lo más recomendable): `obj.obtenerTotal()`
-
-```cpp
-int main() {
-    Contador a;
-    Contador b;
-    std::cout << "Total de objetos: " << Contador::obtenerTotal() << '\n';
-}
-```
+* La declaración de un miembro estático se realiza dentro de la clase. 
+* Su inicialización se hace fuera de la clase.
 
 
-## Ejemplo práctico: ID automático por objeto
+## Ejemplo de atributo estático
 
-Supongamos que deseamos que cada objeto creado reciba un identificador único incremental:
+Quemos contar el números de tickets que se crean. Veamos el ejemplo:
 
 ```cpp
 #include <iostream>
+#include <string>
 
-class Usuario {
+class Ticket {
 private:
-    static int siguienteId;
+    std::string asunto;
     int id;
 
+    
 public:
-    Usuario() : id(siguienteId++) {}
+    // Atributo estático: contador de tickets creados
+    static int contadorTickets;
 
-    int obtenerId() const {
-        return id;
+    Ticket(const std::string& asunto_) {
+        asunto = asunto_;
+        id= ++contadorTickets;
+        std::cout << "Ticket creado: " << id << " - " << asunto << '\n';
     }
 
-    static int totalUsuarios() {
-        return siguienteId;
-    }
+    int getId() const { return id; }
+    const std::string& getAsunto() const { return asunto; }
+
+    // Método estático para acceder al contador
+    static int totalTicketsCreados() { return contadorTickets; }
 };
 
-// Inicialización del atributo estático
-int Usuario::siguienteId = 1;
+
 
 int main() {
-    Usuario u1;
-    Usuario u2;
-    Usuario u3;
+    // Inicialización del atributo estático
+    int Ticket::contadorTickets = 0;
+    Ticket t1("Problema con la impresora");
+    Ticket t2("Fallo en el correo");
+    Ticket t3("Solicitud de acceso a la VPN");
 
-    std::cout << "ID u1: " << u1.obtenerId() << '\n';
-    std::cout << "ID u2: " << u2.obtenerId() << '\n';
-    std::cout << "ID u3: " << u3.obtenerId() << '\n';
-    std::cout << "Total creados: " << Usuario::totalUsuarios() - 1 << '\n';
+    std::cout << "\nTotal tickets creados: " << Ticket::contadorTickets << '\n';
+
+    return 0;
 }
 ```
 
-## Instancia estática dentro de un método de una clase
+## Ejemplo de métodos estático
 
-Una **instancia estática dentro de un método (sea estático o no)** es una variable local que **se inicializa una única vez**, y conserva su valor entre llamadas. Esto se usa, por ejemplo, para implementar **estado persistente privado**. Veamos un ejemplo:
+En este caso declaramos el atributo estático como privado y necesitamos un método estático que nos permita obtener el valor de ese atributo.
 
 ```cpp
-class Herramienta {
+#include <iostream>
+#include <string>
+
+class Ticket {
+private:
+    std::string asunto;
+    int id;
+
+    // Atributo estático: contador de tickets creados
+    static int contadorTickets;
+
 public:
-    int siguienteNumero() const {
-        static int numero = 0; // se inicializa solo una vez
-        return ++numero;
+    Ticket(const std::string& asunto_) {
+        asunto = asunto_;
+        id= ++contadorTickets;
+        std::cout << "Ticket creado: " << id << " - " << asunto << '\n';
     }
+
+    int getId() const { return id; }
+    const std::string& getAsunto() const { return asunto; }
+
+    // Método estático para acceder al contador
+    static int totalTicketsCreados() { return contadorTickets; }
 };
 
+// Inicialización del atributo estático
+int Ticket::contadorTickets = 0;
+
 int main() {
-    Herramienta h1, h2;
-    std::cout << h1.siguienteNumero() << '\n'; // 1
-    std::cout << h2.siguienteNumero() << '\n'; // 2
-    std::cout << h1.siguienteNumero() << '\n'; // 3
+    Ticket t1("Problema con la impresora");
+    Ticket t2("Fallo en el correo");
+    Ticket t3("Solicitud de acceso a la VPN");
+
+    std::cout << "\nTotal tickets creados: " << Ticket::totalTicketsCreados() << '\n';
+
+    return 0;
 }
 ```

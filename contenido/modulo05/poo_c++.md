@@ -69,7 +69,7 @@ En este caso:
 
 ## Introducción a los constructores
 
-Un **constructor** es una función especial cuyo nombre coincide con el de la clase y que **no tiene tipo de retorno**. Se ejecuta automáticamente al crear un objeto y se utiliza para inicializar sus atributos.
+Un **constructor** es un método especial cuyo nombre coincide con el de la clase y que **no tiene tipo de retorno**. Se ejecuta automáticamente al crear un objeto y se utiliza para inicializar sus atributos.
 
 Tipos de constructores:
 
