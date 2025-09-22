@@ -31,8 +31,14 @@ private:
     std::string ciudad;
 
 public:
-    Direccion(const std::string& c, const std::string& ciu)
-        : calle{c}, ciudad{ciu} {}
+    Direccion() {
+        calle="";
+        ciudad="";
+    }    
+    Direccion(const std::string& c, const std::string& ciu) {
+        calle = c;
+        ciudad = ciu;
+    }
 
     void mostrar() const {
         std::cout << "Calle: " << calle << ", Ciudad: " << ciudad << std::endl;
@@ -45,8 +51,11 @@ private:
     Direccion direccion;  // Composición: una Persona tiene una Direccion
 
 public:
-    Persona(const std::string& n, const Direccion& d)
-        : nombre{n}, direccion{d} {}
+    Persona(const std::string& n, const Direccion& d) {
+        nombre = n;
+        direccion = d;
+    }
+    
 
     void mostrar() const {
         std::cout << "Nombre: " << nombre << std::endl;
@@ -55,8 +64,8 @@ public:
 };
 
 int main() {
-    Direccion dir{"Calle Mayor 123", "Madrid"};
-    Persona p{"Juan", dir};
+    Direccion dir("Calle Mayor 123", "Madrid");
+    Persona p("Juan", dir);
 
     p.mostrar();
 
