@@ -30,7 +30,7 @@ Imaginemos que queremos modelar una **bicicleta** en un sistema.
 
 * La **clase** sería el modelo general de una bicicleta: describe qué características tiene y qué puede hacer.
 * Un **objeto** sería una bicicleta concreta, por ejemplo, la que usas para ir al trabajo.
-* Los **atributos** podrían ser: marcha actual, presión de las ruedas, si está en movimiento o detenida.
+* Los **atributos** podrían ser: color, número de marchas, presión de las ruedas, si está en movimiento o detenida.
 * Los **métodos** podrían ser: cambiar de marcha, inflar ruedas, empezar a pedalear, frenar.
 
 Cada vez que creamos una nueva bicicleta en nuestro sistema, estaríamos creando un nuevo objeto a partir de la clase "Bicicleta". Cada objeto tiene su propio estado: una bicicleta puede estar detenida, otra en movimiento; una puede tener las ruedas bien infladas, otra desinfladas.
