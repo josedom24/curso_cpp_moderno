@@ -56,7 +56,8 @@
     * [Introducción al encapsulamiento](contenidoo/modulo5/encapsulamiento.md)
     * [Miembros estáticos de clase](contenido/modulo05/estatico.md)
     * [Composición de objetos](contenido/modulo05/composicion.md)
-    * [Herencia y polimorfismo](contenido/modulo05/herencia.md)
+    * [Herencia de clases](contenido/modulo05/herencia.md)
+    * [Introducción al polimorfismo](contenido/modulo05/polimorfismo.md)
     * [Ejercicios de programación orientada a objetos](contenido/modulo05/ejercicios.md)
 
 6. Estructuras dinámicas en la STL
