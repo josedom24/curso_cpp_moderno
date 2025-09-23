@@ -85,91 +85,76 @@ int main() {
 * Las clases derivadas deben invocar explícitamente el constructor de la clase base. Si no se indica, se invoca automáticamente el constructor por defecto de la clase base (si existe). 
 * El destructor de la clase base se invoca automáticamente después del destructor de la clase derivada.
 
-## Sobrescritura de métodos (`override`)
+Muy buena base 👌.
+Ya introdujiste la **herencia**, con ejemplos claros y un código que muestra la reutilización de atributos y métodos.
+Ahora, de forma introductoria, puedes hablar del **polimorfismo** como el **siguiente paso natural**: no solo heredar, sino **poder tratar a distintos objetos derivados como si fueran de la clase base** y, al mismo tiempo, conseguir que se comporten de manera distinta.
 
-Una clase derivada puede **sobrescribir** un método de la clase base para proporcionar un comportamiento específico.
+## Introducción al polimorfismo
 
-En C++ moderno se recomienda usar la palabra clave `override` para indicar de forma explícita que se está sobrescribiendo un método virtual. Ejemplo:
+El **polimorfismo** significa *“muchas formas”*. En POO, se refiere a la capacidad de que un mismo método tenga **diferentes comportamientos** según el tipo de objeto que lo invoque.
 
-```cpp
-class Animal {
-public:
-    virtual void hablar() const {
-        std::cout << "El animal emite un sonido." << std::endl;
-    }
-};
-```
+En C++ existen dos formas principales de polimorfismo:
 
-```cpp
-class Perro : public Animal {
-public:
-    void hablar() const override {
-        std::cout << "El perro ladra." << std::endl;
-    }
-};
-```
+* **Polimorfismo de sobrecarga (en tiempo de compilación):** mismo nombre de función pero diferentes parámetros.
+* **Polimorfismo dinámico (en tiempo de ejecución):** se logra mediante **herencia** y **métodos virtuales**.
 
-Las ventajas del uso de `override` son:
-* El compilador verifica que efectivamente se está sobrescribiendo un método virtual existente.
-* Ayuda a prevenir errores por diferencias en la firma del método.
+Nos centraremos primero en el **polimorfismo dinámico**, que es el más relevante en la POO clásica.
 
-## Introducción a funciones virtuales y polimorfismo
-
-Las **funciones virtuales** permiten el **polimorfismo dinámico**, es decir, decidir en tiempo de ejecución qué versión de un método invocar según el tipo real del objeto, no el tipo del puntero o referencia.
-
-Para lograr polimorfismo:
-* La función en la clase base debe ser `virtual`.
-* Se invoca el método a través de un puntero o referencia a la clase base.
-* Siempre que una clase tenga métodos virtuales, su destructor debe ser virtual para evitar fugas o comportamientos indefinidos.
-
-Veamos un ejemplo:
-
+Podemos extender nuestro ejemplo de `Animal` para que diferentes animales "hagan sonido" de manera distinta.
 
 ```cpp
 #include <iostream>
 #include <string>
 
 class Animal {
-public:
-    virtual void hablar() const {
-        std::cout << "El animal emite un sonido." << std::endl;
-    }
+protected:
+    std::string nombre;
 
-    virtual ~Animal() = default; // Destructor virtual recomendado
+public:
+    Animal(const std::string& n) : nombre{n} {}
+
+    virtual void hacerSonido() const {  // Método virtual
+        std::cout << nombre << " hace un sonido genérico." << std::endl;
+    }
 };
 
 class Perro : public Animal {
 public:
-    void hablar() const override {
-        std::cout << "El perro ladra." << std::endl;
+    Perro(const std::string& n) : Animal{n} {}
+
+    void hacerSonido() const override {
+        std::cout << nombre << " dice: ¡Guau guau!" << std::endl;
     }
 };
 
 class Gato : public Animal {
 public:
-    void hablar() const override {
-        std::cout << "El gato maúlla." << std::endl;
+    Gato(const std::string& n) : Animal{n} {}
+
+    void hacerSonido() const override {
+        std::cout << nombre << " dice: ¡Miau!" << std::endl;
     }
 };
 
-void hacerHablar(const Animal& a) {
-    a.hablar();
-}
-
 int main() {
-    Perro p{};
-    Gato g{};
+    Perro perro("Firulais");
+    Gato gato("Misu");
 
-    hacerHablar(p);  // "El perro ladra."
-    hacerHablar(g);  // "El gato maúlla."
+    // Polimorfismo usando referencias
+    Animal& a1 = perro;
+    Animal& a2 = gato;
 
-    Animal* ptrAnimal = new Perro{};
-    ptrAnimal->hablar();  // "El perro ladra."
-    delete ptrAnimal;
+    a1.hacerSonido(); // Llama a Perro::hacerSonido()
+    a2.hacerSonido(); // Llama a Gato::hacerSonido()
 
     return 0;
 }
-```
 
-Para que el polimorfismo dinámico funcione correctamente, se deben utilizar **punteros** o **referencias** a la clase base.
+```
+* Un **método virtual** en C++ es un método de una clase base que **puede ser sobrescrito** por las clases derivadas, y cuya llamada se resuelve en tiempo de ejecución según el tipo real del objeto, no según el tipo de la referencia o puntero que lo invoca.
+* Se recomienda usar la palabra clave `override` para indicar de forma explícita que se está sobrescribiendo un método virtual.
+* El método `hacerSonido()` en `Animal` se declara como `virtual`.
+* Cada clase derivada (`Perro`, `Gato`) sobrescribe ese método con `override`.
+* `a1` y `a2` son referencia de tipo `Animal`, pero cada una referencia a un objeto distinto. Al invocar `hacerSonido()` se ejecuta la versión correspondiente al tipo real del objeto (polimorfismo dinámico).
+* Esto permite escribir código más **flexible** y **extensible**, donde se pueden tratar colecciones de distintos tipos de objetos de manera uniforme.
 
