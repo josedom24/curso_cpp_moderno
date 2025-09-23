@@ -22,17 +22,6 @@ La forma más habitual y recomendada de herencia en C++ es la **herencia públic
 
 Veamos un ejemplo:
 
-
-```cpp
-Perfecto, este código tiene varios problemas relacionados con la **herencia y la inicialización de miembros**:
-
-1. En `Perro()`, intentas hacer `nombre = "";` — **no es posible**, porque `nombre` es `private` en la clase base.
-2. En `Perro(const std::string& n, const std::string& r)`, la línea `Animal(n);` **no inicializa la parte base**, sino que crea un objeto temporal.
-
-La **forma correcta** es usar **lista de inicialización**, tanto para la clase base como para los miembros de `Perro`.
-
-Aquí está el código corregido y moderno:
-
 ```cpp
 #include <iostream>
 #include <string>
