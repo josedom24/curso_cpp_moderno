@@ -20,57 +20,81 @@ La herencia evita la duplicación de código y permite extender el comportamient
 
 La forma más habitual y recomendada de herencia en C++ es la **herencia pública**, que significa que los miembros `public` y `protected` de la clase base se mantienen accesibles con las mismas restricciones en la clase derivada. El control de acceso `protected` indica que un miembro no es accesible desde fuera de la clase, pero sí puede ser accedido por clases derivadas. Este modificador se utiliza comúnmente para permitir que las subclases interactúen directamente con ciertos atributos o métodos internos de la clase base, sin exponerlos completamente como parte de su interfaz pública.
 
-La sintaxis básica es:
+Veamos un ejemplo:
+
 
 ```cpp
-class Animal {
-public:
-    void respirar() const {
-        std::cout << "El animal respira." << std::endl;
-    }
-};
+Perfecto, este código tiene varios problemas relacionados con la **herencia y la inicialización de miembros**:
 
-class Perro : public Animal {
-    // Perro hereda de Animal de forma pública
-};
-```
+1. En `Perro()`, intentas hacer `nombre = "";` — **no es posible**, porque `nombre` es `private` en la clase base.
+2. En `Perro(const std::string& n, const std::string& r)`, la línea `Animal(n);` **no inicializa la parte base**, sino que crea un objeto temporal.
 
-Las clases derivadas deben invocar explícitamente el constructor de la clase base dentro de su lista de inicialización. Si no se indica, se invoca automáticamente el constructor por defecto de la clase base (si existe). Ejemplo:
+La **forma correcta** es usar **lista de inicialización**, tanto para la clase base como para los miembros de `Perro`.
+
+Aquí está el código corregido y moderno:
 
 ```cpp
+#include <iostream>
+#include <string>
+
+// Clase base
 class Animal {
 private:
     std::string nombre;
 
 public:
+    // Constructor por defecto usando lista de inicialización
+    Animal() : nombre{""} {}
+
+    // Constructor con parámetro usando lista de inicialización
     Animal(const std::string& n) : nombre{n} {}
+
+    void respirar() const {
+        std::cout << nombre << " está respirando." << std::endl;
+    }
 
     void mostrarNombre() const {
         std::cout << "Nombre: " << nombre << std::endl;
     }
 };
-```
 
-La clase derivada:
-
-```cpp
+// Clase derivada
 class Perro : public Animal {
 private:
     std::string raza;
 
 public:
+    // Constructor por defecto
+    Perro() : Animal{}, raza{""} {}
+
+    // Constructor con parámetros usando lista de inicialización
     Perro(const std::string& n, const std::string& r)
         : Animal{n}, raza{r} {}
-
+        
     void mostrar() const {
-        mostrarNombre();
+        mostrarNombre(); // Método heredado de Animal
         std::cout << "Raza: " << raza << std::endl;
     }
+
+    void ladrar() const {
+        std::cout << "¡Guau guau!" << std::endl;
+    }
 };
+
+int main() {
+    Perro miPerro{"Firulais", "Pastor Alemán"};
+
+    miPerro.respirar();  // Método heredado de Animal
+    miPerro.mostrar();   // Método propio que llama a mostrarNombre()
+    miPerro.ladrar();    // Método exclusivo de Perro
+
+    return 0;
+}
 ```
 
+* La clase base `Animal` y los miembros de `Perro` se inicializan **directamente en la lista de inicialización**.
+* Las clases derivadas deben invocar explícitamente el constructor de la clase base. Si no se indica, se invoca automáticamente el constructor por defecto de la clase base (si existe). 
 * El destructor de la clase base se invoca automáticamente después del destructor de la clase derivada.
-* Si la clase base gestiona recursos, su destructor debe ser virtual (se explicará más adelante).
 
 ## Sobrescritura de métodos (`override`)
 

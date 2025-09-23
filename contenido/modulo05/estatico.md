@@ -1,6 +1,6 @@
-# Atributos estáticos de clases
+# Miembros estáticos de clases
 
-En programación orientada a objetos, cada instancia de una clase suele tener sus propios atributos (miembros de datos), lo que permite que cada objeto mantenga su propio estado. Sin embargo, en ciertos casos, es necesario disponer de información **compartida por todas las instancias** de una clase. Para ello, C++ proporciona los **miembros estáticos**.
+En programación orientada a objetos, cada instancia de una clase suele tener sus propios atributos y métodos (miembros de datos), lo que permite que cada objeto mantenga su propio estado. Sin embargo, en ciertos casos, es necesario disponer de información **compartida por todas las instancias** de una clase. Para ello, C++ proporciona los **miembros estáticos**.
 
 ## ¿Qué es un atributo estático?
 
@@ -25,33 +25,35 @@ private:
     std::string asunto;
     int id;
 
-    
 public:
     // Atributo estático: contador de tickets creados
     static int contadorTickets;
 
-    Ticket(const std::string& asunto_) {
-        asunto = asunto_;
-        id= ++contadorTickets;
+    // Constructor usando lista de inicialización
+    Ticket(const std::string& asunto_) 
+        : asunto{asunto_}, id{++contadorTickets} 
+    {
         std::cout << "Ticket creado: " << id << " - " << asunto << '\n';
     }
 
-    int getId() { 
+    int getId() const { 
         return id; 
     }
-    const std::string& getAsunto() { 
+
+    const std::string& getAsunto() const { 
         return asunto; 
     }
 
     // Método estático para acceder al contador
-    static int totalTicketsCreados() { return contadorTickets; }
+    static int totalTicketsCreados() { 
+        return contadorTickets; 
+    }
 };
 
-
+// Inicialización del atributo estático (fuera de main)
+int Ticket::contadorTickets = 0;
 
 int main() {
-    // Inicialización del atributo estático
-    int Ticket::contadorTickets = 0;
     Ticket t1("Problema con la impresora");
     Ticket t2("Fallo en el correo");
     Ticket t3("Solicitud de acceso a la VPN");
@@ -64,7 +66,7 @@ int main() {
 
 ## Ejemplo de métodos estático
 
-En este caso declaramos el atributo estático como privado y necesitamos un método estático que nos permita obtener el valor de ese atributo.
+En este caso declaramos el atributo estático como privado y necesitamos un **método estático** que nos permita obtener el valor de ese atributo.
 
 ```cpp
 #include <iostream>
@@ -79,24 +81,28 @@ private:
     static int contadorTickets;
 
 public:
-    Ticket(const std::string& asunto_) {
-        asunto = asunto_;
-        id= ++contadorTickets;
+    // Constructor usando lista de inicialización
+    Ticket(const std::string& asunto_) 
+        : asunto{asunto_}, id{++contadorTickets} 
+    {
         std::cout << "Ticket creado: " << id << " - " << asunto << '\n';
     }
 
-    int getId() { 
+    int getId() const { 
         return id; 
     }
-    const std::string& getAsunto() { 
+
+    const std::string& getAsunto() const { 
         return asunto; 
     }
 
     // Método estático para acceder al contador
-    static int totalTicketsCreados() { return contadorTickets; }
+    static int totalTicketsCreados() { 
+        return contadorTickets; 
+    }
 };
 
-// Inicialización del atributo estático
+// Inicialización del atributo estático (fuera de la clase)
 int Ticket::contadorTickets = 0;
 
 int main() {
@@ -104,7 +110,8 @@ int main() {
     Ticket t2("Fallo en el correo");
     Ticket t3("Solicitud de acceso a la VPN");
 
-    std::cout << "\nTotal tickets creados: " << Ticket::totalTicketsCreados() << '\n';
+    std::cout << "\nTotal tickets creados: " 
+              << Ticket::totalTicketsCreados() << '\n';
 
     return 0;
 }
