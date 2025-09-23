@@ -1,89 +1,81 @@
 # Ejercicios de programación orientada a objetos
 
-## Ejercicio 1: Clase `Rectangulo`
+## Ejercicio 1
 
-Define una clase llamada `Rectangulo` que represente un rectángulo con los atributos `base` y `altura`. Ambos deben ser `double` y estar encapsulados como privados.
+Define una clase llamada `Empleado` que represente un empleado de una empresa con los siguientes atributos privados:
+
+* `nombre` (`std::string`)
+* `edad` (`int`)
+* `sueldo` (`double`)
+* `departamento` (`std::string`)
 
 La clase debe incluir:
 
-* Un **constructor** que reciba `base` y `altura` como parámetros.
-* Un método `double area() const` que devuelva el área del rectángulo.
-* Un método `double perimetro() const` que devuelva el perímetro.
+* Un **constructor por defecto** que inicialice todos los atributos con valores razonables (por ejemplo: nombre vacío, edad 0, sueldo 0, departamento vacío).
+* Un **constructor que reciba todos los atributos** como parámetros.
+* Métodos `double calcularBono()` y `double calcularSalarioAnual()` que devuelvan, respectivamente:
+
+  * Bono = 10% del sueldo
+  * Salario anual = sueldo mensual × 12 + bono
 * Métodos **setters y getters** para cada atributo.
-* En el `main`, crea al menos dos objetos `Rectangulo` y muestra su área y perímetro.
+* Un método `mostrarInformacion()` que imprima todos los datos del empleado.
+* En el `main`, crea al menos **dos empleados**, uno usando el constructor por defecto y otro usando el constructor con parámetros, y muestra su información completa junto con el bono y el salario anual.
 
-## Ejercicio 2: Composición con clase `Empleado` y `Fecha`
+## Ejercicio 2
+
+Partiendo de la clase `Empleado`, modifica la clase para incluir:
+
+* Un **atributo estático** `contadorEmpleados` que lleve la cuenta de cuántos empleados se han creado.
+* Un **método estático** `totalEmpleados()` que devuelva el valor de `contadorEmpleados`.
+* Actualiza los **constructores** (por defecto y con parámetros) para incrementar `contadorEmpleados` cada vez que se crea un empleado.
+* Mantén todos los atributos anteriores (`nombre`, `edad`, `sueldo`, `departamento`) y los métodos de cálculo (`calcularBono()`, `calcularSalarioAnual()`) y de mostrar información.
+* En el `main`, crea varios empleados y, además de mostrar su información, muestra el **total de empleados creados** usando el método estático.
+
+## Ejercicio 3
+
+1. Define una clase llamada `Fecha` con los siguientes atributos privados:
+
+   * `dia` (`int`)
+   * `mes` (`int`)
+   * `anio` (`int`)
+
+   La clase debe incluir:
+
+   * Constructor por defecto que inicialice la fecha a 1/1/2000.
+   * Constructor que reciba día, mes y año.
+   * Métodos **setters y getters** para cada atributo.
+   * Método `mostrar()` que imprima la fecha en formato `dd/mm/aaaa`.
+
+2. Modifica la clase `Empleado` del ejercicio anterior para añadir un **atributo privado `fechaIncorporacion`** de tipo `Fecha`.
+
+   La clase `Empleado` debe incluir:
+
+   * Modificar los constructores para inicializar también `fechaIncorporacion`.
+   * Métodos **setters y getters** para `fechaIncorporacion`.
+   * Actualizar el método `mostrarInformacion()` para mostrar también la fecha de incorporación.
+
+3. En el `main`, crea varios empleados con distintas fechas de incorporación y muestra toda su información.
 
 
-Define dos clases:
+## Ejercicio 4
 
-1. `Fecha`: representa una fecha con `dia`, `mes` y `anio` (todos enteros).
+1. Partiendo de la clase `Empleado` que ya has creado (con atributos `nombre`, `edad`, `sueldo` y `departamento`, y métodos de cálculo de bono y salario anual), define una **clase derivada** llamada `EmpleadoTemporal`.
 
-   * Incluye un constructor con inicialización uniforme y un método `mostrar()` que imprima la fecha en formato `dd/mm/aaaa`.
+2. La clase `EmpleadoTemporal` debe incluir:
 
-2. `Empleado`: representa un empleado con `nombre` (string) y una fecha de incorporación (`Fecha`, como objeto miembro).
+   * Un **atributo privado** `duracionContrato` (`int`) que represente la duración del contrato en meses.
+   * Un **constructor** que reciba todos los atributos de `Empleado` más `duracionContrato`.
+   * Métodos **setters y getters** para `duracionContrato`.
+   * Un método `mostrarInformacion()` que sobrescriba el de la clase base y muestre también la duración del contrato.
 
-   * Incluye un constructor que reciba el nombre y una fecha.
-   * Incluye un método `mostrar()` que muestre el nombre y la fecha de incorporación.
-   * Incluye un **destructor** que imprima un mensaje indicando que el objeto se ha destruido.
+3. Define otra clase derivada llamada `EmpleadoFijo` que represente un empleado con contrato indefinido:
 
-En el `main`, crea un empleado y llama al método `mostrar()`.
+   * Un **atributo privado** `beneficios` (`std::string`) que indique beneficios adicionales (por ejemplo: “Seguro médico”).
+   * Constructor que reciba los atributos de `Empleado` y `beneficios`.
+   * Métodos **setters y getters** para `beneficios`.
+   * Método `mostrarInformacion()` que sobrescriba el de la clase base y muestre también los beneficios.
 
-Perfecto, aquí tienes el **Ejercicio 3** completamente reformulado con la **sugerencia adicional integrada**: un método virtual adicional que permite practicar **polimorfismo de comportamiento** mediante métodos que devuelven valores distintos según la clase derivada.
+4. En el `main`, crea al menos **un `EmpleadoTemporal` y un `EmpleadoFijo`**, y llama a `mostrarInformacion()` para ambos.
 
-## Ejercicio 3: Herencia y Polimorfismo con clase `Curso`
-
-Define una clase base llamada `Curso`, que represente un curso general. Esta clase debe contener:
-
-* Un atributo `titulo` de tipo `std::string` (privado).
-* Un constructor que inicialice el título mediante **inicialización uniforme**.
-* Un método virtual `void describir() const` que imprima `"Curso general: [título]"`.
-* Un método virtual `double costo() const` que devuelva un valor base, por ejemplo `0.0`.
-* Un **destructor virtual**.
-
-Después, define dos clases derivadas:
-
-`CursoPresencial`
-
-* Atributo adicional: `aula` (`std::string`).
-* El método `describir()` debe imprimir:
-  `"Curso presencial en aula [aula]: [título]"`.
-* El método `costo()` debe devolver un valor fijo, por ejemplo, `200.0`.
-
-`CursoEnLinea`
-
-* Atributo adicional: `plataforma` (`std::string`).
-* El método `describir()` debe imprimir:
-  `"Curso en línea en [plataforma]: [título]"`.
-* El método `costo()` debe devolver un valor distinto, por ejemplo, `100.0`.
-
-Tienes que tener en cuenta:
-
-* Usa **inicialización uniforme** en todos los constructores (`:` con llaves `{}`).
-* Usa la palabra clave `override` para los métodos sobrescritos.
-* Implementa un **destructor virtual** en la clase base para asegurar destrucción adecuada.
-* Implementa una función auxiliar:
-
-    ```cpp
-    void mostrarInformacionCurso(const Curso& curso) {
-        curso.describir();
-        std::cout << "Costo: " << curso.costo() << " euros\n";
-    }
-    ```
-
-En la función principal:
-
-* Crea un `std::vector<std::unique_ptr<Curso>>`.
-* Añade varios objetos `CursoPresencial` y `CursoEnLinea`.
-* Recorre el vector llamando a `mostrarInformacionCurso()` con cada elemento.
-* Observa cómo se comporta el polimorfismo al llamar a `describir()` y `costo()` a través de punteros a la clase base.
-
-Ejemplo de salida esperada:
-
-```
-Curso presencial en aula B203: Programación C++
-Costo: 200 euros
-Curso en línea en Udemy: Introducción a Python
-Costo: 100 euros
-```
+5. **Opcional:** Haz que `mostrarInformacion()` en la clase base sea **virtual** para preparar el polimorfismo dinámico.
 
