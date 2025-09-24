@@ -10,29 +10,35 @@ Determinar el mayor de dos valores que puedan compararse mediante el operador re
 
 ```cpp
 #include <iostream>
-#include <string>
 
+// Función plantilla que devuelve el mayor de dos valores
 template <typename T>
-T mi_max(T a, T b) {
+T max(T a, T b) {
     return (a > b) ? a : b;
 }
 
 int main() {
-    int a = 4, b = 7;
-    int mayor = mi_max(a, b); // Devuelve 7
-    std::cout << "Mayor entre " << a << " y " << b << " es: " << mayor << '\n';
+    // Ejemplo con enteros
+    int x = 5, y = 10;
+    auto resultado = max(x, y);  // T deducido como int
+    std::cout << "El mayor entre " << x << " y " << y << " es " << resultado << std::endl;
 
-    double x = 3.5, y = 2.8;
-    double mayorReal = mi_max(x, y); // Devuelve 3.5
-    std::cout << "Mayor entre " << x << " y " << y << " es: " << mayorReal << '\n';
+    // Ejemplo con double
+    double a = 3.14, b = 2.71;
+    auto resultado2 = max(a, b); // T deducido como double
+    std::cout << "El mayor entre " << a << " y " << b << " es " << resultado2 << std::endl;
 
-    std::string s1 = "apple", s2 = "banana";
-    std::string mayorStr = mi_max(s1, s2); // Devuelve "banana"
-    std::cout << "Mayor entre \"" << s1 << "\" y \"" << s2 << "\" es: " << mayorStr << '\n';
+    // Ejemplo con std::string
+    std::string s1 = "hola", s2 = "mundo";
+    auto resultado3 = max(s1, s2); // T deducido como std::string
+    std::cout << "El mayor entre \"" << s1 << "\" y \"" << s2 << "\" es \"" << resultado3 << "\"" << std::endl;
 
+    // Uso explicito de tipos 
+    // La función es instancia con double
+    auto resultado4 = max<double>(3, 7.5);
+    std::cout << "El mayor es \"" << resultado4 << "\"" 
     return 0;
 }
-
 ```
 
 * Se declara una plantilla de función con un parámetro de tipo `T`.
