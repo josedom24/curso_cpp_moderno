@@ -42,6 +42,7 @@ int main() {
     if (c == Color::Verde) {
         std::cout << "El color es verde\n";
     }
+    return 0;
 }
 ```
 
