@@ -3,10 +3,8 @@
 `std::vector` es un contenedor dinámico de la biblioteca estándar de C++ que permite almacenar colecciones de elementos de tamaño variable. Internamente, gestiona un bloque de memoria contiguo que puede crecer o reducirse según sea necesario.
 
 A diferencia de los arrays clásicos o de `std::array`, el tamaño de un `std::vector` **no es fijo** y puede modificarse en tiempo de ejecución mediante métodos como `push_back`, `pop_back` o `resize`.
-Otra diferencia es que mientras en los array se utiliza la memoria *stack*, con los vectores se usa memoria dinámica *heap*.
 
 Para utilizar `std::vector` es necesario incluir el fichero de cabecera `<vector>`.
-
 
 ## Declaración e inicialización de `std::vector`
 
@@ -21,37 +19,7 @@ int main() {
     std::vector<double> reales {3.14, 2.71, 1.618}; // Vector de reales
 }
 ```
-
-## Acceso a los elementos
-
-Existen varias formas de acceder a los elementos de un `std::vector`: como en `std::array` podemos usar indexación usando `[ ]`, acceso seguro mediante el método `at()` o acceso al primer o último elemento usando los métodos `front()` y `back()`:
-
-```cpp
-#include <vector>
-#include <iostream>
-
-int main() {
-    std::vector<int> datos {10, 20, 30};
-
-    // Acceso mediante el operador []
-    std::cout << datos[0] << std::endl;
-
-    // Acceso mediante el método at (con comprobación de límites)
-    std::cout << datos.at(1) << std::endl;
-
-    // Acceso al primer y último elemento
-    std::cout << datos.front() << std::endl;
-    std::cout << datos.back() << std::endl;
-}
-```
-
-## Métodos más importantes de `std::vector`
-
-
-Por supuesto, aquí tienes la sección solicitada reescrita como **lista simple**, con un lenguaje formal y ampliando la descripción de cada método para mayor claridad:
-
-
-## Métodos más importantes de `std::vector`
+## Métodos de `std::vector`
 
 A continuación, se describen los métodos fundamentales para el uso de un `std::vector`:
 
@@ -63,7 +31,7 @@ A continuación, se describen los métodos fundamentales para el uso de un `std:
 * `clear()`: Elimina todos los elementos del vector, dejándolo vacío. No libera necesariamente la memoria reservada internamente, por lo que la capacidad del vector puede permanecer inalterada.
 * `front()`:  Devuelve una referencia al primer elemento del vector. Si el vector está vacío, el comportamiento es indefinido.
 * `back()`: Devuelve una referencia al último elemento del vector. Si el vector está vacío, el comportamiento es indefinido.
-* `at(índice)`: Devuelve una referencia al elemento ubicado en la posición especificada por `índice`. Si el índice está fuera de los límites válidos del vector, lanza una excepción de tipo `std::out_of_range`.
+* `at(índice)`: Devuelve una referencia al elemento ubicado en la posición especificada por `índice`. Si el índice está fuera de los límites válidos del vector, lanza una excepción de tipo `std::out_of_range`. También podemos acceder usando indexación con `[ ]`.
 
 Ejemplo:
 
@@ -73,6 +41,10 @@ Ejemplo:
 
 int main() {
     std::vector<int> numeros {1, 2, 3};
+
+    // Mostrar el segundo elemento
+     std::cout << "Segundo elemento: " << numeros[1] << std::endl;
+     std::cout << "Segundo elemento: " << numeros.at(1) << std::endl;
 
     // Añadir elementos al final
     numeros.push_back(4);
@@ -108,9 +80,6 @@ int main() {
 }
 ```
 
-Por supuesto, aquí tienes el mismo apartado adaptado específicamente para **`std::vector`**, respetando el formato y el estilo formal, con ejemplos completos y utilizando **inicialización uniforme**:
-
-
 ## Recorridos de un `std::vector`
 
 ### Bucle clásico con índice
@@ -123,7 +92,7 @@ int main() {
     std::vector<int> numeros {1, 2, 3, 4, 5};
 
     for (std::size_t i = 0; i < numeros.size(); i++) {
-        std::cout << numeros[i] << " ";
+        std::cout << numeros.at(i) << " ";
     }
 
     std::cout << std::endl;
@@ -166,9 +135,6 @@ int main() {
     return 0;
 }
 ```
-
-Claro, aquí tienes el apartado reescrito específicamente para **`std::vector`**, manteniendo el estilo formal, las explicaciones claras y utilizando **inicialización uniforme** en los ejemplos:
-
 
 ## Envío de `std::vector` como parámetro a funciones
 
