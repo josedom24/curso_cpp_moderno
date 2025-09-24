@@ -19,6 +19,7 @@ void saludar(std::string nombre) { // 'nombre' es un parámetro
 
 int main() {
     saludar("Carlos"); // "Carlos" es el argumento
+    return 0;
 }
 ```
 
@@ -59,6 +60,7 @@ int main() {
     incrementar(a);
     // a sigue valiendo 5
     std::cout << a;
+    return 0;
 }
 ```
 
@@ -82,6 +84,7 @@ int main() {
     incrementar(a);
     // a ahora vale 6
     std::cout << a;
+    return 0;
 }
 ```
 
@@ -132,6 +135,7 @@ int main() {
     int a = 5;
     incrementar(&a);
     std::cout << a;
+    return 0;
 }
 ```
 
