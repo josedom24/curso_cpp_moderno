@@ -180,8 +180,6 @@ En este ejemplo:
 * `texto.end()` devuelve un **iterador** que apunta a la posición **después** del último elemento.
 * `++it` avanza el iterador al siguiente elemento, y `*it` accede al valor al que apunta.
 
-Ah, ya entiendo. Vamos a centrarnos en **cómo enviar un `std::string` a una función como parámetro**. Este es un tema importante, ya que las cadenas son uno de los tipos de datos más utilizados en C++ y es esencial entender cómo pasarlas a funciones correctamente, tanto por valor como por referencia.
-
 ## `std::string` como parámetro en funciones
 
 ### Paso por valor
