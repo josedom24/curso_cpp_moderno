@@ -52,8 +52,8 @@ En el C tradicional (y también en C++ clásico), la memoria dinámica se gestio
 
 * Reservar memoria con `new` o `malloc`.
 * Liberarla con `delete` o `free`.
-* Tener cuidado de no liberar dos veces, ni olvidar liberar (fugas).
-* Controlar correctamente la propiedad del recurso, es decir la **propiedad** se refiere **a quién es responsable de liberar un recurso dinámico**. La parte del programa, por ejemplo la función, que tiene laa responsabilidad de liberar la memoria es el "propietario" del recurso.
+* Tener cuidado de no liberar dos veces, ni olvidar liberar (fugas), acceder a memoria liberada,...
+* Controlar correctamente la propiedad del recurso, es decir la **propiedad** se refiere **a quién es responsable de liberar un recurso dinámico**. En este caso la propiedad del recurso la tiene el **programador**, que es el responsable de la liberación del recurso.
 
 Este enfoque era **poderoso pero propenso a errores**, y exigía mucho cuidado por parte del programador.
 
