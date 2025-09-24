@@ -3,7 +3,7 @@
 `std::vector` es un contenedor dinámico de la biblioteca estándar de C++ que permite almacenar colecciones de elementos de tamaño variable. Internamente, gestiona un bloque de memoria contiguo que puede crecer o reducirse según sea necesario.
 
 A diferencia de los arrays clásicos o de `std::array`, el tamaño de un `std::vector` **no es fijo** y puede modificarse en tiempo de ejecución mediante métodos como `push_back`, `pop_back` o `resize`.
-Otra diferencias es que mientras en los array se utiliza la memoria *stack*, con los vectores se usa memoria dinámica *heap*.
+Otra diferencia es que mientras en los array se utiliza la memoria *stack*, con los vectores se usa memoria dinámica *heap*.
 
 Para utilizar `std::vector` es necesario incluir el fichero de cabecera `<vector>`.
 
@@ -24,7 +24,7 @@ int main() {
 
 ## Acceso a los elementos
 
-Existen varias formas de acceder a los elementos de un `std::vector`: como en `std::array` podemos usar indexación usando `[ ]`, acceso seguro medirante el método `at()` o acceso al primer o último elemento usando los métodos `front()` y `back()`:
+Existen varias formas de acceder a los elementos de un `std::vector`: como en `std::array` podemos usar indexación usando `[ ]`, acceso seguro mediante el método `at()` o acceso al primer o último elemento usando los métodos `front()` y `back()`:
 
 ```cpp
 #include <vector>
@@ -57,13 +57,13 @@ A continuación, se describen los métodos fundamentales para el uso de un `std:
 
 * `size()`: Devuelve el número de elementos almacenados actualmente en el vector. El valor devuelto es de tipo `std::size_t`
 * `empty()`: Devuelve un valor booleano (`true` o `false`) que indica si el vector está vacío, es decir, si no contiene ningún elemento.
-* `push_back(valor)`: Añade un nuevo elemento al final del vector, incrementando su tamaño en uno. Si es necesario, el vector realoca su almacenamiento interno para acomodar el nuevo elemento.
+* `push_back(valor)`: Añade un nuevo elemento al final del vector, incrementando su tamaño en uno. Sí es necesario, el vector realoja su almacenamiento interno para acomodar el nuevo elemento.
 * `pop_back()`: Elimina el último elemento del vector, reduciendo su tamaño en uno. Si el vector está vacío, el comportamiento es indefinido, por lo que debe comprobarse previamente con `empty()`.
 * `resize(n)`: Cambia el tamaño del vector a `n` elementos. Si el nuevo tamaño es mayor que el actual, se añaden nuevos elementos inicializados con el valor por defecto del tipo almacenado. Si el tamaño es menor, se eliminan los elementos excedentes.
 * `clear()`: Elimina todos los elementos del vector, dejándolo vacío. No libera necesariamente la memoria reservada internamente, por lo que la capacidad del vector puede permanecer inalterada.
 * `front()`:  Devuelve una referencia al primer elemento del vector. Si el vector está vacío, el comportamiento es indefinido.
 * `back()`: Devuelve una referencia al último elemento del vector. Si el vector está vacío, el comportamiento es indefinido.
-* `at(indice)`: Devuelve una referencia al elemento ubicado en la posición especificada por `indice`. Si el índice está fuera de los límites válidos del vector, lanza una excepción de tipo `std::out_of_range`.
+* `at(índice)`: Devuelve una referencia al elemento ubicado en la posición especificada por `índice`. Si el índice está fuera de los límites válidos del vector, lanza una excepción de tipo `std::out_of_range`.
 
 Ejemplo:
 

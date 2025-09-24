@@ -128,7 +128,7 @@ int main() {
 }
 ```
 
-En el caso de que necesitemos modificar los elementos de la listas utilizaríamos paso por referencia constante:
+En el caso de que necesitemos modificar los elementos de las listas utilizaríamos paso por referencia constante:
 
 ```cpp
 #include <list>
@@ -153,7 +153,7 @@ int main() {
 
 ## Otros contenedores de la STL que no hemos estudiado
 
-* `std::deque`: Estructura de datos similar a un `std::vector` pero que permite inserciones y eliminaciones eficientes tanto al principio como al final.
+* `std::deque`: Estructura de datos similar a un `std::vector`, pero que permite inserciones y eliminaciones eficientes tanto al principio como al final.
 * `std::set`: Contenedor que almacena elementos únicos en orden. Ideal para colecciones donde se desea evitar duplicados.
 * `std::unordered_set`: Similar a `std::set`, pero sin mantener el orden de los elementos. Utiliza tablas hash para un acceso eficiente.
 

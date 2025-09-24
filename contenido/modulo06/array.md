@@ -8,7 +8,7 @@ En C++ existen dos formas de trabajar con arreglos o arrays:
     int numeros[5] {1, 2, 3, 4, 5};
     ```
 
-    Trabajar con estas estructuras conlleva algunos incovenientes:
+    Trabajar con estas estructuras conlleva algunos inconvenientes:
 
     * No conocen su propio tamaño.
     * No ofrecen métodos ni funcionalidades adicionales.
@@ -67,9 +67,9 @@ Existen varias formas de acceder a los elementos de un `std::array`:
 
 ## Métodos más importantes de `std::array`
 
-* `size()`: Devuelve el tamaño del array. Como en las cadenas devuelve un datos del tipo `std::size_t`..
+* `size()`: Devuelve el tamaño del array. Como en las cadenas devuelve un dato del tipo `std::size_t`.
 * `empty()`: Indica si el array está vacío. Devuelve un valor booleano.
-* `at(indice)`: Acceso seguro con comprobación de límites.
+* `at(índice)`: Acceso seguro con comprobación de límites.
 * `front()`, `back()`: Acceso al primer y último elemento.
 * `fill(valor)`: Rellena todo el array con el valor especificado.
 

@@ -6,7 +6,7 @@ Escribe un programa que solicite una frase por teclado y, utilizando una funció
 
 ## Ejercicio 2: Contar apariciones de un carácter
 
-Pide al usuario una cadena de texto y un único carácter (valida que sea un carácter). Crea una función que cuente cuántas veces aparece dicho carácter en la cadena y muestre el resultado.
+Pide al usuario una cadena de texto y un único carácter (válida que sea un carácter). Crea una función que cuente cuántas veces aparece dicho carácter en la cadena y muestre el resultado.
 
 ## Ejercicio 3: Contar palabras en una frase
 

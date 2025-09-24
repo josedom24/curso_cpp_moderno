@@ -85,7 +85,7 @@ Los recursos que podemos gestionar con RAII pueden ser de distinto tipo:
 
 ## Aplicación práctica: las estructuras dinámicas de la STL
 
-La **Biblioteca Estándar de C++ (STL)** proporciona estructuras dinámicas que gestionan la memoria dinámica usando el principio de **RAII**, por lo tanto estas estructuras son **seguras, eficientes y fáciles de usar**. Por ejemplo:
+La **Biblioteca Estándar de C++ (STL)** proporciona estructuras dinámicas que gestionan la memoria dinámica usando el principio de **RAII**, por lo tanto, estas estructuras son **seguras, eficientes y fáciles de usar**. Por ejemplo:
 
 * `std::string`: cadena de caracteres.
 * `std::array`: arrays con tamaño definido.

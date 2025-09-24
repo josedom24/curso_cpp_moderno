@@ -80,7 +80,7 @@ int main() {
         {"Luis", 30}
     };
 
-    edades.insert({"Maria", 28});   // Insertar un nuevo elemento
+    edades.insert({"María", 28});   // Insertar un nuevo elemento
     edades["Pedro"] = 35;           // Insertar o modificar un elemento
 
     std::cout << "Edad de Ana: " << edades.at("Ana") << std::endl;
@@ -108,7 +108,7 @@ int main() {
     std::map<std::string, int> edades {
         {"Ana", 25},
         {"Luis", 30},
-        {"Maria", 28}
+        {"María", 28}
     };
 
     for (const auto& par : edades) {
@@ -133,7 +133,7 @@ int main() {
     std::unordered_map<std::string, int> telefonos {
         {"Ana", 1234},
         {"Luis", 5678},
-        {"Maria", 9101}
+        {"María", 9101}
     };
 
     for (auto it = telefonos.begin(); it != telefonos.end(); ++it) {
@@ -166,7 +166,7 @@ int main() {
     std::map<std::string, int> edades {
         {"Ana", 25},
         {"Luis", 30},
-        {"Maria", 28}
+        {"María", 28}
     };
 
     mostrar(edades);

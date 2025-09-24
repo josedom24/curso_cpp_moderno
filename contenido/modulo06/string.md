@@ -25,7 +25,7 @@ A continuación se presenta una lista de los métodos más frecuentes y útiles 
 * `erase(pos, n)`: Elimina `n` caracteres a partir de la posición `pos`.
 * `replace(pos, n, cadena)`: Reemplaza los `n` caracteres a partir de `pos` por `cadena`.
 * `append(cadena)`: Añade `cadena` al final.
-* `compare(cadena)`: Compara dos cadenas, devolviendo `0` si son iguales, `< 0`	si laa cadena que llama al método es menor y `> 0` si la cadena que llama al método es mayor.
+* `compare(cadena)`: Compara dos cadenas, devolviendo `0` si son iguales, `< 0`	si la cadena que llama al método es menor y `> 0` si la cadena que llama al método es mayor.
 
 Veamos un ejemplo:
 ```cpp
