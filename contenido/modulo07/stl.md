@@ -2,7 +2,7 @@
 
 La programación genérica en C++ permite escribir funciones y algoritmos que operan sobre una amplia variedad de tipos sin perder eficiencia ni claridad. Una de las aplicaciones más relevantes de esta capacidad es su integración con los **contenedores de la STL** (Standard Template Library), como `std::vector`, `std::list` o `std::map`.
 
-## Ejemplo básico: impresión de elementos
+## Ejemplo: impresión de elementos
 
 Una función que recorra cualquier contenedor iterable e imprima sus elementos puede definirse de forma genérica así:
 
@@ -27,11 +27,16 @@ int main() {
     print_container(l); // Imprime: uno dos tres
 }
 ```
+* `Container` es un **tipo genérico** que se deduce automáticamente cuando llamas a la función.
+* Puede ser **cualquier contenedor** que se puede recorrer con bucles range-based for loop o con iteradores:
+  * `std::vector<T>`
+  * `std::list<T>`
+  * `std::array<T, N>`
+  * Incluso contenedores propios que implementen `begin()` y `end()`.
+* El compilador reemplaza `Container` por `std::vector<int>`.
+* Así, con **una sola plantilla**, puedes imprimir distintos tipos de contenedores.
 
-Esta función es válida para cualquier contenedor que implemente los métodos `begin()` y `end()` y cuyos elementos puedan imprimirse con `operator<<`.
-
-
-## Funciones genéricas de utilidad
+## Ejemplo: modificación de elementos
 
 También es posible escribir funciones plantilla que **modifiquen** o **transformen** los elementos de un contenedor. Por ejemplo, aplicar una operación a cada elemento:
 
