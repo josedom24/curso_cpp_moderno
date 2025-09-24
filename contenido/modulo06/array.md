@@ -1,8 +1,8 @@
 # Arreglos: `std::array`
 
-En C++ existen dos formas de trabajar con arreglos o arrays:
+Los arrays nos permiten trabajar con conjuntos de elementos del mismo tipo. Podemos hacerlos de dos maneras:
 
-* **Arrays clásicos**, heredados de C. Que son una estructura de datos que almacenan la información en bloques de memoria contigua y almacenan elementos del mismo tipo. Por ejemplo:
+* **Arrays clásicos**, heredados de C. Que son una estructura de datos **estáticos** que almacenan la información en bloques de memoria contigua y almacenan elementos del mismo tipo. Por ejemplo:
 
     ```cpp
     int numeros[5] {1, 2, 3, 4, 5};
@@ -15,7 +15,7 @@ En C++ existen dos formas de trabajar con arreglos o arrays:
     * Son propensos a errores como desbordamientos de búfer.
     * El acceso fuera de los límites genera comportamiento indefinido.
 
-* **Arrays modernos**: `std::array`. Estas estructuras se clasifican en los denominados **contenedores**, que combina la eficiencia de los arrays clásicos con la seguridad y funcionalidad de los contenedores de la STL. Para usar este tipo de datos tenemos que incluir el fichero de cabecera `<array>`. Características:
+* **Arrays modernos**: `std::array`. Un **contenedor** que nos ofrece trabajar con arrays con la seguridad y funcionalidad de las estructuras de la STL. Para usar este tipo de datos tenemos que incluir el fichero de cabecera `<array>`. Características:
 
     * Conoce su propio tamaño mediante `size()`.
     * Seguridad adicional con `at()`.
@@ -40,36 +40,11 @@ int main() {
     }
 }
 ```
-
-## Acceso a los elementos
-
-Existen varias formas de acceder a los elementos de un `std::array`:
-
-* Indexación, utilizando los `[ ]` e indicando la posición (como siempre empezando por 0).
-
-    ```cpp
-    std::cout << numeros[0] << std::endl;
-    ```
-
-    En este caso no se realiza comprobación de límites; el acceso fuera del rango genera comportamiento indefinido.
-
-* Acceso seguro mediante el método `at()`. Realiza comprobación de límites y lanza una excepción (`std::out_of_range`) si el índice no es válido. 
-
-    ```cpp
-    std::cout << numeros.at(0) << std::endl;
-    ```
-* Acceso a los extremos. Utilizando los métodos `front()` y `back()`.
-
-    ```cpp
-    std::cout << numeros.front() << std::endl;  // Primer elemento
-    std::cout << numeros.back() << std::endl;   // Último elemento
-    ```
-
 ## Métodos más importantes de `std::array`
 
 * `size()`: Devuelve el tamaño del array. Como en las cadenas devuelve un dato del tipo `std::size_t`.
 * `empty()`: Indica si el array está vacío. Devuelve un valor booleano.
-* `at(índice)`: Acceso seguro con comprobación de límites.
+* `at(índice)`: Acceso seguro con comprobación de límites, aunque también se puede usar la indexación del mismo modo que en la `std::string`.
 * `front()`, `back()`: Acceso al primer y último elemento.
 * `fill(valor)`: Rellena todo el array con el valor especificado.
 
@@ -90,6 +65,7 @@ int main() {
 
     for (size_t i = 0; i < numeros.size(); ++i) {
         std::cout << numeros[i] << " ";
+        std::cout << numeros.at(i) << " ";
     }
     std::cout << std::endl;
 
@@ -109,7 +85,7 @@ int main() {
     std::array<int, 5> numeros{1, 2, 3, 4, 5};
 
     for (std::size_t i = 0; i < numeros.size(); i++) {
-        std::cout << numeros[i] << " ";
+        std::cout << numeros.at(i) << " ";
     }
 
     std::cout << std::endl;
@@ -223,10 +199,22 @@ int main() {
         {9, 10, 11, 12}
     }};
 
+    //Mostrar un elemento
+    std::cout << tabla[1][2] << std::endl; // Imprime 7
+    std::cout << tabla.at(1).at(2) << std::endl; // También imprime 7
+
     // Recorrer la tabla fila por fila
     for (const auto& fila : tabla) {
         for (int valor : fila) {
             std::cout << valor << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    // Recorrer la tabla usando índices
+    for (size_t i = 0; i < tabla.size(); ++i) {           // fila
+        for (size_t j = 0; j < tabla[i].size(); ++j) {    // columna
+            std::cout << tabla.at(i).at(j) << " ";
         }
         std::cout << std::endl;
     }

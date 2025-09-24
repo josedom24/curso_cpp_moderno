@@ -1,4 +1,4 @@
-# stas: `std::list`
+# Listas: `std::list`
 
 `std::list` es una estructura de datos proporcionada por la biblioteca estándar de C++ (STL) que implementa una **lista doblemente enlazada**. A diferencia de los contenedores `std::array` y `std::vector`, los elementos de un `std::list` no se almacenan en ubicaciones contiguas de memoria, sino que cada elemento mantiene un enlace (puntero) al siguiente y al anterior, lo que permite inserciones y eliminaciones eficientes en cualquier posición, incluso en el medio de la lista.
 
