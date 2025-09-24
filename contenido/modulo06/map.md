@@ -2,14 +2,14 @@
 
 Tanto `std::map` como `std::unordered_map` son estructuras de datos de la biblioteca estándar de C++ (STL) que permiten almacenar **pares clave-valor**, donde cada clave es única y está asociada a un valor. Para trabajar con los mapas hay que incluir la cabecera `<map>`.
 
-* `std::map`: Implementa un árbol binario balanceado (habitualmente un árbol rojo-negro), lo que garantiza que los elementos estén **ordenados según la clave**.
+* `std::map`: Implementa un árbol binario balanceado, lo que garantiza que los elementos estén **ordenados según la clave**.
 * `std::unordered_map`: Implementa una tabla hash, por lo que **no mantiene el orden de los elementos**, pero ofrece tiempos de acceso promedio más rápidos para operaciones de búsqueda e inserción.
 
 Estas estructuras son útiles cuando se desea asociar una clave a un valor y poder buscar rápidamente un valor a partir de su clave.
 
 ## Declaración e inicialización de `std::map` y `std::unordered_map`
 
-La inicialización se puede realizar mediante inicialización uniforme:
+En la declaración es necesario indicar el tipo de datos de la clave y el del valor. La inicialización se puede realizar mediante inicialización uniforme:
 
 ```cpp
 #include <map>
@@ -48,7 +48,7 @@ Existen dos formas principales de acceder a los elementos o crear nuevos pares c
     ```
 
 * **Acceso mediante `at(clave)`**: Si la clave existe, devuelve una referencia al valor asociado.
-  Si la clave no existe, lanza una excepción `std::out_of_range`.
+  Si la clave no existe, lanza una excepción (error en tiempo de ejecución) `std::out_of_range`.
 
     ```cpp
     std::map<std::string, int> edades{{"Ana", 25}};
@@ -118,9 +118,9 @@ int main() {
     return 0;
 }
 ```
-* En este caso la variable `par` es de tipo `std::pair<const Key, T>.
-* `par.first`: Representa la clave del par, en este caso un std::string. Ejemplo: "Ana".
-* `par.second`: Representa el valor asociado a esa clave, en este caso un int. Ejemplo: 25.
+* En este caso la variable `par` es de tipo `std::pair<const Key, T>`.
+* `par.first`: Representa la clave del par, en este caso un `std::string`. Ejemplo: "Ana".
+* `par.second`: Representa el valor asociado a esa clave, en este caso un `int`. Ejemplo: 25.
 
 ### Recorrido con iteradores
 
