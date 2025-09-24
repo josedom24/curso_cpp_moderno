@@ -69,7 +69,6 @@ int main() {
 }
 ```
 
-
 ## Recorridos de un `std::list`
 
 ### Bucle range-based for loop (bucle basado en rangos)
