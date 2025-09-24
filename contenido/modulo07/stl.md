@@ -2,14 +2,6 @@
 
 La programación genérica en C++ permite escribir funciones y algoritmos que operan sobre una amplia variedad de tipos sin perder eficiencia ni claridad. Una de las aplicaciones más relevantes de esta capacidad es su integración con los **contenedores de la STL** (Standard Template Library), como `std::vector`, `std::list` o `std::map`.
 
-En este apartado se muestra cómo aprovechar las **funciones plantilla** para trabajar con colecciones heterogéneas de datos, respetando la filosofía de **abstracción sin pérdida de rendimiento** que caracteriza al lenguaje C++.
-
-Vamos a:
-
-* Aplicar funciones genéricas sobre distintos tipos de contenedores.
-* Escribir algoritmos reutilizables con independencia del tipo de datos almacenado.
-* Comprender las restricciones necesarias para que una función plantilla funcione correctamente con un contenedor.
-
 ## Ejemplo básico: impresión de elementos
 
 Una función que recorra cualquier contenedor iterable e imprima sus elementos puede definirse de forma genérica así:
@@ -70,11 +62,3 @@ int main() {
 ```
 Aquí se hace uso de una expresión lambda como parámetro, lo que permite aplicar cualquier transformación sin reescribir la función genérica.
 
-
-## Consideraciones de compatibilidad
-
-Para que una función genérica funcione correctamente con un contenedor de la STL, es necesario que:
-
-* El tipo contenedor implemente `begin()` y `end()` (esto es cierto para todos los contenedores estándar).
-* La operación usada dentro de la función (como `operator<<`, `+`, `*`, etc.) esté definida para el tipo de elemento (`T`).
-* En caso de pasar funciones como parámetros, estas deben aceptar el tipo de elemento del contenedor (o ser genéricas a su vez).
