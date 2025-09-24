@@ -17,6 +17,7 @@ void saludar(std::string nombre = "Usuario");
 int main() {
     saludar("Carlos"); // Imprime: Hola, Carlos
     saludar();         // Imprime: Hola, Usuario
+    return 0;
 }
 
 // Definición sin repetir el valor por defecto
@@ -47,6 +48,7 @@ int main() {
     imprimirLinea("Título", '*', 20); // Personalizado
     imprimirLinea("Subtítulo");       // Usa los valores por defecto de 'simbolo' y 'repeticiones'
     imprimirLinea();                  // Usa todos los valores por defecto
+    return 0;
 }
 ```
 
