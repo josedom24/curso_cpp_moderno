@@ -1,7 +1,7 @@
 # Gestión dinámica de memoria y estructuras dinámicas
 
 En la programación moderna, es fundamental comprender **cómo se gestiona la memoria** y cómo se pueden construir y utilizar estructuras que se adaptan dinámicamente a las necesidades del programa.
-C++ es un lenguaje que permite tanto una gestión manual de la memoria (como en C), como una gestión segura y automática gracias a sus mecanismos modernos, en particular el **RAII** y las **estructuras dinámicas de la STL**.
+C++ es un lenguaje que permite tanto una gestión manual de la memoria (como en C), como una gestión segura y automática gracias a sus mecanismos modernos, en particular el **Resource Acquisition Is Initialization (RAII)** y las **estructuras dinámicas de la STL**.
 
 ## Tipos de memoria en tiempo de ejecución
 
@@ -9,10 +9,11 @@ Al ejecutar un programa en C++, los datos que maneja se almacenan en diferentes 
 
 ### Memoria automática (stack)
 
-* Almacena variables locales (por ejemplo, dentro de funciones) y parámetros de funciones.
+* Almacena **variables locales** (por ejemplo, dentro de funciones) y **parámetros de funciones**.
 * La memoria se reserva y libera automáticamente.
 * Muy rápida, pero limitada en tamaño.
 * Vida útil: **desde la entrada hasta la salida del bloque donde se declara la variable**.
+* **Las variables globales y estáticas** que tienen **duración global** y se guardan en una memoria llamada **estática** con características similares, pero en este caso estas variables duran toda la ejecución del programa.
 
 ```cpp
 void ejemplo() {
@@ -94,9 +95,9 @@ Ejemplo sencillo:
 
 ## Aplicación práctica: las estructuras dinámicas de la STL
 
-Gracias a RAII, la Biblioteca Estándar de C++ (STL) proporciona estructuras dinámicas **seguras, eficientes y fáciles de usar**, como:
+La **Biblioteca Estándar de C++ (STL)** proporciona estructuras dinámicas que gestionan la memoria dinámica usando el principio de **RAII**, por lo tanto estas estructuras son **seguras, eficientes y fáciles de usar**. Por ejemplo:
 
-* `std::string`: cadena de caracteres con gestión automática.
+* `std::string`: cadena de caracteres.
 * `std::array`: arrays con tamaño definido.
 * `std::vector`: arrays dinámico.
 * `std::list`: lista doblemente enlazada.
