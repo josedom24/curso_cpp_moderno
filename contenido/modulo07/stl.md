@@ -75,6 +75,6 @@ Aquí se hace uso de una expresión lambda como parámetro, lo que permite aplic
 
 Para que una función genérica funcione correctamente con un contenedor de la STL, es necesario que:
 
-* El tipo `Container` implemente `begin()` y `end()` (esto es cierto para todos los contenedores estándar).
+* El tipo contenedor implemente `begin()` y `end()` (esto es cierto para todos los contenedores estándar).
 * La operación usada dentro de la función (como `operator<<`, `+`, `*`, etc.) esté definida para el tipo de elemento (`T`).
 * En caso de pasar funciones como parámetros, estas deben aceptar el tipo de elemento del contenedor (o ser genéricas a su vez).

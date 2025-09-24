@@ -17,11 +17,10 @@ Estas características convierten a C++ moderno en un lenguaje altamente expresi
 
 ## Aplicaciones típicas
 
-La programación genérica es ampliamente utilizada en la **biblioteca estándar de C++ (STL)**, en la cual casi todos los algoritmos y estructuras de datos son plantillas:
+La programación genérica es ampliamente utilizada en la **biblioteca estándar de C++ (STL)**, en la que casi todos los algoritmos y estructuras de datos son plantillas:
 
 * Contenedores: `std::vector<T>`, `std::list<T>`, `std::map<Key, T>`, etc.
 * Algoritmos: `std::sort`, `std::accumulate`, `std::find`, etc.
-* Utilidades: `std::function`, `std::optional`, `std::pair`, entre otras.
 
 Gracias a las plantillas, estas herramientas pueden utilizarse con distintos tipos de datos sin reescribir el código.
 
