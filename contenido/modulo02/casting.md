@@ -28,6 +28,7 @@ int main() {
     double resultado {entero + decimal};
 
     std::cout << resultado << std::endl;  // Imprime: 7.5
+    return 0;
 }
 ```
 
@@ -56,6 +57,7 @@ int main() {
 
     entero = entero + static_cast<int>(1.0);  // Conversión explícita en asignación
     std::cout << "Entero modificado: " << entero << std::endl;
+    return 0;
 }
 ```
 
@@ -72,6 +74,7 @@ int main() {
 
     std::cout << "La letra es: " << letra << std::endl;
     std::cout << "Su código es: " << codigo << std::endl;
+    return 0;
 }
 ```
 
@@ -87,5 +90,6 @@ int main() {
     int entero {static_cast<int>(decimal)};  // Se pierde la parte decimal
 
     std::cout << entero << std::endl;  // Imprime: 9
+    return 0;
 }
 ```
