@@ -1,33 +1,24 @@
 #include <iostream>
 #include <string>
 
-// Función plantilla para intercambiar valores
+// Función plantilla que repite un valor según un factor
 template <typename T>
-void intercambiar(T& a, T& b) {
-    T temp = a;
-    a = b;
-    b = temp;
+T repetirValor(const T& valor, int factor) {
+    T resultado{};  // inicialización del resultado
+    for (int i = 0; i < factor; ++i) {
+        resultado = resultado + valor;
+    }
+    return resultado;
 }
 
 int main() {
-    int x = 5, y = 10;
-    double d1 = 1.5, d2 = 3.7;
-    std::string s1 = "Hola", s2 = "Mundo";
+    int x = 5;
+    double y = 2.5;
+    std::string s = "hola";
 
-    // Intercambio de enteros
-    std::cout << "Antes: x = " << x << ", y = " << y << std::endl;
-    intercambiar(x, y);
-    std::cout << "Después: x = " << x << ", y = " << y << std::endl;
-
-    // Intercambio de doubles
-    std::cout << "Antes: d1 = " << d1 << ", d2 = " << d2 << std::endl;
-    intercambiar(d1, d2);
-    std::cout << "Después: d1 = " << d1 << ", d2 = " << d2 << std::endl;
-
-    // Intercambio de strings
-    std::cout << "Antes: s1 = " << s1 << ", s2 = " << s2 << std::endl;
-    intercambiar(s1, s2);
-    std::cout << "Después: s1 = " << s1 << ", s2 = " << s2 << std::endl;
+    std::cout << "x repetido 3 veces: " << repetirValor(x, 3) << std::endl;   // 15
+    std::cout << "y repetido 4 veces: " << repetirValor(y, 4) << std::endl;   // 10.0
+    std::cout << "s repetido 3 veces: " << repetirValor(s, 3) << std::endl;   // "holaholahola"
 
     return 0;
 }

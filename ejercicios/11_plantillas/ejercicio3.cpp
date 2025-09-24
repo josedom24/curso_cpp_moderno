@@ -1,27 +1,26 @@
 #include <iostream>
 #include <vector>
+#include <string>
 #include <list>
-#include <string>  // Solo para demostrar strings, si se desea concatenación
 
-// Función plantilla que suma los elementos de un contenedor
-template <typename Contenedor>
-auto sumar_elementos(const Contenedor& c) {
-    using TipoElemento = typename Contenedor::value_type; // Tipo de los elementos del contenedor
-    TipoElemento suma{}; // Inicialización a 0 o valor por defecto
+// Función plantilla que cuenta cuántas veces aparece un valor en un contenedor
+template <typename Contenedor, typename T>
+int contarCoincidencias(const Contenedor& c, const T& valor) {
+    int contador = 0;
     for (const auto& elem : c) {
-        suma += elem;
+        if (elem == valor) {
+            ++contador;
+        }
     }
-    return suma;
+    return contador;
 }
 
 int main() {
-    std::vector<int> v_int = {1, 2, 3, 4, 5};
-    std::list<double> l_double = {1.5, 2.5, 3.0};
-    std::vector<std::string> v_str = {"Hola", " ", "Mundo"};
+    std::vector<int> numeros = {1, 2, 3, 2, 4, 2};
+    std::list<std::string> palabras = {"hola", "mundo", "hola"};
 
-    std::cout << "Suma de enteros: " << sumar_elementos(v_int) << std::endl;
-    std::cout << "Suma de doubles: " << sumar_elementos(l_double) << std::endl;
-    std::cout << "Concatenación de strings: " << sumar_elementos(v_str) << std::endl;
+    std::cout << "El número 2 aparece " << contarCoincidencias(numeros, 2) << " veces." << std::endl; // 3
+    std::cout << "\"hola\" aparece " << contarCoincidencias(palabras, std::string("hola")) << " veces." << std::endl; // 2
 
     return 0;
 }
