@@ -43,6 +43,7 @@ int main() {
     std::string texto = "Algoritmo";
 
     // std::transform: Convertir todos los caracteres a minúsculas
+    // Recibe el inicio y fin del rango de entrada, el inicio del rango de salida y la función que se ejecuta.
     std::transform(texto.begin(), texto.end(), texto.begin(), ::tolower);
     std::cout << "Texto en minúsculas: " << texto << std::endl;
 
@@ -197,10 +198,12 @@ int main() {
 
 ## Algoritmos aplicables a mapas
 
-Los mapas (`std::map` y `std::unordered_map`) son contenedores que proporcionan **iteradores bidireccionales** (en el caso de `std::map`) o **iteradores al menos forward** (en el caso de `std::unordered_map`). Esto significa que se pueden usar algoritmos de la STL que:
+Los mapas (`std::map` y `std::unordered_map`) son contenedores que proporcionan **iteradores** , por lo que se pueden usar algoritmos de la STL que:
 
 * No modifiquen la estructura interna del mapa (es decir, que no intenten ordenar, insertar o eliminar elementos, lo cual debe hacerse mediante los métodos específicos del mapa).
 * Trabajen sobre el rango proporcionado por los iteradores, generalmente operando sobre los **pares clave-valor**.
+
+Por lo tanto, no se pueden usar algoritmos como `std::sort`, `std::reverse`, `std::shuffle`.
 
 Ejemplos de algoritmos que **sí** se pueden aplicar:
 
@@ -209,15 +212,9 @@ Ejemplos de algoritmos que **sí** se pueden aplicar:
 * `std::count_if`: Contar elementos que cumplan una condición.
 * `std::all_of`, `std::any_of`, `std::none_of`: Comprobar condiciones sobre los elementos.
 
-Algoritmos que no tienen sentido en mapas: `std::sort`, `std::reverse`, `std::shuffle` **no se deben aplicar**, ya que:
 
-* Los mapas ya tienen su propio criterio de orden (por clave en `std::map`).
-* Intentar alterar el orden viola las propiedades internas de la estructura.
-* Si necesitas orden personalizado, debes definir un comparador al construir el mapa, no con algoritmos externos.
+Veamos un ejemplo:
 
----
-
-Ejemplo con un `std::map`**
 
 ```cpp
 #include <iostream>
@@ -254,6 +251,28 @@ int main() {
         std::cout << "Nadie tiene 30 años.\n";
     }
 
+    // all_of: ¿Todas las personas son mayores de 20 años?
+    bool todos_mayores_20 = std::all_of(edades.begin(), edades.end(), [](const auto& par) {
+        return par.second > 20;
+    });
+    std::cout << "Todas las personas son mayores de 20 años? " 
+              << (todos_mayores_20 ? "Sí" : "No") << "\n";
+
+    // any_of: ¿Hay alguien menor de 26 años?
+    bool alguno_menor_26 = std::any_of(edades.begin(), edades.end(), [](const auto& par) {
+        return par.second < 26;
+    });
+    std::cout << "Hay alguien menor de 26 años? " 
+              << (alguno_menor_26 ? "Sí" : "No") << "\n";
+
+    // none_of: ¿Nadie tiene exactamente 35 años?
+    bool nadie_35 = std::none_of(edades.begin(), edades.end(), [](const auto& par) {
+        return par.second == 35;
+    });
+    std::cout << "Nadie tiene 35 años? " 
+              << (nadie_35 ? "Sí" : "No") << "\n";
+
     return 0;
 }
+
 ```
