@@ -14,7 +14,11 @@ En C++ moderno existen dos formas principales de trabajar con cadenas de caracte
 
 ## Uso de la clase `std::string`
 
-Para declarar una variable de tipo cadena, utilizamos la clase `std::string`. Podemos inicializarla directamente en el momento de la declaración utilizando **inicialización uniforme `{}`**, que es la forma recomendada en C++ moderno. Ejemplo:
+Para declarar una variable de tipo cadena, utilizamos la clase `std::string`. Podemos inicializarla directamente en el momento de la declaración utilizando **inicialización uniforme `{}`**, que es la forma recomendada en C++ moderno. 
+
+Podemos acceder a un carácter de la cadena, es lo que se llama **indexación** y lo hacemos utilizando un **índice numérico**, teniendo en cuenta que el primer carácter está en la posición `0`. 
+
+Ejemplo:
 
 ```cpp
 #include <iostream>
@@ -25,30 +29,14 @@ int main() {
     std::string cadena2 {"Hola Mundo"};
 
     std::cout << cadena2 << std::endl;
+    std::cout << cadena2[0] << std::endl;  // Imprime: H
+    std::cout << cadena2.at(1) << std::endl;  // Imprime: o
+    return 0;
 }
 ```
 
-Es necesario incluir el archivo de cabeceras `string` para trabajar con la clase `std::string`.
-
-## Indexación de caracteres
-
-Los caracteres que componen una cadena se pueden acceder utilizando un **índice numérico**, teniendo en cuenta que el primer carácter está en la posición `0`. Por ejemplo:
-
-```cpp
-#include <iostream>
-#include <string>
-
-int main() {
-    std::string texto {"Hola Mundo"};
-
-    std::cout << texto[0] << std::endl;  // Imprime: H
-}
-```
-Hay que tener en cuenta que el acceso con `texto[índice]` **no realiza comprobación de límites**. Si se desea una forma más segura, se puede utilizar el método `at()`:
-
-```cpp
-std::cout << texto.at(0) << std::endl;  // Imprime: H, pero verifica que el índice sea válido
-```
+* Es necesario incluir el archivo de cabeceras `string` para trabajar con la clase `std::string`.
+* Hay que tener en cuenta que el acceso con `texto[índice]` **no realiza comprobación de límites**. Si se desea una forma más segura, se puede utilizar el método `at()`:
 
 ## Tamaño de la cadena
 
@@ -63,6 +51,7 @@ int main() {
 
     std::cout << "La longitud es: " << texto.length() << std::endl;
     std::cout << "Último carácter: " << texto[texto.size() - 1] << std::endl;
+    return 0;
 }
 ```
 
@@ -85,5 +74,6 @@ int main() {
     nombre_completo = nombre + " " + apellidos;
 
     std::cout << nombre_completo << std::endl;
+    return 0;
 }
 ```
