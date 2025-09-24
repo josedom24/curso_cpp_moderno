@@ -74,7 +74,7 @@ La idea principal es que **la gestión del recurso debe estar ligada a la vida d
 
 * El recurso se adquiere en el constructor.
 * Se libera automáticamente en el destructor.
-* La gestión se delega a objetos bien definidos, no al programador directamente.
+* La gestión o propiedad se delega a objetos bien definidos, no al programador directamente.
 
 Los recursos que podemos gestionar con RAII pueden ser de distinto tipo:
 
@@ -82,16 +82,6 @@ Los recursos que podemos gestionar con RAII pueden ser de distinto tipo:
 * Archivos abiertos.
 * Conexiones de red o a bases de datos.
 * Handles o descriptores de dispositivos, entre otros.
-
-Este patrón es la base la **gestión de memoria dinámica** de **clases inteligentes como `std::string`, `std::vector`, `std::unique_ptr`**, etc. que encontramos en la **Biblioteca Estándar de C++ (STL)**.
-
-Ejemplo sencillo:
-
-```cpp
-{
-    std::string saludo = "Hola mundo"; // RAII aplicado a memoria dinámica
-} // memoria liberada automáticamente
-```
 
 ## Aplicación práctica: las estructuras dinámicas de la STL
 
