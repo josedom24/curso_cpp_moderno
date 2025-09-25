@@ -86,7 +86,7 @@
 8. Excepciones: Gestión de errores 
     * [Gestión de errores en C++](contenido/modulo08/errores.md)
     * Introducción a las excepciones
-    * [Manejo de excepciones con `try`, `catch` y `throw`](contenido/modulo08/excepciones.md)
+    * [Manejo de excepciones con `try`, `catch` y `throw`](contenido/modulo08/try.md)
     * [Ejercicios con excepciones](contenido/modulo08/ejercicios.md)
 
 9. Trabajo con archivos
