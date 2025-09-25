@@ -92,4 +92,4 @@
 9. Trabajo con archivos
     * [Introducción al trabajo con archivos](contenido/modulo09/archivos.md)
     * [Apertura, lectura y escritura de archivos](contenido/modulo09/operaciones.md)
-    * [Ejercicios con archivos](contenido/modulo09/ejercicios.md
+    * [Ejercicios con archivos](contenido/modulo09/ejercicios.md)
