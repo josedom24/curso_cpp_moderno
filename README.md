@@ -83,10 +83,13 @@
     * [Uso de funciones genéricas con contenedores STL](contenido/modulo07/stl.md)
     * [Ejercicios con plantillas de función](contenido/modulo07/ejercicios.md)
 
-8. Excepciones y trabajo con archivos
-    * [Gestión de errores en C++: conceptos fundamentales](contenido/modulo08/errores.md)
+8. Excepciones: Gestión de errores 
+    * [Gestión de errores en C++](contenido/modulo08/errores.md)
+    * Introducción a las excepciones
     * [Manejo de excepciones con `try`, `catch` y `throw`](contenido/modulo08/excepciones.md)
-    * [Ejercicios con excepciones](contenido/modulo08/ejercicios1.md)
-    * [Introducción al trabajo con archivos](contenido/modulo08/archivos.md)
-    * [Apertura, lectura y escritura de archivos](contenido/modulo08/operaciones.md)
-    * [Ejercicios con archivos](contenido/modulo08/ejercicios2.md)
+    * [Ejercicios con excepciones](contenido/modulo08/ejercicios.md)
+
+9. Trabajo con archivos
+    * [Introducción al trabajo con archivos](contenido/modulo09/archivos.md)
+    * [Apertura, lectura y escritura de archivos](contenido/modulo09/operaciones.md)
+    * [Ejercicios con archivos](contenido/modulo09/ejercicios.md

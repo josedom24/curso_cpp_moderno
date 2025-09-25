@@ -1,4 +1,4 @@
-# Gestión de errores en C++: conceptos fundamentales
+# Gestión de errores en C++
 
 La gestión de errores es una parte esencial del desarrollo de software robusto y fiable. En C++, como en muchos otros lenguajes, los errores pueden clasificarse según el momento en que se detectan: **errores de compilación** y **errores en tiempo de ejecución**. Cada uno tiene características propias y exige diferentes estrategias para su tratamiento.
 
