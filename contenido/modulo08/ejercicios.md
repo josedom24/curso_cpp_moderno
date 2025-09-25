@@ -2,10 +2,7 @@
 
 ## Ejercicio 1: Acceso seguro a un vector
 
-**Enunciado:**
 Escribe un programa que intente acceder a un elemento de un `std::vector<int>` en una posición inválida. Captura la excepción generada y muestra un mensaje de error adecuado. Después del error, el programa debe continuar normalmente mostrando "Programa finalizado".
-
-**Solución:**
 
 ```cpp
 #include <iostream>
@@ -32,12 +29,11 @@ int main() {
 
 ## Ejercicio 2: Conversión de cadena a número
 
-**Enunciado:**
 Escribe una función `convertirANumero` que reciba una cadena (`std::string`) y la convierta a entero usando `std::stoi`. Si la conversión falla, captura la excepción y devuelve `-1` como valor por defecto.
 
 En `main`, prueba la función con `"123"` y con `"abc"`.
 
-**Solución:**
+
 
 ```cpp
 #include <iostream>
@@ -67,10 +63,9 @@ int main() {
 
 ## Ejercicio 3: División segura con excepciones propias
 
-**Enunciado:**
 Implementa una función `dividir(int a, int b)` que lance una excepción `std::runtime_error` si el divisor es cero. En `main`, pide dos números al usuario, llama a la función y captura cualquier excepción mostrando el mensaje correspondiente.
 
-**Solución:**
+
 
 ```cpp
 #include <iostream>
