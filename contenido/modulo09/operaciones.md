@@ -8,6 +8,27 @@ Una vez entendida la relación entre archivos, recursos y excepciones, pasamos a
 
 Para usar estas clases debemos incluir el archivo de cabeceras `fstream`.
 
+Cuando usamos estas clases, podemos indicar el modo de operación indicando distintos `flags`. Podemos combinar varios flags (modos) usando el operador OR bit a bit `|`. Los modos son los siguientes:
+
+
+* `std::ifstream` (solo lectura):
+  * `std::ios::in` (por defecto): abrir para **leer**.
+  * `std::ios::binary`: leer en **modo binario**.
+* `std::ofstream` (solo escritura):
+  * `std::ios::out` (por defecto): abrir para **escribir**, sobrescribe si el archivo existe.
+  * `std::ios::app`: añadir al **final** del archivo.
+  * `std::ios::ate`: posiciona el puntero al final al abrir (pero permite escribir en cualquier posición).
+  * `std::ios::binary`: escribir en **modo binario**.
+  * `std::ios::trunc`: **trunca** el archivo al abrir (borra el contenido).
+* `std::fstream` (lectura y escritura):
+  * `std::ios::in`: abrir para **leer**.
+  * `std::ios::out`: abrir para **escribir**.
+  * `std::ios::app`: añadir al **final** del archivo.
+  * `std::ios::ate`: posiciona el puntero al final al abrir.
+  * `std::ios::binary`: abrir en **modo binario**.
+  * `std::ios::trunc`: **trunca** el archivo al abrir (borra el contenido).
+
+  
 ## Lectura de archivos
 
 Veamos un ejemplo para abrir un archivo de texto para lectura:
@@ -34,6 +55,7 @@ int main() {
     }
 
     // Cierre automático por RAII
+    return 0;
 }
 
 ```
@@ -120,18 +142,6 @@ int main() {
     }
 }
 ```
-* Los **flags** (banderas) en este caso son **constantes de tipo `std::ios::openmode`** que se usan para indicar **cómo quieres abrir un archivo**: solo para leer, solo para escribir, para leer y escribir, en modo binario, para añadir contenido al final, etc.
-* Por ejemplo, hemos usado la bandera `std::ios::app` al escribir al final del arvhivo.
-* Podemos usar distintas banderas según el modo de apertura que queramos configurar:
-    * `std::ios::in`: Abrir para **lectura**.
-    * `std::ios::out`: Abrir para **escritura**.
-    * `std::ios::app`: Escribir **al final del archivo** (modo "append").
-    * `std::ios::trunc`: **Truncar el archivo** (borrar su contenido si ya existe).
-    * `std::ios::binary`: Abrir en **modo binario** (por defecto se abre en modo texto).
-    * `std::ios::ate`: Posiciona el cursor al **final del archivo**, pero permite escribir/leer desde cualquier posición.
-* Con el operador `|` (OR a nivel de bits) podemos **combinar varias opciones** en una sola. Esto permite especificar **varios modos de apertura simultáneamente**.
-
-
 
 ## Leer archivos palabra por palabra
 

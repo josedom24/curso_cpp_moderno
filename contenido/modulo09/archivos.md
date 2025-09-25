@@ -58,6 +58,7 @@ int main() {
     std::ofstream archivo("datos.txt");
     archivo << "Hola, archivo\n";
     // El archivo se cierra automáticamente al salir del bloque
+    return 0;
 }
 ```
 
@@ -73,7 +74,48 @@ Abrir o manipular un archivo puede fallar por muchos motivos:
 * El disco está lleno o dañado.
 * El archivo está en uso por otro proceso.
 
-Por eso, el trabajo con archivos también **puede lanzar excepciones**, especialmente si se configura el flujo para que lo haga:
+
+
+Cuando trabajamos con archivos en C++ (`std::ifstream`, `std::ofstream`, `std::fstream`), los errores no lanzan excepciones por defecto; en su lugar, el flujo se marca con **flags** de error:
+
+* `std::ios::failbit`: indica un error lógico, como intentar leer un número donde hay texto o no poder abrir un archivo correctamente.
+* `std::ios::badbit`: indica un error grave, como fallo del sistema de archivos o problemas de hardware.
+
+Por defecto, debes comprobar manualmente estos estados usando métodos como `fail()` o `bad()`. Por ejemplo:
+
+```cpp
+#include <iostream>
+#include <fstream>
+#include <string>
+
+int main() {
+    // Abrimos el archivo
+    std::ifstream archivo("archivo.txt");
+    if (!archivo.is_open()) {
+        std::cerr << "Error al abrir archivo\n";
+        return 1; // Salida temprana si no se puede abrir
+    }
+
+    int numero{};
+    archivo >> numero; // Intentamos leer un número
+
+    if (archivo.fail()) {
+        std::cerr << "Error al leer el número\n";
+        return 1; // Salida si la lectura falla
+    }
+
+    // Si todo va bien, mostramos el número leído
+    std::cout << "Número leído: " << numero << '\n';
+
+    // Cierre automático al salir del bloque
+    std::cout << "Programa finalizado\n";
+
+    return 0;
+}
+```
+Si en cambio configuramos el flujo con `archivo.exceptions(std::ios::failbit | std::ios::badbit);`, cualquier operación que active estas flags lanzará automáticamente una **excepción** de tipo `std::ios_base::failure`.
+
+Esto permite manejar errores de archivos dentro de un sistema de **excepciones**, lo que hace el código más limpio y robusto, por ejemplo:
 
 ```cpp
 #include <fstream>
@@ -91,39 +133,11 @@ int main() {
     } catch (const std::ios_base::failure& e) {
         std::cerr << "Error al trabajar con archivos: " << e.what() << '\n';
     }
+    return 0;
 }
 ```
 
-* Configuramos el objeto `archivo` (de tipo `std::ifstream`) para que **lance excepciones** automáticamente si ocurre un error durante las operaciones con archivos. Se indican dos **flags** (banderas) que indican estados de error en los flujos de entrada/salida (`std::ifstream`, `std::ofstream`, `std::fstream`):
-    * `std::ios::failbit`:  Se activa cuando ocurre un error lógico, por ejemplo:
-        * Intentar leer un número donde hay texto.
-        * No poder abrir un archivo (aunque el sistema de archivos esté bien).
-        * Formato de datos inesperado.
-    * `std::ios::badbit`: Se activa cuando ocurre un error **grave** o de bajo nivel:
-        * Fallo del sistema de archivos.
-        * Pérdida de integridad del flujo.
-        * Errores en el hardware.
-    Ambos **no lanzan excepciones por defecto**, sino que dejan el flujo en un estado de error que debes comprobar manualmente (con `fail()`, `bad()`, etc.). `exceptions(...)` **activa** el lanzamiento automático de una excepción si el flujo entra en uno de los estados de error especificados.
-* Si no usamos excepciones, el control de errores sería de esta manera:
+En resumen: activar excepciones en flujos de archivos permite que los errores se integren en el sistema general de manejo de errores, evitando comprobaciones manuales tras cada operación.
 
-    ```cpp
-    std::ifstream archivo("archivo.txt");
-    if (!archivo.is_open()) {
-        std::cerr << "Error al abrir archivo\n";
-    }
-    ```
 
-    O después de una operación:
-
-    ```cpp
-    int numero;
-    archivo >> numero;
-    if (archivo.fail()) {
-        std::cerr << "Error al leer el número\n";
-    }
-    ```
-* Si el archivo no puede abrirse, se lanza una excepción de tipo `std::ios_base::failure`.
-* Capturamos esa excepción y mostramos un mensaje apropiado.
-
-Este mecanismo permite integrar el trabajo con archivos dentro de un sistema general de manejo de errores basado en **excepciones**, lo cual hace nuestro código más robusto y claro.
 
