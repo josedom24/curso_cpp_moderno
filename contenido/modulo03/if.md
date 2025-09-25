@@ -117,7 +117,7 @@ int main() {
 }
 ```
 
-### Alternativa múltiple con `else if`**
+### Alternativa múltiple con `else if`
 
 Para mejorar la legibilidad cuando se tienen múltiples opciones mutuamente excluyentes, es recomendable usar `else if`. Esta estructura evalúa condiciones secuencialmente y ejecuta solo el bloque correspondiente a la primera condición verdadera. Su sintaxis es:
 
