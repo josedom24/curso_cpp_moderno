@@ -83,7 +83,7 @@
     * [Uso de funciones genéricas con contenedores STL](contenido/modulo07/stl.md)
     * [Ejercicios con plantillas de función](contenido/modulo07/ejercicios.md)
 
-8. Excepciones: Gestión de errores 
+8. Excepciones: gestión de errores 
     * [Gestión de errores en C++](contenido/modulo08/errores.md)
     * [Introducción a las excepciones](contenido/modulo08/excepcioones.md)
     * [Manejo de excepciones con `try`, `catch` y `throw`](contenido/modulo08/try.md)
