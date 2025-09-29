@@ -1,6 +1,6 @@
 # Introducción a las excepciones
 
-Tenemos a nuestra disposición varias herramientas para la detección de errores.
+Tenemos a nuestra disposición varias herramientas para gestión de errores.
 
 ## `std::cerr`: salida estándar de errores
 
