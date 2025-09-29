@@ -15,7 +15,7 @@ C++ proporciona **soporte nativo para la programación genérica** desde sus pri
 
 Estas características convierten a C++ moderno en un lenguaje altamente expresivo para desarrollar componentes genéricos de alto rendimiento.
 
-## Aplicaciones típicas
+## Programación genérica en la STL
 
 La programación genérica es ampliamente utilizada en la **biblioteca estándar de C++ (STL)**, en la que casi todos los algoritmos y estructuras de datos son plantillas:
 
