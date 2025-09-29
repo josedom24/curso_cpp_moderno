@@ -60,3 +60,8 @@ int main() {
     return 0;
 }
 ```
+Hay que indicar que a la hora de compilarlo, habrá que indicar los dos ficheros de implementación:
+
+```bash
+$ g++ main.cpp math_utils.cpp -o programa
+``` 
