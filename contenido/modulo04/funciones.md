@@ -89,7 +89,7 @@ Los ejemplos anteriores quedarían con prototipo:
 #include <iostream>
 
 //Prototipo de la función
-int suma(int a, int b)
+int suma(int a, int b);
 
 int main() {
     int resultado = suma(3, 4);
