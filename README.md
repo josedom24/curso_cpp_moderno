@@ -53,7 +53,7 @@
 
     * [Introducción a la programación orientada a objetos](contenido/modulo05/introduccion.md)
     * [Definición de clases y creación de objetos](contenido/modulo05/poo_c++.md)
-    * [Introducción al encapsulamiento](contenido/modulo5/encapsulamiento.md)
+    * [Introducción al encapsulamiento](contenido/modulo05/encapsulamiento.md)
     * [Miembros estáticos de clase](contenido/modulo05/estatico.md)
     * [Composición de objetos](contenido/modulo05/composicion.md)
     * [Herencia de clases](contenido/modulo05/herencia.md)
