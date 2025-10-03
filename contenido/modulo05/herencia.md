@@ -85,7 +85,4 @@ int main() {
 * Las clases derivadas deben invocar explícitamente el constructor de la clase base. Si no se indica, se invoca automáticamente el constructor por defecto de la clase base (si existe). 
 * El destructor de la clase base se invoca automáticamente después del destructor de la clase derivada.
 
-Muy buena base 👌.
-Ya introdujiste la **herencia**, con ejemplos claros y un código que muestra la reutilización de atributos y métodos.
-Ahora, de forma introductoria, puedes hablar del **polimorfismo** como el **siguiente paso natural**: no solo heredar, sino **poder tratar a distintos objetos derivados como si fueran de la clase base** y, al mismo tiempo, conseguir que se comporten de manera distinta.
 
