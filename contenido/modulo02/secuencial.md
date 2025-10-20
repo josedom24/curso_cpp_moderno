@@ -24,23 +24,36 @@ Pide al usuario un valor en grados Fahrenheit y muestra su equivalencia en grado
 
 ## Ejercicio 6
 
-Pide al usuario una cantidad de minutos y muestra cuántas horas y minutos corresponden.
+
+Escribe un programa que solicite al usuario tres números enteros, calcule su suma y muestre su media aritmética (como número real, no entero).
+
+El programa debe:
+
+* Declarar tres variables enteras para almacenar los números introducidos por el usuario.
+* Leer los tres valores desde la entrada estándar.
+* Calcular la suma utilizando `decltype` para deducir automáticamente el tipo de la variable resultado.
+* Calcular la media realizando una conversión explícita a double para evitar la división entera.
+* Mostrar el resultado en pantalla con un mensaje descriptivo.
 
 ## Ejercicio 7
 
-Un vendedor recibe un sueldo base, un 10% de comisión por tres ventas realizadas y tiene un descuento del 15% sobre el total por impuestos. Solicita al usuario el sueldo base y el importe de las tres ventas, y muestra el total que recibirá finalmente.
+Pide al usuario una cantidad de minutos y muestra cuántas horas y minutos corresponden.
 
 ## Ejercicio 8
+
+Un vendedor recibe un sueldo base, un 10% de comisión por tres ventas realizadas y tiene un descuento del 15% sobre el total por impuestos. Solicita al usuario el sueldo base y el importe de las tres ventas, y muestra el total que recibirá finalmente.
+
+## Ejercicio 9
+
+Escribe un programa que solicite al usuario el importe total de una compra y calcule el descuento aplicado y el total final a pagar.
+Aplicar un descuento fijo del 15 % sobre dicho importe.
+Calcular la cantidad del descuento y el total final después de aplicarlo.
+
+
+## Ejercicio 10
 
 Solicita al usuario sus tres calificaciones parciales, la nota del examen final y la nota del trabajo final. Calcula y muestra la calificación final, teniendo en cuenta:
 * 55% del promedio de parciales
 * 30% del examen final
 * 15% del trabajo final
 
-## Ejercicio 9
-
-Pide al usuario las coordenadas de dos puntos en el plano (x₁, y₁) y (x₂, y₂) y calcula la distancia entre ellos.
-
-## Ejercicio 10
-
-Solicita al usuario un número de dos cifras y muestra el número invertido.
