@@ -2,9 +2,9 @@
 
 En programación orientada a objetos, cada instancia de una clase suele tener sus propios atributos y métodos (miembros de datos), lo que permite que cada objeto mantenga su propio estado. Sin embargo, en ciertos casos, es necesario disponer de información **compartida por todas las instancias** de una clase. Para ello, C++ proporciona los **miembros estáticos**.
 
-## ¿Qué es un atributo estático?
+## ¿Qué es un miembro estático?
 
-Un **atributo estático** es un miembro de una clase que **pertenece a la clase en sí**, y no a las instancias individuales. Esto significa que:
+Un **miembro estático** es un miembro (atributo o método) de una clase que **pertenece a la clase en sí**, y no a las instancias individuales. Esto significa que:
 
 * Existe una sola copia compartida por todas las instancias.
 * Puede accederse sin necesidad de crear un objeto (usando el nombre de la clase).
