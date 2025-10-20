@@ -32,12 +32,6 @@ Al finalizar, muestra la palabra máxima y la mínima introducidas.
 
 ## Ejercicio 6
 
-Aquí tienes un enunciado adaptado **sin usar vectores ni arrays**, calculando el promedio en tiempo real:
-
----
-
-## Ejercicio: Promedio de números reales
-
 Define una función:
 
 ```cpp
