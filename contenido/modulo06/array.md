@@ -73,7 +73,7 @@ int main() {
 }
 ```
 
-## Recorridos de un `std::array`**
+## Recorridos de un `std::array`
 
 ### Bucle clásico con índice
 
