@@ -1,5 +1,7 @@
 # Curso de Introducción a C++ Moderno
 
+* [Ejercicios y ejemplos](https://github.com/josedom24/ejercicios_curso_cpp_moderno)
+
 1. Fundamentos de la programación
 
     * [¿Qué es un lenguaje de programación?](contenido/modulo01/introduccion.md)
