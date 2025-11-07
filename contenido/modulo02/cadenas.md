@@ -26,7 +26,7 @@ Ejemplo:
 
 int main() {
 
-    //Definición de una cadena en C clísco
+    //Definición de una cadena en C clásico
     //Tiene 5 caracteres, el último '\0'
     char saludo[] = "Hola";
 
