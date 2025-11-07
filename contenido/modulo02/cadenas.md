@@ -25,6 +25,12 @@ Ejemplo:
 #include <string>
 
 int main() {
+
+    //Definición de una cadena en C clísco
+    //Tiene 5 caracteres, el último '\0'
+    char saludo[] = "Hola";
+
+    //Uso de la clase String
     std::string cadena1 {};
     std::string cadena2 {"Hola Mundo"};
 
