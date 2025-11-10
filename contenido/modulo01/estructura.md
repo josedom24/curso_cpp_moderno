@@ -47,7 +47,7 @@ int main() {  // Función principal: punto de inicio del programa
     ```
     int main(int argc, char *argv[])
     ```
-* `cout << "Hola, Mundo" << endl;`: Instrucción que envía el texto `"Hola, Mundo!!!"` al flujo de salida estándar, generalmente la pantalla. `
+* `cout << "Hola, Mundo" << endl;`: Instrucción que envía el texto `"Hola, Mundo!!!"` al flujo de salida estándar, generalmente la pantalla.
     * `cout` es el objeto de salida estándar de la biblioteca `std`.
     * El operador `<<` dirige la información al flujo de salida.
     * `"Hola, Mundo!!!"` es una cadena de texto literal.
