@@ -52,7 +52,7 @@ Cuando queremos leer una cadena de texto que pueda contener espacios, no podemos
 
 La solución es usar la función `std::getline` que permite leer toda la línea, incluidos los espacios. 
 
-Cuando se combinan ambas formas de entrada, puede ocurrir que quede un carácter de salto de línea `'\n'` pendiente en el búfer de entrada, lo que provoca que `std::getline` lea una línea vacía. Ejemplo:
+Cuando se combinan ambas formas de entrada, puede ocurrir que quede un carácter de salto de línea `'\n'` pendiente en el búfer de entrada, lo que provoca que `std::getline` lea una línea vacía.
 
 Para evitar este problema, podemos utilizar `std::cin.ignore()` antes de llamar a `std::getline`, que limpia el buffer de entrada. Ejemplo:
 
