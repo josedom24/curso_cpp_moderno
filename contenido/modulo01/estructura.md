@@ -33,8 +33,9 @@ using namespace std;
 */
 
 int main() {  // Función principal: punto de inicio del programa
-    cout << "Hola, Mundo" << endl;  // Imprime un mensaje en pantalla
-    return 0;  // Indica que el programa finalizó correctamente, devolviendo un valor entero igual a 0 al sistema operativo
+   cout << "Hola, Mundo" << endl;  // Imprime un mensaje en pantalla
+   // Indica que el programa finalizó correctamente, devolviendo un valor entero igual a 0 al sistema operativo
+   return 0;  
 }
 ```
 
