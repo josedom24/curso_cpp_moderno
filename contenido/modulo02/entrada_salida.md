@@ -6,29 +6,7 @@ Para ello, utilizamos los siguientes objetos:
 * **`std::cin`** es un objeto de la clase `std::istream`, definido en la librería `<iostream>`. Representa la entrada estándar.
 * **`std::cout`** es un objeto de la clase `std::ostream`, también definido en `<iostream>`. Representa la salida estándar.
 
-Para poder utilizarlos, es necesario incluir la biblioteca de cabecera `iostream`. Son objetos globales creados por la biblioteca estándar al inicio del programa, listos para usarse. Veamos un ejemplo para comenzar:
-
-
-```cpp
-#include <iostream>
-#include <string>
-
-int main() {
-    std::string nombre {};
-    int edad {};
-
-    std::cout << "Bienvenido..." << std::endl;
-    std::cout << "Dime tu nombre: ";
-    std::getline(std::cin, nombre);
-
-    std::cout << "Dime la edad de " << nombre << ": ";
-    std::cin >> edad;
-
-    std::cout << nombre << " tiene " << edad << " años." << std::endl;
-
-    return 0;
-}
-```
+Para poder utilizarlos, es necesario incluir la biblioteca de cabecera `iostream`. Son objetos globales creados por la biblioteca estándar al inicio del programa, listos para usarse. 
 
 ## Salida por pantalla: `std::cout`
 
