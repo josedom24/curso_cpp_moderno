@@ -262,3 +262,7 @@ int main() {
     return 0;
 }
 ```
+
+* El método `write` solo escribe punteros al tipo `char`.
+* `reinterpret_cast<const char*>(numeros)`: Convierte la dirección del array `int[]` a un `const char*` para que lo escriba `write`.
+
