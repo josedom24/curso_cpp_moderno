@@ -173,6 +173,7 @@ int main() {
 
     return 0;
 }
+```
 
 Y otro ejemplo, donde vamos a modificar los datos del mapa, donde utilizamos paso por referencia:
 
@@ -199,3 +200,4 @@ int main() {
 
     return 0;
 }
+```
