@@ -81,7 +81,7 @@ Cuando trabajamos con archivos en C++ (`std::ifstream`, `std::ofstream`, `std::f
 * `std::ios::failbit`: indica un error lógico, como intentar leer un número donde hay texto o no poder abrir un archivo correctamente.
 * `std::ios::badbit`: indica un error grave, como fallo del sistema de archivos o problemas de hardware.
 
-Por defecto, debes comprobar manualmente estos estados usando métodos como `fail()` o `bad()`. Por ejemplo:
+Por defecto, debes comprobar manualmente estos estados usando métodos como `fail()` o `bad()`. Además podemos usar el método `is_open()` para comprobar si el fichero se ha abierto de manera adecuada. Por ejemplo:
 
 ```cpp
 #include <iostream>
@@ -93,21 +93,25 @@ int main() {
     std::ifstream archivo("archivo.txt");
     if (!archivo.is_open()) {
         std::cerr << "Error al abrir archivo\n";
-        return 1; // Salida temprana si no se puede abrir
+        return 1;
     }
 
     int numero{};
-    archivo >> numero; // Intentamos leer un número
+    archivo >> numero; // Intento de lectura
 
+    // Comprobación: ¿falló la lectura por formato o fin de archivo?
     if (archivo.fail()) {
-        std::cerr << "Error al leer el número\n";
-        return 1; // Salida si la lectura falla
+        std::cerr << "Error al leer el número (fail)\n";
+        return 1;
     }
 
-    // Si todo va bien, mostramos el número leído
-    std::cout << "Número leído: " << numero << '\n';
+    // Comprobación opcional: ¿ocurrió un error grave durante la operación?
+    if (archivo.bad()) {
+        std::cerr << "Error grave en el flujo (bad)\n";
+        return 1;
+    }
 
-    // Cierre automático al salir del bloque
+    std::cout << "Número leído: " << numero << '\n';
     std::cout << "Programa finalizado\n";
 
     return 0;
