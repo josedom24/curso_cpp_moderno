@@ -64,7 +64,7 @@ Existen dos formas principales de acceder a los elementos o crear nuevos pares c
 * `at(clave)`: Accede al valor asociado a una clave. Si la clave no existe, lanza una excepción `std::out_of_range`.
 * `erase(clave)`: Elimina el elemento asociado a la clave, si existe.
 * `clear()`: Elimina todos los elementos del mapa.
-* `find(clave)`: Devuelve un iterador al elemento con la clave dada o `end()` si no se encuent
+* `find(clave)`: Devuelve un iterador al elemento con la clave dada o `end()` si no se encuentra.
 * `count(clave)`: Devuelve 1 si la clave existe o 0 si no existe.
 
 Ejemplo:
