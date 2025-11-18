@@ -63,8 +63,10 @@ int main() {
 * Activamos las excepciones sobre el flujo antes de abrirlo. Cualquier fallo lanza `std::ios_base::failure`.
 * `std::getline()` permite leer línea a línea.
 * No hace falta llamar a `archivo.close()`, porque el objeto se destruye automáticamente al salir del ámbito (RAII).
-* Estamos diciéndole al flujo de entrada que lance una excepción si se activa `failbit` o `badbit`. Pero al llegar al final del archivo, `std::getline()` establece `failbit`, lo que activa una excepción, incluso aunque la lectura haya sido exitosa hasta ese punto.
-* Para solucionarlo vamos a hacer la lectura dentro del bucle sin que `failbit` dispare excepciones, y activa excepciones solo para errores críticos (como `badbit`). Haz la lectura dentro del bucle sin que failbit dispare excepciones, y activa excepciones solo para errores críticos (como badbit). Es decir:
+
+Estamos diciéndole al flujo de entrada que lance una excepción si se activa `failbit` o `badbit`. Pero al llegar al final del archivo, `std::getline()` establece `failbit`, lo que activa una excepción, incluso aunque la lectura haya sido exitosa hasta ese punto.
+
+Para solucionarlo vamos a hacer la lectura dentro del bucle sin que `failbit` dispare excepciones, y activa excepciones solo para errores críticos (como `badbit`). Haz la lectura dentro del bucle sin que failbit dispare excepciones, y activa excepciones solo para errores críticos (como badbit). Es decir:
 
 ```cpp
 #include <iostream>
