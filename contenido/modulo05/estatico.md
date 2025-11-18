@@ -44,10 +44,6 @@ public:
         return asunto; 
     }
 
-    // Método estático para acceder al contador
-    static int totalTicketsCreados() { 
-        return contadorTickets; 
-    }
 };
 
 // Inicialización del atributo estático (fuera de main)

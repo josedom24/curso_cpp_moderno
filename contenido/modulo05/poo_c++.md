@@ -114,7 +114,7 @@ public:
 
 int main() {
     // Crear un objeto usando el constructor por defecto
-    Rectangulo r1();
+    Rectangulo r1;
     std::cout << "Área del rectángulo r1 (por defecto): " << r1.calcularArea() << std::endl;
 
     // Crear un objeto usando el constructor con parámetros
