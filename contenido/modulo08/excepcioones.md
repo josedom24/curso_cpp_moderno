@@ -63,34 +63,5 @@ Si bien `std::cerr` y `assert` son útiles, tienen limitaciones:
 * No permiten **separar el código normal del código de tratamiento de errores**.
 
 Para solventar estas limitaciones, C++ ofrece un mecanismo robusto y estructurado: **las excepciones**, que permiten detectar, lanzar y capturar errores de forma controlada y jerárquica.
-
-Ejemplo:
-
-```cpp
-#include <iostream>
-#include <vector>
-
-int main() {
-    std::vector<int> v = {1, 2, 3};
-    int x = -1; // declaración fuera del try (inicializamos con un valor por defecto)
-
-    try {
-        x = v.at(10); // Lanza una excepción (índice fuera de rango)
-    } catch (const std::out_of_range& e) {
-        std::cerr << "Excepción capturada: " << e.what() << '\n';
-    }
-
-    // Uso de x fuera del try
-    std::cout << "Valor de x: " << x << '\n';
-
-    return 0;
-}
-```
-
-* `x` se declara fuera del `try`, así su ámbito abarca también el `catch` y el resto de `main`.
-* Se inicializa con `-1` como valor de seguridad.
-* Si ocurre una excepción, `x` conserva ese valor inicial y no queda sin definir.
-* Se imprime el valor de `x` al final.
-
 En el siguiente apartado estudiaremos en profundidad el sistema de excepciones de C++: cómo lanzar (`throw`), capturar (`catch`) y definir excepciones propias.
 

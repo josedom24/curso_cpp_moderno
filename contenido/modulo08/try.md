@@ -24,8 +24,11 @@ int main() {
     return 0;
 }
 ```
-
-* Aquí, usamos `vector::at`, que **lanza automáticamente** una excepción si se accede a una posición inválida. El código susceptible de fallar lo metemos en el bloque `try` y usamos `catch` para capturar la excepción y ejecutar las instrucciones que se deben de ejecutar cuando se produce. El programa **no se detiene**,  si la excepción se captura.
+* `x` se declara fuera del `try`, así su ámbito abarca también el `catch` y el resto de `main`.
+* Se inicializa con `-1` como valor de seguridad.
+* Si ocurre una excepción, `x` conserva ese valor inicial y no queda sin definir.
+* Se imprime el valor de `x` al final.
+* Usamos `vector::at`, que **lanza automáticamente** una excepción si se accede a una posición inválida. El código susceptible de fallar lo metemos en el bloque `try` y usamos `catch` para capturar la excepción y ejecutar las instrucciones que se deben de ejecutar cuando se produce. El programa **no se detiene**,  si la excepción se captura.
 * `e` es el objeto que representa la excepción que ha sido capturada en el bloque `catch`. Todas las excepciones estándar derivan de la clase base `std::exception`, que tiene un método llamado `what()`, que devuelve un mensaje descriptivo en formato de cadena de texto (`const char*`).
 
 ## Jerarquía de excepciones estándar
